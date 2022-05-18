@@ -61,7 +61,8 @@ html,body {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    text-align: center;
     padding: 10px;
     background-color:#752F48;
     border-radius: 5px;
@@ -94,10 +95,6 @@ html,body {
     bottom: 0;
     width: 100%;
 }
-.df {
-    display: flex;
-    justify-content: center;
-}
 .arrow {
     width: 34px;
     height: 42px;
@@ -107,6 +104,8 @@ html,body {
     margin-bottom: 25px;
     transform: translateX(-8px) translateY(8px);
     box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+}
+.arrow, .fa-arrow-down {
     cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
 }
 .fa-arrow-down {
@@ -121,7 +120,7 @@ html,body {
 .wrapper2 {
     height: fit-content;
     background-color: #E5E5E5;
-    padding: 60px 0px 60px 0px;
+    padding: 60px 0px;
     position: relative;
 }
 .options {
@@ -231,6 +230,4 @@ html,body {
     border-radius: 10px;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
 }
-/* .block4 > div:hover {
-    
-} */
+
