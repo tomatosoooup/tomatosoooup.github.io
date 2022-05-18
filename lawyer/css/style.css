@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+html,body {
+    box-sizing: inherit;
+    height: 100%;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #727272;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background: #822948;
+    border-radius: 50px;
+}
+/* Simple Responsive Framework. */
+.row {
+    width: 100%;
+}
+.wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/back.png);
+    height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 115px;
+    position: relative;
+}
+.menu {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 148px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.number {
+    letter-spacing: 1px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.number > img {
+    width: 25px;
+    height: 25px;
+}
+.menu_ {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color:#752F48;
+    border-radius: 5px;
+}
+.menu_ li{
+    padding: 3px 10px;
+    align-self: center;
+    color: white;
+}
+.menu_ li:hover {
+    border-radius: 5px;
+    background-color: white;
+    color: #752F48;
+    cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
+}
+.name {
+    margin-top: 120px;
+    font-size: 55px;
+    color: white;
+    text-align: center;
+}
+.opt {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.arrow {
+    width: 34px;
+    height: 42px;
+    background-color: #752F48;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    transform: translateX(-8px) translateY(8px);
+    box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+    cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
+}
+.fa-arrow-down {
+    transform: translateX(10px) translateY(11px);
+    color: white;
+}
+.arrow:hover {
+    transform: translateX(4px) translateY(-4px);
+    box-shadow: none;
+    transition: 300ms;
+}
+.wrapper2 {
+    height: fit-content;
+    background-color: #E5E5E5;
+    padding: 60px 0px 60px 0px;
+    position: relative;
+}
+.options {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    transform: translateZ(50px);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    align-items: center;
+    flex-wrap: wrap;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 550px;
+}
+.text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#t1 {
+    color:#752F48;
+    letter-spacing: 2px;
+    font-size: 23px;
+}
+#t2 {
+    color:#727272;
+    font-size: 17px;
+}
+.link_btn {
+    color:white;
+    padding: 3px 15px;
+    background-color: #752F48;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 20px;
+    cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
+}
+.link_btn:hover {
+    color:#752F48;
+    background-color: white;
+}
+.block2{
+    display: flex;
+    height: 450px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:12.5px;
+}
+.card {
+    background-color: white;
+    height: 200px;
+    transform: translateZ(50px);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.card > img {
+    height: 100px;
+}
+.card > p {
+    overflow: hidden;
+    text-overflow: clip;
+}
+.portfolio {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    align-items: center;
+}
+.block3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 550px;
+}
+.text2 {
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.text2 > h2 {
+    margin-bottom: 5px;
+}
+.block4 {
+    height: 550px;
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+}
+.block4 > div > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+}
+/* .block4 > div:hover {
+    
+} */
