@@ -94,6 +94,10 @@ html,body {
     bottom: 0;
     width: 100%;
 }
+.df {
+    display: flex;
+    justify-content: center;
+}
 .arrow {
     width: 34px;
     height: 42px;
