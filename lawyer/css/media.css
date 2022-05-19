@@ -169,6 +169,9 @@
 }
 /********** Smartphones only **********/
 @media (max-width: 767px) {
+.wrapper2 {
+  padding: 100px 0px;
+}
 .carousel .slick-arrow {
   position: absolute;
   top: 50%;
