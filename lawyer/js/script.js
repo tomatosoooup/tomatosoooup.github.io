@@ -16,7 +16,8 @@
     });
     $("#change-slider").on("click","a", function (event) {
 		event.preventDefault();
-		let top  = 650
-		$('body,html').animate({scrollTop: top}, 200);
+      let top  = 650
+      $('body,html').animate({scrollTop: top}, 200);
+
 	});
 });

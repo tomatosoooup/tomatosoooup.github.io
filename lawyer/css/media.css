@@ -94,7 +94,7 @@
 .carousel_item > h2 {
   font-size: 20px;
 }
-.carousel_item > h3 {
+.carousel_item > a {
   margin-top: 10px;
 }
   .carousel_item > div > img {
@@ -188,7 +188,7 @@
 .carousel_item {
   align-items: center;
 }
-.carousel_item > h3 {
+.carousel_item > a {
   margin-top: 10px;
   align-self: center;
 }

@@ -292,7 +292,7 @@ html,body {
     height: 400px;
     margin: 10px 0px;
 }
-.carousel_item > h3 {
+.carousel_item > a {
     align-self: flex-end;
 }
 .source-btn {
