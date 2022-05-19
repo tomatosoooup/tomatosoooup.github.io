@@ -6,5 +6,6 @@
         infinite: true,
         autoplay: true,
         autoplaySpeed: 5000,
+        pauseOnHover:true,
     });
   });
