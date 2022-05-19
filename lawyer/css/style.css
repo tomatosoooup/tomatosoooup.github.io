@@ -9,6 +9,7 @@
 html,body {
     box-sizing: inherit;
     height: 100%;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -78,13 +79,13 @@ html,body {
     color: #752F48;
     cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
 }
-.name {
+.fio {
     margin-top: 120px;
     font-size: 55px;
     color: white;
     text-align: center;
 }
-.opt {
+.notar {
     font-size: 25px;
     color: white;
     text-align: center;
@@ -133,14 +134,14 @@ html,body {
     align-items: center;
     flex-wrap: wrap;
 }
-.block {
+.section-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
     height: 550px;
 }
-.text {
+.info-1 {
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -168,7 +169,7 @@ html,body {
     color:#752F48;
     background-color: white;
 }
-.block2{
+.section-2{
     display: flex;
     height: 450px;
     flex-wrap: wrap;
@@ -202,32 +203,109 @@ html,body {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     align-items: center;
 }
-.block3 {
+.section-3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
     height: 550px;
 }
-.text2 {
+.info-2 {
     padding: 0px 30px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.text2 > h2 {
+.info-2 > h2 {
     margin-bottom: 5px;
 }
-.block4 {
+.section-4 {
     height: 550px;
     padding: 40px 10px;
     display: flex;
     justify-content: center;
 }
-.block4 > div > img {
+.section-4 > div > img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
 }
-
+.carousel {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.slick-initialized .slick-slide {
+    display: flex;
+}
+.slick-track {
+    align-items: flex-start;
+}
+.carousel .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -30px 0 0 0;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 50px;
+    border: none;
+}
+.carousel .slick-arrow.slick-prev {
+    left: 10px;
+    background: url(../images/chevron-left-solid.svg) 0 0 /100% no-repeat;
+    cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
+    opacity: 0.5;
+}
+.carousel .slick-arrow.slick-next {
+    right: 10px;
+    background: url(../images/chevron-right-solid.svg) 0 0 /100% no-repeat;
+    cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
+    opacity: 0.5;
+}
+.carousel_inner {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+.carousel_item {
+    flex-direction: column;
+    padding: 30px 50px;
+    background-color: white;
+    gap: 5px;
+}
+.date {
+    color:white;
+    padding: 3px 15px;
+    background-color: #752F48;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 17px;
+    margin-left: 20px;
+}
+.carousel_item > h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+.carousel_item > div > img {
+    width: 100%;
+    height: 400px;
+    margin: 10px 0px;
+}
+.carousel_item > h3 {
+    align-self: flex-end;
+}
+.source-btn {
+    color:white;
+    padding: 3px 15px;
+    background-color: #752F48;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 20px;
+    cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
+}
+.source-btn:hover {
+    color:#752F48;
+    background-color: rgba(128, 128, 128,0.4);
+}

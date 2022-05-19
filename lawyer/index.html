@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <title>Lawyer</title>
@@ -30,30 +31,30 @@
     </div>
     <div class="row">
         <div>
-            <h1 class="name">Юлія Іванівна</h1>
-            <h2 class="opt">Приватний нотаріус</h2>
+            <h1 class="fio">Юлія Іванівна</h1>
+            <h2 class="notar">Приватний нотаріус</h2>
         </div>
     </div>
     <div class="footer">
         <div class="arrow">
-            <a href=""><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+            <a href="#dia"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
         </div>
     </div>
     </div>
-    <div class="wrapper2">
+    <div class="wrapper2" id="dia">
         <div class="row">
             <div class="options col-lg-11 col-md-11 col-sm-11 col-xs-11">
-                <div class="block col-lg-5 col-md-4 col-sm-12 col-xs-12">
-                    <div class="text">
+                <div class="section-1 col-lg-5 col-md-4 col-sm-12 col-xs-12">
+                    <div class="info-1">
                         <p id="t1">Нотаріальні дії</p>
                         <p id="t2">Короткий перелік дій, <br> що я можу надати.</p>
                         <a href=""><p class="link_btn">Всі дії</p></a>
                     </div>
                 </div>
-                <div class="block2 col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                <div class="section-2 col-lg-7 col-md-8 col-sm-12 col-xs-12">
                     <div class="card col-lg-4 col-md-4 col-sm-5 col-xs-5">
                         <img src="images/hammer.png" alt="card-pic">
-                        <h3>Довіренність</h3>
+                        <h3>Довіреність</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, accusamus?</p>
                     </div>
                     <div class="card col-lg-4 col-md-4 col-sm-5 col-xs-5">
@@ -79,8 +80,8 @@
     <div class="wrapper2">
         <div class="row">
             <div class="portfolio col-lg-11 col-md-11 col-sm-11 col-xs-11">
-                <div class="block3 col-lg-5 col-md-5 col-sm-6 col-xs-6">
-                    <div class="text2">
+                <div class="section-3 col-lg-5 col-md-5 col-sm-6 col-xs-6">
+                    <div class="info-2">
                         <h2>Габінет Ю.І.</h2>
                         <h4>Приватний нотаріус</h4>
                         <h4>Адреса: Харківська область, Богодухівський район, <br> м. Валки, вул. Г.Сковороди 6</h4>
@@ -89,12 +90,43 @@
                         <h3 class="link_btn">Зв'язатись</h3>
                     </div>
                 </div>
-                <div class="block4 col-lg-7 col-md-7 col-sm-6 col-xs-6">
+                <div class="section-4 col-lg-7 col-md-7 col-sm-6 col-xs-6">
                     <div><img src="images/photo.png" alt=""></div>
                 </div>
             </div>
             <div class="footer"><hr></div>
         </div>
     </div>
+    <div class="wrapper2">
+        <div class="carousel col-lg-11 col-md-11 col-sm-11 col-xs-11">
+            <div class="carousel_inner col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <div class="carousel_item">
+                    <span class="date">24.03.2022</span>
+                    <h2>ОФОРМЛЕННЯ ДОГОВОРУ КУПІВЛІ-ПРОДАЖУ КВАРТИРИ</h2>
+                    <div><img src="images/house-sl.png" alt="picture-sl"></div>
+                    <p>Про вибір нотаріуса при оформленні договору купівлі-продажу квартири</p>
+                    <h3 class="source-btn">Дізнатись</h3>
+                </div>
+                <div class="carousel_item">
+                    <span class="date">24.03.2022</span>
+                    <h2>ОФОРМЛЕННЯ ДОГОВОРУ КУПІВЛІ-ПРОДАЖУ КВАРТИРИ</h2>
+                    <div><img src="images/house-sl.png" alt="picture-sl"></div>
+                    <p>Про вибір нотаріуса при оформленні договору купівлі-продажу квартири</p>
+                    <h3 class="source-btn">Дізнатись</h3>
+                </div>
+                <div class="carousel_item">
+                    <span class="date">24.03.2022</span>
+                    <h2>ОФОРМЛЕННЯ ДОГОВОРУ КУПІВЛІ-ПРОДАЖУ КВАРТИРИ</h2>
+                    <div><img src="images/house-sl.png" alt="picture-sl"></div>
+                    <p>Про вибір нотаріуса при оформленні договору купівлі-продажу квартири</p>
+                    <h3 class="source-btn">Дізнатись</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JQuery and js files for slider -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
