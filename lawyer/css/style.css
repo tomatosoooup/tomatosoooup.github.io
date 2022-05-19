@@ -105,11 +105,10 @@ html,body {
     margin-bottom: 25px;
     transform: translateX(-8px) translateY(8px);
     box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-}
-.arrow, .fa-arrow-down {
     cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
 }
 .fa-arrow-down {
+    cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
     transform: translateX(10px) translateY(11px);
     color: white;
 }
