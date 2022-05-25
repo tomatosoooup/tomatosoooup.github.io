@@ -1,0 +1,95 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+:root {
+    --distance: 15px;
+    --bgc--gray: #E5E5E5;
+    --bgc--purp: #752F48;
+}
+html,body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #727272;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background: #822948;
+    border-radius: 50px;
+}
+/* Simple Responsive Framework. */
+.row {
+    width: 100%;
+}
+.wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/back.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 115px;
+    position: relative;
+}
+.menu {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 148px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.number {
+    letter-spacing: 1px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.number > img {
+    width: 25px;
+    height: 25px;
+}
+.menu_ {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    padding: 10px;
+    background-color:var(--bgc--purp);
+    border-radius: 5px;
+}
+.menu_ li{
+    padding: 3px 10px;
+    align-self: center;
+    color: white;
+}
+.menu_ li:hover {
+    border-radius: 5px;
+    background-color: white;
+    color: var(--bgc--purp);
+    cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
+}
+.slide-dii {
+    position: relative;
+}
+.dii {
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    background-color: var(--bgc--gray);
+    padding: 60px 50px;
+}

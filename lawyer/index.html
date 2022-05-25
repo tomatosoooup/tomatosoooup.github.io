@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/slider.css"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-first-page.css">
     <link rel="stylesheet" href="css/media.css">
     <title>Lawyer</title>
 </head>
@@ -26,7 +26,7 @@
             <a href="#"><li>Головна</li></a>
             <a href="#dia"><li>Нотаріальні дії</li></a>
             <a href="#news"><li>Новини</li></a>
-            <a href="#"><li>Особистий кабінет</li></a>
+            <a href="#popup" class="popup-link"><li>Особистий кабінет</li></a>
         </ul>
     </div>
     <div class="row">
@@ -55,7 +55,11 @@
                     </div>
                 </div>
                 <div class="section-4 col-lg-7 col-md-7 col-sm-6 col-xs-6">
-                    <div><img src="images/photo.png" alt=""></div>
+                    <div>
+                        <img src="images/photo.png" alt="">
+                        <div class="section-4-back">Я працюю нотаріусом більше 25 років.</div>
+                    </div>
+                    
                 </div>
             </div>
             <div class="footer"><hr></div>
@@ -124,6 +128,31 @@
             </div>
         </div>
         <div class="footer"><hr></div>
+    </div>
+    <div class="popup-wrapper">
+        <div class="popup" id="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">Х</a>
+                    <form action="#" id="form__main">
+                        <label for="surname">
+                            <input type="text" class="form__element" id="surname" placeholder="Ім'я користувача">
+                        </label>
+                        <label for="user_fio">
+                            <input type="text" class="form__element" id="user_fio" placeholder="ПІБ">
+                        </label>
+                        <label for="password-1">
+                            <input type="password" name="" id="password-1" placeholder="Пароль">
+                        </label>
+                        <label for="password-2">
+                            <input type="password" name="" id="password-2" placeholder="Повторити пароль">
+                        </label>
+                        <!-- <button type="button" id="cancel-btn"></button>
+                        <button type="submit" id="subm-btn"></button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- JQuery and js files for slider -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
