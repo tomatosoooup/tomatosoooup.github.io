@@ -78,6 +78,9 @@
 }
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+.cancel-btn, .subm-btn {
+  width: calc(25% - var(--distance))
+}
 .carousel .slick-arrow {
   position: absolute;
   top: 50%;
@@ -171,6 +174,14 @@
 @media (max-width: 767px) {
 label {
   width: calc(100% - var(--distance));
+}
+.cancel-btn, .subm-btn {
+  width: calc(100% - var(--distance));
+}
+.buttons-todo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .carousel .slick-arrow {
   position: absolute;

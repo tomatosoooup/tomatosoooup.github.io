@@ -133,22 +133,38 @@
         <div class="popup" id="popup">
             <div class="popup__body">
                 <div class="popup__content">
-                    <a href="#" class="popup__close close-popup">Х</a>
-                    <form action="#" id="form__main">
+                    <span class="signin-active" onclick="changeSignIn()" id="signIn-span"><a href='#'>Ввійти до кабінету</a></span></a>
+                    <span class="signup-inactive" onclick="changeSignUp()" id="signUp-span"><a href='#'>Зареєструватись</a></span></a>
+                    <a href="#" class="popup__close close-popup"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    <form action="#" class="form__signin" id="formIn">
                         <label for="surname">
-                            <input type="text" class="form__element" id="surname" placeholder="Ім'я користувача">
+                            <input type="text" class="form__element" placeholder="Ім'я користувача">
+                        </label>
+                        <label for="password-1">
+                            <input type="password" name="" placeholder="Пароль">
+                        </label>
+                        <div class="buttons-todo">
+                            <button type="button" class="cancel-btn">Очистити все</button>
+                            <button type="submit" class="subm-btn">Війти</button>
+                        </div>
+                    </form>
+                    <form action="#" class="form__signup__fade" id="formUp">
+                        <label for="surname">
+                            <input type="text" class="form__element" placeholder="Ім'я користувача">
                         </label>
                         <label for="user_fio">
                             <input type="text" class="form__element" id="user_fio" placeholder="ПІБ">
                         </label>
                         <label for="password-1">
-                            <input type="password" name="" id="password-1" placeholder="Пароль">
+                            <input type="password" name="" placeholder="Пароль">
                         </label>
                         <label for="password-2">
-                            <input type="password" name="" id="password-2" placeholder="Повторити пароль">
+                            <input type="password" name="" placeholder="Повторити пароль">
                         </label>
-                        <!-- <button type="button" id="cancel-btn"></button>
-                        <button type="submit" id="subm-btn"></button> -->
+                        <div class="buttons-todo">
+                            <button type="button" class="cancel-btn">Очистити все</button>
+                            <button type="submit" class="subm-btn">Відправити</button>
+                        </div>
                     </form>
                 </div>
             </div>

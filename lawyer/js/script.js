@@ -124,3 +124,39 @@ document.addEventListener('keydown', function (e) {
         popupClose(popupActive);
     }
 });
+
+// Кнопки
+const changeFormSignIn = document.querySelector('#signIn-span') //active
+const changeFormSignUp = document.querySelector('#signUp-span') //inactive
+// Формы
+const formSignIn = document.querySelector('#formIn') //active
+const formSignUp = document.querySelector('#formUp') //inactive
+
+function changeSignIn(){
+    if (changeFormSignIn){
+        // Работа с формами
+        formSignIn.classList.remove('form__signin__fade')
+        formSignIn.classList.add('form__signin')
+        formSignUp.classList.remove('form__signup')
+        formSignUp.classList.add('form__signup__fade')
+        // Работа с кнопками
+        changeFormSignIn.classList.remove('signin-inactive')
+        changeFormSignIn.classList.add('signin-active')
+        changeFormSignUp.classList.remove('signup-active')
+        changeFormSignUp.classList.add('signup-inactive')
+    }
+}
+function changeSignUp(){
+    if (changeFormSignUp){
+        // Работа с формами
+        formSignUp.classList.remove('form__signup__fade')
+        formSignUp.classList.add('form__signup')
+        formSignIn.classList.remove('form__signin')
+        formSignIn.classList.add('form__signin__fade')
+        // Работа с кнопками
+        changeFormSignUp.classList.remove('signup-inactive')
+        changeFormSignUp.classList.add('signup-active')
+        changeFormSignIn.classList.remove('signin-active')
+        changeFormSignIn.classList.add('signin-inactive')
+    }
+}
