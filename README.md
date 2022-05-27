@@ -4,6 +4,8 @@ https://tomatosoooup.github.io/
 
 https://tomatosoooup.github.io/mod2_solution/ 
 
+# mod3_solution
+https://tomatosoooup.github.io/mod3_solution/
 
 # Lawyer
 https://tomatosoooup.github.io/lawyer/
