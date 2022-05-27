@@ -12,8 +12,10 @@
     --bgc--purp: #752F48;
 }
 html,body {
-    height: 100%;
+    height: 100vh;
     scroll-behavior: smooth;
+    position: relative;
+    background-color: var(--bgc--gray);
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -29,6 +31,15 @@ html,body {
 /* Simple Responsive Framework. */
 .row {
     width: 100%;
+}
+.white__blure {
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 125px;
+    z-index: 1;
 }
 .wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/back.png);
@@ -49,6 +60,7 @@ html,body {
     height: 100px;
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 2;
 }
 .number {
     letter-spacing: 1px;
@@ -56,6 +68,7 @@ html,body {
     display: flex;
     align-items: center;
     gap: 10px;
+    z-index: 2;
 }
 .number > img {
     width: 25px;
@@ -83,13 +96,49 @@ html,body {
     color: var(--bgc--purp);
     cursor: url(../images/jobs-judge-gavel-and-wig-cursor-a.png), auto;
 }
-.slide-dii {
+.slide-news {
     position: relative;
+    z-index: 2;
 }
-.dii {
-    position: absolute;
-    top: 50%;
-    z-index: -1;
+.news {
     background-color: var(--bgc--gray);
-    padding: 60px 50px;
+    padding: 50px 50px 20px;
+    height: 77vh;
+    width: 100%;
+}
+.img__text {
+    height: 100%;
+    padding: 5px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pic__date {
+    width: calc(35% - var(--distance)); 
+    padding: 0px 20px;
+    margin-top: 30px;
+}
+.pic__date > img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.date {
+    color:white;
+    padding: 5px 15px;
+    background-color: var(--bgc--purp);
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 17px;
+}
+.information {
+    margin: 30px 20px 0px 0px;
+    padding: 0px 5px 0px 5px;
+    overflow-y: auto;
+    width: calc(65% - var(--distance));
+    min-height: 90%;
+    max-height: 91%;
+}
+.information > p {
+    margin-right: 5px;
 }

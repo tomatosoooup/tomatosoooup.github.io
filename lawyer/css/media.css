@@ -78,6 +78,20 @@
 }
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+.img__text {
+  overflow-y: hidden;
+  height: fit-content;
+}
+.img__text .pic__date {
+  width: calc(100% - var(--distance));
+}
+.img__text .information {
+  width: calc(100% - var(--distance));
+  margin-right: 0px;
+  padding: 0px 20px;
+  overflow-y: auto;
+  max-height: 300px;
+}
 .cancel-btn, .subm-btn {
   width: calc(25% - var(--distance))
 }
@@ -171,7 +185,25 @@
 }
 }
 /********** Smartphones only **********/
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
+.img__text {
+  overflow-y: hidden;
+  height: fit-content;
+}
+.img__text .pic__date {
+  width: calc(100% - var(--distance));
+}
+.img__text .information {
+  width: calc(100% - var(--distance));
+  margin-right: 0px;
+  padding: 0px 20px;
+  overflow-y: auto;
+  max-height: 300px;
+}
+.number > h3 {
+  font-size: 10px;
+  text-align: center;
+}
 label {
   width: calc(100% - var(--distance));
 }
