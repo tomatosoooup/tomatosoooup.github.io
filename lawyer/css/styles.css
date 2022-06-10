@@ -10,7 +10,8 @@
 
 :root {
     --distance: 15px;
-    --bgc--gray: #E5E5E5;
+    --bgc--gray: #e0e0e0;
+    /* E5E5E5 */
     --bgc--purp: #752F48;
 }
 
@@ -418,6 +419,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #fff;
 }
 
 .pic__date {
@@ -455,20 +457,36 @@ body {
 
 .new__info {
     margin-bottom: 10px;
-    overflow: hidden;
     max-height: 300px;
-    text-overflow: ellipsis;
-    overflow: hidden;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     padding: 10px 10px 0px;
+    background-color: #fff;
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.new__info>img {
+    margin: 0 auto 7px;
 }
 
 .new__info>a>p {
     max-height: 70px;
     color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .new__info:hover {
     transform: scale(1.1)
+}
+
+.visit {
+    border-top: 1px solid var(--bgc--gray);
+    position: absolute;
+    background-color: #fff;
+    right: 0px;
+    bottom: -19px;
+    color: #752F48;
+    font-size: 13px;
 }
