@@ -16,7 +16,7 @@
 html,
 body {
     min-height: 100vh;
-    width: 100vw;
+    box-sizing: inherit;
 }
 
 .header {
@@ -33,14 +33,19 @@ body {
 }
 
 .links>li {
-    margin-right: 2em;
+    margin-right: 3em;
     padding: 5px 10px;
-    opacity: 0.8;
 }
 
-.links>li:hover {
-    opacity: 1;
+.links li a {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.links>li:hover,
+.links>li>a:hover {
     transform: scale(1.1);
+    opacity: 1;
 }
 
 .links>li:first-child {
@@ -79,19 +84,24 @@ body {
 .photo-description {
     display: flex;
     justify-content: space-between;
-    margin: 40px auto 0px;
-    height: 45vh;
+    align-items: flex-end;
+    margin: 5vh auto;
+    height: 50vh;
     background-color: var(--orange--color);
-    position: relative;
 }
 
-.photo>img {
-    width: 450px;
-    position: absolute;
-    left: 0;
-    bottom: 0px;
+.photo {
+    width: 100%;
+    height: 550px;
+    display: block;
 }
 
 .description {
+    align-self: flex-start;
     padding: 20px 0px 5px;
+}
+
+.sertificates {
+    min-height: 100vh;
+    background-color: #00B268;
 }
