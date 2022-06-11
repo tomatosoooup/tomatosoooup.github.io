@@ -17,5 +17,8 @@ https://tomatosoooup.github.io/mod5_solution/
 # Lawyer
 https://tomatosoooup.github.io/lawyer/
 
+# Oftalmic
+https://tomatosoooup.github.io/oftalmic/
+
 
 
