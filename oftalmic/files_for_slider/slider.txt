@@ -1,0 +1,21 @@
+﻿<div class="licenses-inner col-lg-10 col-md-10 col-tb-10 col-sm-10 carousel_inner slick-initialized slick-slider"><button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
+                    <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 20000px; transform: translate3d(-150px, 0px, 0px);"><div class="license-container carousel_item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1">
+                        <img src="images/sertificate.png" alt="">
+                    </div><div class="license-container carousel_item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="">
+                        <img src="images/sertificate.png" alt="">
+                    </div><div class="license-container carousel_item slick-slide" data-slick-index="1" aria-hidden="true" tabindex="">
+                        <img src="images/sertificate.png" alt="">
+                    </div><div class="license-container carousel_item slick-slide" data-slick-index="2" aria-hidden="true" tabindex="">
+                        <img src="images/sertificate.png" alt="">
+                    </div><div class="license-container carousel_item slick-slide" data-slick-index="3" aria-hidden="true" tabindex="">
+                        <img src="images/sertificate.png" alt="">
+                    </div><div class="license-container carousel_item slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" tabindex="">
+                        <img src="images/sertificate.png" alt="">
+                    </div><div class="license-container carousel_item slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="">
+                        <img src="images/sertificate.png" alt="">
+                    </div><div class="license-container carousel_item slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="">
+                        <img src="images/sertificate.png" alt="">
+                    </div><div class="license-container carousel_item slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" tabindex="">
+                        <img src="images/sertificate.png" alt="">
+                    </div></div></div>
+<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button></div>
