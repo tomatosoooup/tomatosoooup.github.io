@@ -243,6 +243,7 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+
     .license-container img:hover {
         transform: scale(1);
     }
@@ -426,8 +427,9 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+
     .license-container img:hover {
-        transform: scale(1.1);
+        transform: scale(1);
     }
 
     .study {

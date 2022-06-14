@@ -199,6 +199,7 @@ body {
 
 .license-container {
     height: 250px;
+    width: 250px;
 }
 
 .license-container img {
@@ -219,13 +220,7 @@ body {
 }
 
 .slick-initialized .slick-slide {
-    height: 200px;
-    width: 150px;
-}
-
-
-.slick-slider {
-    padding: 25px 30px;
+    display: flex;
 }
 
 .carousel .slick-arrow {
@@ -234,29 +229,32 @@ body {
     margin: -30px 0 0 0;
     z-index: 10;
     font-size: 0;
-    width: 30px;
-    height: 50px;
+    width: 20px;
+    height: 40px;
     border: none;
 }
 
 .carousel .slick-arrow.slick-prev {
-    left: -5px;
+    left: 10px;
     background: url(../images/chevron-left-solid.svg) 0 0 /100% no-repeat;
     opacity: 0.5;
 }
 
 .carousel .slick-arrow.slick-next {
-    right: -5px;
+    right: 10px;
     background: url(../images/chevron-right-solid.svg) 0 0 /100% no-repeat;
     opacity: 0.5;
 }
 
 .carousel_inner {
     cursor: pointer;
+    justify-content: center;
 }
 
 .carousel_item {
-    padding: 0px 10px;
+    margin: 0 auto;
+    padding: 10px 45px;
 }
+
 
 /* Конец блока сертификатов и лицензий */
