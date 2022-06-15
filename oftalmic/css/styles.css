@@ -92,7 +92,8 @@ body {
     align-items: flex-end;
     margin: 5vh auto;
     height: 50vh;
-    background-color: var(--orange--color);
+    background: url(../images/frame-doctor.jpg) no-repeat 47% 53%;
+    background-size: cover;
 }
 
 .photo {
@@ -109,9 +110,7 @@ body {
 /* Описание и фотка конец */
 /* Блок сертификатов и лицензий */
 .sertificates {
-    min-height: 100vh;
-    /*fit-content*/
-    /* background-color: #00B268; */
+    min-height: fit-content;
 }
 
 .sertificates>h2 {
@@ -128,7 +127,6 @@ body {
 
 .study-wrapper {
     height: fit-content;
-    /* background-color: bisque; */
 }
 
 .study-inner {
@@ -195,6 +193,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
+    padding: 10px 20px;
 }
 
 .license-container {
@@ -219,19 +218,16 @@ body {
     position: relative;
 }
 
-.slick-initialized .slick-slide {
-    display: flex;
-}
-
 .carousel .slick-arrow {
     position: absolute;
     top: 50%;
     margin: -30px 0 0 0;
     z-index: 10;
     font-size: 0;
-    width: 20px;
-    height: 40px;
+    width: 30px;
+    height: 50px;
     border: none;
+    cursor: pointer;
 }
 
 .carousel .slick-arrow.slick-prev {
@@ -248,7 +244,6 @@ body {
 
 .carousel_inner {
     cursor: pointer;
-    justify-content: center;
 }
 
 .carousel_item {
@@ -256,5 +251,94 @@ body {
     padding: 10px 45px;
 }
 
+.questions_inner_2 {
+    width: 100%;
+    height: 300px;
+    border-radius: 25px;
+}
+
+.question_item_2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    background-color: #fff;
+    padding: 25px 20px;
+    margin: 0px 10px;
+    position: relative;
+}
+
+.question_item_2 p {
+    margin-top: 20px;
+    max-height: 110px;
+    overflow: hidden;
+}
+
+.question_item_2 span {
+    color: var(--green--color);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.1em;
+}
 
 /* Конец блока сертификатов и лицензий */
+/* Начало большого блока (3 шт.)*/
+.big-wrapper {
+    min-height: 300vh;
+    background-color: #00B268;
+}
+
+.big-wrapper h2 {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.questions {
+    margin: 0 auto;
+}
+
+.questions_inner {
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.question {
+    width: 30%;
+    border-radius: 25px;
+    background-color: #fff;
+    height: 250px;
+    padding: 25px 20px;
+    position: relative;
+}
+
+.question p {
+    margin-top: 20px;
+    max-height: 110px;
+    overflow: hidden;
+}
+
+.question span {
+    color: var(--green--color);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.1em;
+}
+
+.question:nth-child(2),
+.question:nth-child(3),
+.question:nth-child(6) {
+    height: 350px;
+}
+
+.question:nth-child(2)>p,
+.question:nth-child(3)>p,
+.question:nth-child(6)>p {
+    max-height: 160px;
+}
