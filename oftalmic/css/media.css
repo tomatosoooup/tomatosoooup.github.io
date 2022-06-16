@@ -4,6 +4,8 @@
 
 /********** Large devices only **********/
 @media screen and (min-width: 993px) and (max-width: 1280px) {
+
+    /* Блок отзывов */
     .review {
         flex-wrap: wrap;
     }
@@ -14,6 +16,7 @@
         max-width: 350px;
     }
 
+    /* Конец блока отзывов */
     .row-flex {
         width: 100%;
         margin-top: 5vh;
@@ -84,6 +87,28 @@
 
 /********** Laptops devices only **********/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+    #footer_request p {
+        display: none;
+    }
+
+    #footer_request {
+        padding: 50px 0px 0px;
+        text-align: center;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #footer_image {
+        display: none;
+    }
+
+    /* Блок отзывов */
     .review {
         flex-wrap: wrap;
     }
@@ -94,6 +119,7 @@
         max-width: 300px;
     }
 
+    /* Конец блока отзывов */
     body.lock {
         overflow: hidden;
     }
@@ -262,6 +288,21 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+    #footer_request p {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #footer_image {
+        display: none;
+    }
 
     /* Блок с отзывами начался */
     .user_photo {
@@ -517,6 +558,21 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+    #footer_request p {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #footer_image {
+        display: none;
+    }
 
     /* Блок с отзывами начался */
     .user_photo {
@@ -740,7 +796,7 @@
         width: 100%;
         height: 2px;
         left: 0;
-        transition: all 0.3s ease 0s;
+        transition: all 0.2s ease 0s;
     }
 
     .menu-burger:before {

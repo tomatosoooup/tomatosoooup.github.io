@@ -27,7 +27,7 @@ $(".reviews_inner").slick({
 });
 // Конец слайдера с отзывами
 
-if ($(window).width() < 768) {
+if ($(window).width() <= 768) {
   //это карусель с лицензиями и сертификатами
   $(".license-container").removeClass("col-lg-5 col-md-5 col-tb-5 col-sm-5");
   $(".licenses-wrapper").addClass("carousel");
@@ -81,7 +81,7 @@ $(document).ready(function () {
 $(window).resize(function (event) {
   let sliderAdd = true;
   let sliderClose = true;
-  if ($(window).width() < 768) {
+  if ($(window).width() <= 768) {
     sliderClose = false;
 
     if (sliderClose == false) {
@@ -127,7 +127,7 @@ $(window).resize(function (event) {
     }
   }
 
-  if ($(window).width() >= 768) {
+  if ($(window).width() > 768) {
     sliderAdd = false;
 
     if (sliderAdd == false) {

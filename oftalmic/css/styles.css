@@ -105,6 +105,8 @@ body {
     width: 100%;
     height: 500px;
     display: block;
+    background: url(../images/photo-doctor.png) no-repeat 60% 100%;
+    background-size: contain;
 }
 
 .description {
@@ -314,7 +316,7 @@ li {
     margin: 0 0.25rem;
 }
 
-button {
+li>button {
     display: block;
     width: 1rem;
     height: 1rem;
@@ -337,9 +339,11 @@ li.slick-active button {
 /* Конец блока сертификатов и лицензий */
 /* Начало большого блока (3 шт.)*/
 .big-wrapper {
-    min-height: 400vh;
+    min-height: fit-content;
     background: url(../images/big-frame.jpg) no-repeat 45% 55%;
     background-size: cover;
+    position: relative;
+    padding-bottom: 150px;
 }
 
 .big-wrapper h2 {
@@ -526,4 +530,120 @@ li.slick-active button {
     width: 40px;
     height: 40px;
     display: block;
+}
+
+.map {
+    height: 250px;
+    background-color: #fff;
+    position: absolute;
+    left: 4.16%;
+    bottom: -150px;
+}
+
+.map div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map div span {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(128, 124, 124, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.location {
+    min-height: fit-content;
+    padding-top: 175px;
+}
+
+.location_inner {
+    margin: 0 auto;
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
+
+.location_item {
+    padding: 15px 25px 10px 15px;
+    font-weight: bold;
+}
+
+.location_item h3,
+.location_item h4:first-of-type {
+    margin-top: 30px;
+}
+
+.location_item p {
+    margin-top: 25px;
+    font-weight: 500;
+    color: #807C7C;
+    max-width: 200px;
+}
+
+.location_item h4,
+.location_item h5 {
+    margin-top: 15px;
+}
+
+.footer {
+    margin: 0 auto;
+    background: url(../images/frame-request.jpg) no-repeat 30% 30%;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#footer_request {
+    padding: 50px 0px 0px 60px;
+}
+
+#footer_request p {
+    margin-top: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+#footer_request h2 {
+    font-weight: bold;
+    color: white;
+}
+
+#footer_image {
+    background: url(../images/photo-doctor.png) no-repeat;
+    background-size: contain;
+    display: block;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+label {
+    width: 100%
+}
+
+input[type='text'],
+input[type='tel'] {
+    width: 100%;
+    padding: 10px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
 }

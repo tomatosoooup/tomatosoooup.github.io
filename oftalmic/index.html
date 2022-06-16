@@ -36,9 +36,7 @@
     </div> <!-- fio -->
     </div> <!-- row with fio -->
     <div class="photo-description col-lg-11 col-md-11 col-tb-12 col-sm-12">
-        <div class="col-lg-5 col-md-5 col-tb-6 col-sm-6">
-            <img src="images/photo-doctor.png" alt="doctor" id="doctor" class="photo">
-        </div>
+        <div class="photo col-lg-5 col-md-5 col-tb-6 col-sm-6"></div>
         <div class="description col-lg-5 col-md-5 col-tb-5 col-sm-5">
             <h3>Досвід та досягнення</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum dolorem, consectetur corporis in
@@ -235,7 +233,61 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="show_more" id="show-3">
+            <div><a href="#">Написати відгук</a></div>
+        </div> <!-- end of block w reviews -->
+        <div class="map col-lg-11 col-md-11 col-tb-11 col-sm-11">
+            <a href="https://goo.gl/maps/9GW4FhTntYzz5HQ7A" target="_blank">
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4733783192128!2d30.47659789999999!3d50.4509091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce8668c99a23%3A0xab703b8837af2264!2zMUEsINGD0LsuINCo0L7Qu9GD0LTQtdC90LrQviwgMdCQLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1655408705190!5m2!1sru!2sua"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <span>Де ми знаходимось</span>
+                </div>
+            </a>
+        </div>
+    </div> <!-- big wrapper for 3 slides-->
+    <div class="location">
+        <div class="location_inner col-lg-10 col-md-10 col-tb-10">
+            <div class="location_item col-lg-4 col-md-4 col-tb-4 col-sm-12">
+                <span>м.Київ</span>
+                <h3>вул. Шолуденко, 1А, Київ</h3>
+                <p>Парковка со стороны двора
+                    на домофоне набрать кв 7</p>
+            </div>
+            <div class="location_item col-lg-4 col-md-4 col-tb-4 col-sm-12">
+                <span>Режим роботи</span>
+                <h4>ПН,ЧТ,СБ - Прийом у кабінеті</h4>
+                <h4>ВТ,СР,ПТ - Виїзд до лікарні</h4>
+                <h4>НД - Вихідний</h4>
+            </div>
+            <div class="location_item col-lg-4 col-md-4 col-tb-4 col-sm-12">
+                <span>Контакти</span>
+                <h3>+380 (99) 485 27 98</h3>
+                <h5>Щоденно з 08:00 до 23:00</h5>
+                <h5>Email: doc@kyiv.ua</h5>
+            </div>
+        </div> <!-- location inner -->
+        <div class="footer col-lg-11 col-md-11 col-tb-11 col-sm-11">
+            <div class="col-lg-3 col-md-12 col-tb-12 col-sm-12" id="footer_request">
+                <h2>Запишіться на прийом</h2>
+                <p>Залиште свій номер та телефон і я з вами зв'яжусь</p>
+            </div>
+            <div class="col-lg-4" id="footer_image"></div>
+            <div class="col-lg-3 col-md-4 col-tb-4 col-sm-4">
+                <form action="" class="form">
+                    <label for="fio">
+                        <input type="text" name="fio">
+                    </label>
+                    <label for="telephone">
+                        <input type="tel" name="telephone">
+                    </label>
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </div>
+    </div> <!-- container w location information -->
     <!-- Подключение jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="js/slick.min.js"></script>
