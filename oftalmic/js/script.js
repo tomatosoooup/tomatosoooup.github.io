@@ -1,5 +1,4 @@
-﻿const widthOnStart = window.innerWidth;
-if (widthOnStart < 768) {
+﻿if ($(window).width() < 768) {
   //это карусель с лицензиями и сертификатами
   $(".license-container").removeClass("col-lg-5 col-md-5 col-tb-5 col-sm-5");
   $(".licenses-wrapper").addClass("carousel");
@@ -31,24 +30,33 @@ if (widthOnStart < 768) {
     adaptiveHeight: true,
     arrows: false,
   });
+
+  // Удаление или добавление пунктов услуг
+  if ($(window).width() <= 600) {
+    let options_li = document.getElementById("li_container").children;
+    let items = [].slice.call(options_li);
+    $(items.slice(4)).addClass("disable");
+  } else {
+    $(".flex_li").removeClass("disable");
+  }
+  // Конец удаления подключения пунктов
 }
 $(document).ready(function () {
+  // Включение меню бургера при нажатии на кнопку
   $(".menu-burger").click(function (event) {
     $(".menu-burger, .menu").toggleClass("active");
     $("body").toggleClass("lock");
   });
 });
-
+// Здесь я подключаю или отключаю слайдеры, в зависимости от размера экрана
 $(window).resize(function (event) {
   // let width = window.innerWidth;
   let sliderAdd = true;
   let sliderClose = true;
   if ($(window).width() < 768) {
     sliderClose = false;
-    console.log(sliderClose + " " + "now add");
 
     if (sliderClose == false) {
-      console.log("Now I should add sliders");
       let sliders = {
         1: { slider: "#slider_1", class: "carousel_inner" },
         2: { slider: "#slider_2", class: "carousel_inner" },
@@ -93,10 +101,8 @@ $(window).resize(function (event) {
 
   if ($(window).width() >= 768) {
     sliderAdd = false;
-    console.log(sliderAdd + " " + "now close");
 
     if (sliderAdd == false) {
-      console.log("Now I should close sliders");
       let sliders = {
         1: { slider: "#slider_1" },
         2: { slider: "#slider_2" },
@@ -119,4 +125,14 @@ $(window).resize(function (event) {
       $(".question").removeClass("question_item_2");
     }
   }
+  // Конец подключения слайдеров
+  // Удаление или добавление пунктов услуг
+  if ($(window).width() <= 600) {
+    let options_li = document.getElementById("li_container").children;
+    let items = [].slice.call(options_li);
+    $(items.slice(4)).addClass("disable");
+  } else {
+    $(".flex_li").removeClass("disable");
+  }
+  // Конец удаления подключения пунктов
 });

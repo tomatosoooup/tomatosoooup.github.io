@@ -243,8 +243,17 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+
+    .prices {
+        max-width: 325px;
+    }
+
+    #show-1 {
+        display: none;
+    }
+
     .big-wrapper h2 {
-        margin-bottom: 35px;
+        margin-bottom: 30px;
     }
 
     .license-container img:hover {
@@ -430,6 +439,64 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+
+    /* Начало списка услуг */
+    .prices {
+        max-width: 325px;
+    }
+
+    .options_inner {
+        width: 90%;
+        margin: 0 auto;
+        height: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .flex_li {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 25px;
+    }
+
+    .flex_li h4 {
+        margin: 0 auto;
+        font-weight: bolder;
+        font-size: medium;
+        font-size: 21px;
+    }
+
+    .flex_li span {
+        color: black;
+        margin: 0px auto;
+        font-size: 18px;
+    }
+
+    .flex_li:last-child,
+    .flex_li:first-child {
+        height: 200px;
+    }
+
+    .flex_li:nth-child(odd) {
+        background-color: var(--gray--color);
+    }
+
+    .flex_li.disable {
+        display: none;
+    }
+
+    /* Конец списка услуг */
+    .show_more div {
+        display: none;
+    }
+
     .big-wrapper h2 {
         margin-bottom: 35px;
     }
@@ -622,5 +689,32 @@
 
     .col-sm-12 {
         width: 100%;
+    }
+}
+
+/* keyframes for shaking button */
+@keyframes effect {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+    20% {
+        transform: translateX(-4px) rotate(-4deg);
+    }
+
+    40% {
+        transform: translateX(-2px) rotate(-2deg);
+    }
+
+    60% {
+        transform: translateX(4px) rotate(4deg);
+    }
+
+    80% {
+        transform: translateX(2px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(0deg);
     }
 }
