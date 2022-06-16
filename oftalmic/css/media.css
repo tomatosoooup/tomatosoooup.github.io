@@ -5,6 +5,12 @@
 /********** Large devices only **********/
 @media screen and (min-width: 993px) and (max-width: 1280px) {
 
+    .review_text p,
+    .review_text h3,
+    .review_text span {
+        max-width: 350px;
+    }
+
     .row-flex {
         width: 100%;
         margin-top: 5vh;
@@ -75,6 +81,13 @@
 
 /********** Laptops devices only **********/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+
+    .review_text p,
+    .review_text h3,
+    .review_text span {
+        max-width: 300px;
+    }
+
     body.lock {
         overflow: hidden;
     }
@@ -244,6 +257,43 @@
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
 
+    /* Блок с отзывами начался */
+    .review {
+        height: fit-content;
+        width: 450px;
+    }
+
+    .review_text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .review_text span {
+        color: var(--orange--color);
+        font-weight: bold;
+    }
+
+    .user_photo {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin-right: 10px;
+    }
+
+    .quotes {
+        margin: 10px 0px 0px 0px;
+        width: 40px;
+        height: 40px;
+        display: block;
+    }
+
+    .review_text p,
+    .review_text h3,
+    .review_text span {
+        max-width: 250px;
+    }
+
+    /* Блок с отзывами закончился */
     .prices {
         max-width: 325px;
     }

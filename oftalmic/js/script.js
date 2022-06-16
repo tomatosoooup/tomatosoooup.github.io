@@ -1,4 +1,33 @@
-﻿if ($(window).width() < 768) {
+﻿// Подключение 3-го слайдера с отзывами
+$(".reviews_inner").slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  speed: 800,
+  infinite: true,
+  // autoplay: true,
+  // autoplaySpeed: 5000,
+  pauseOnHover: true,
+  arrows: false,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
+// Конец слайдера с отзывами
+
+if ($(window).width() < 768) {
   //это карусель с лицензиями и сертификатами
   $(".license-container").removeClass("col-lg-5 col-md-5 col-tb-5 col-sm-5");
   $(".licenses-wrapper").addClass("carousel");

@@ -1,13 +1,11 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-* {
+﻿* {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
     color: black;
-    font-family: 'Noto Sans sans-serif';
+    font-family: 'Futura PT', sans-serif;
 }
 
 :root {
@@ -20,7 +18,7 @@
 html,
 body {
     min-height: 100vh;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 /* Меню начало */
@@ -44,7 +42,8 @@ body {
 
 .links li a {
     font-size: 18px;
-    opacity: 0.9;
+    opacity: 0.6;
+    font-weight: medium;
 }
 
 .links>li:hover,
@@ -61,7 +60,10 @@ body {
     margin: 0;
 }
 
-/* .phone {} */
+.phone {
+    font-weight: medium;
+}
+
 /* Меню конец */
 /* Описание и фотка начало */
 .row-flex {
@@ -79,12 +81,14 @@ body {
 .fio>h2 {
     font-size: 35px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .fio>span {
     font-size: 20px;
     padding-bottom: 3px;
     border-bottom: 2px solid var(--orange--color);
+    font-weight: medium;
 }
 
 .photo-description {
@@ -108,6 +112,13 @@ body {
     padding: 20px 0px 5px;
 }
 
+.description h3,
+.description p {
+    color: white;
+    margin-top: 15px;
+    padding: 0px 10px 0px 0px;
+}
+
 /* Описание и фотка конец */
 /* Блок сертификатов и лицензий */
 .sertificates {
@@ -119,6 +130,7 @@ body {
     padding-top: 25px;
     margin-bottom: 20px;
     font-size: 25px;
+    font-weight: bold;
 }
 
 .licenses {
@@ -147,6 +159,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: medium;
 }
 
 #hat-text img {
@@ -267,11 +280,12 @@ body {
     padding: 25px 20px;
     margin: 0px 10px;
     position: relative;
+    flex-direction: column;
 }
 
 .question_item_2 p {
-    margin-top: 20px;
-    max-height: 110px;
+    margin-top: 18px;
+    max-height: 100px;
     overflow: hidden;
 }
 
@@ -283,10 +297,14 @@ body {
     font-size: 1.1em;
 }
 
+.slick-initialized .slick-slide {
+    display: flex;
+}
+
 /* Конец блока сертификатов и лицензий */
 /* Начало большого блока (3 шт.)*/
 .big-wrapper {
-    min-height: 300vh;
+    min-height: 400vh;
     background: url(../images/big-frame.jpg) no-repeat 45% 55%;
     background-size: cover;
 }
@@ -297,6 +315,7 @@ body {
     margin-bottom: 15px;
     color: #fff;
     font-size: 25px;
+    font-weight: bold;
 }
 
 .questions {
@@ -321,9 +340,13 @@ body {
     position: relative;
 }
 
+.question h4 {
+    font-size: 15px;
+}
+
 .question p {
-    margin-top: 20px;
-    max-height: 110px;
+    margin-top: 18px;
+    max-height: 100px;
     overflow: hidden;
     word-break: keep-all;
     /*break-all*/
@@ -346,7 +369,9 @@ body {
 .question:nth-child(2)>p,
 .question:nth-child(3)>p,
 .question:nth-child(6)>p {
-    max-height: 160px;
+    word-break: keep-all;
+    max-height: 168px;
+    overflow: hidden;
 }
 
 .show_more div {
@@ -422,4 +447,50 @@ body {
 
 .flex_li:nth-child(even) {
     background-color: #fff;
+}
+
+.reviews {
+    margin: 100px auto 0px;
+    display: flex;
+}
+
+.reviews_inner {
+    margin: 0 auto;
+}
+
+.review {
+    height: fit-content;
+    width: 450px;
+}
+
+.review_text p,
+.review_text h3,
+.review_text span {
+    color: white;
+    margin: 30px 0px 10px 50px;
+    max-width: 200px;
+}
+
+.review_text {
+    padding: 0px 10px 0px 20px;
+}
+
+.review_text span {
+    color: var(--orange--color);
+    font-weight: bold;
+}
+
+.user_photo {
+    width: 60px;
+    height: 60px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.quotes {
+    margin: 10px 0px 0px 0px;
+    width: 40px;
+    height: 40px;
+    display: block;
 }
