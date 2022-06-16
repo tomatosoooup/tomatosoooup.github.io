@@ -4,8 +4,8 @@ $(".reviews_inner").slick({
   slidesToScroll: 1,
   speed: 800,
   infinite: true,
-  // autoplay: true,
-  // autoplaySpeed: 5000,
+  autoplay: true,
+  autoplaySpeed: 5000,
   pauseOnHover: true,
   arrows: false,
   dots: true,
@@ -79,7 +79,6 @@ $(document).ready(function () {
 });
 // Здесь я подключаю или отключаю слайдеры, в зависимости от размера экрана
 $(window).resize(function (event) {
-  // let width = window.innerWidth;
   let sliderAdd = true;
   let sliderClose = true;
   if ($(window).width() < 768) {

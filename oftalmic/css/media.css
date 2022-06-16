@@ -4,6 +4,9 @@
 
 /********** Large devices only **********/
 @media screen and (min-width: 993px) and (max-width: 1280px) {
+    .review {
+        flex-wrap: wrap;
+    }
 
     .review_text p,
     .review_text h3,
@@ -81,6 +84,9 @@
 
 /********** Laptops devices only **********/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+    .review {
+        flex-wrap: wrap;
+    }
 
     .review_text p,
     .review_text h3,
@@ -258,21 +264,6 @@
 @media screen and (min-width: 601px) and (max-width: 768px) {
 
     /* Блок с отзывами начался */
-    .review {
-        height: fit-content;
-        width: 450px;
-    }
-
-    .review_text {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .review_text span {
-        color: var(--orange--color);
-        font-weight: bold;
-    }
-
     .user_photo {
         width: 60px;
         height: 60px;
@@ -287,10 +278,47 @@
         display: block;
     }
 
+    .reviews {
+        margin-top: 60px;
+    }
+
+    .review {
+        height: fit-content;
+        width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .review_text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .review_text p,
     .review_text h3,
     .review_text span {
-        max-width: 250px;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .review_text h3 {
+        order: 1;
+        margin: 30px 0px 0px 0px;
+        font-size: 25px;
+    }
+
+    .review_text span {
+        order: 2;
+        margin: 30px 0px 0px 0px;
+        font-size: 20px;
+    }
+
+    .review_text p {
+        order: 3;
+        margin: 30px 0px 0px 0px;
     }
 
     /* Блок с отзывами закончился */
@@ -490,6 +518,65 @@
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
 
+    /* Блок с отзывами начался */
+    .user_photo {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin-right: 10px;
+    }
+
+    .quotes {
+        margin: 10px 0px 0px 0px;
+        width: 40px;
+        height: 40px;
+        display: block;
+    }
+
+    .reviews {
+        margin-top: 50px;
+    }
+
+    .review {
+        height: fit-content;
+        width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .review_text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review_text p,
+    .review_text h3,
+    .review_text span {
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .review_text h3 {
+        order: 1;
+        margin: 30px 0px 0px 0px;
+        font-size: 25px;
+    }
+
+    .review_text span {
+        order: 2;
+        margin: 30px 0px 0px 0px;
+        font-size: 20px;
+    }
+
+    .review_text p {
+        order: 3;
+        margin: 30px 0px 0px 0px;
+    }
+
+    /* Блок с отзывами закончился */
     /* Начало списка услуг */
     .prices {
         max-width: 325px;

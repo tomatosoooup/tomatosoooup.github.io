@@ -43,7 +43,7 @@ body {
 .links li a {
     font-size: 18px;
     opacity: 0.6;
-    font-weight: medium;
+    font-weight: 500;
 }
 
 .links>li:hover,
@@ -61,7 +61,7 @@ body {
 }
 
 .phone {
-    font-weight: medium;
+    font-weight: 500;
 }
 
 /* Меню конец */
@@ -88,7 +88,7 @@ body {
     font-size: 20px;
     padding-bottom: 3px;
     border-bottom: 2px solid var(--orange--color);
-    font-weight: medium;
+    font-weight: 500;
 }
 
 .photo-description {
@@ -159,7 +159,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-weight: medium;
+    font-weight: 500;
 }
 
 #hat-text img {
@@ -301,6 +301,39 @@ body {
     display: flex;
 }
 
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 3rem 0;
+    list-style-type: none;
+}
+
+
+li {
+    margin: 0 0.25rem;
+}
+
+button {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: var(--orange--color);
+    opacity: 0.9;
+    font-size: 0px;
+    transition: all 0.2s ease 0.3s;
+}
+
+li.slick-active button {
+    background-color: var(--orange--color);
+    opacity: 1;
+    width: 2rem;
+    border-radius: 25px;
+}
+
 /* Конец блока сертификатов и лицензий */
 /* Начало большого блока (3 шт.)*/
 .big-wrapper {
@@ -428,7 +461,7 @@ body {
 .flex_li h4 {
     margin: 0px 0px 0px 60px;
     font-weight: bold;
-    font-size: medium;
+    font-size: 500;
 }
 
 .flex_li span {
