@@ -87,6 +87,11 @@
 
 /********** Laptops devices only **********/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+
+    .form_container {
+        padding: 0;
+    }
+
     #footer_request p {
         display: none;
     }
@@ -102,6 +107,10 @@
         justify-content: flex-start;
         align-items: center;
         gap: 40px;
+    }
+
+    .form_container {
+        padding: 0;
     }
 
     #footer_image {
@@ -288,8 +297,18 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+
+    .location_inner {
+        padding-bottom: 60px;
+    }
+
     #footer_request p {
         display: none;
+    }
+
+    #footer_request {
+        padding: 50px 0px 0px;
+        text-align: center;
     }
 
     .footer {
@@ -558,8 +577,22 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+
+    .form_container {
+        padding: 0;
+    }
+
+    .location_inner {
+        padding-bottom: 50px;
+    }
+
     #footer_request p {
         display: none;
+    }
+
+    #footer_request {
+        padding: 50px 0px 0px;
+        text-align: center;
     }
 
     .footer {

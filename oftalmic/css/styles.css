@@ -611,6 +611,7 @@ li.slick-active button {
 }
 
 #footer_request p {
+    max-width: 190px;
     margin-top: 20px;
     font-weight: 500;
     color: white;
@@ -627,23 +628,51 @@ li.slick-active button {
     display: block;
 }
 
+.form_container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-right: 40px;
+}
+
 .form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
 }
 
-label {
-    width: 100%
+.form label {
+    width: 250px;
+    height: fit-content;
 }
 
 input[type='text'],
 input[type='tel'] {
     width: 100%;
-    padding: 10px;
+    height: 45px;
+    background-color: #128B59;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: white;
+    background-color: #128B59;
 }
 
 .form button {
     width: 100%;
-    padding: 10px;
+    height: 40px;
+    background-color: #ffffff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form button:hover {
+    transform: translateY(-2px);
 }
