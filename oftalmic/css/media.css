@@ -424,6 +424,7 @@
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
+        z-index: 5;
     }
 
     .menu.active {
@@ -461,10 +462,12 @@
 
     .menu-burger {
         display: block;
-        position: relative;
+        position: fixed;
+        right: 30px;
+        top: 40px;
         width: 30px;
         height: 20px;
-        z-index: 3;
+        z-index: 6;
     }
 
     .menu-burger.active span {

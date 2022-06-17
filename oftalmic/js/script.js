@@ -77,6 +77,15 @@ $(document).ready(function () {
     $("body").toggleClass("lock");
   });
 });
+// это плавный переход ко всем слайдам по нажатию пункта меню
+$("#menu").on("click", "a", function (event) {
+  event.preventDefault();
+  let id = $(this).attr("href");
+  let top = $(id).offset().top;
+  $("body,html").animate({ scrollTop: top }, 1500);
+  $(".menu-burger, .menu").toggleClass("active");
+  $("body").toggleClass("lock");
+});
 // Здесь я подключаю или отключаю слайдеры, в зависимости от размера экрана
 $(window).resize(function (event) {
   let sliderAdd = true;
