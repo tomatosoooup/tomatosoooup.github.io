@@ -143,6 +143,7 @@
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
+        z-index: 10;
     }
 
     .menu.active {
@@ -180,11 +181,12 @@
 
     .menu-burger {
         display: block;
-        position: relative;
+        position: fixed;
+        right: 30px;
+        top: 40px;
         width: 30px;
         height: 20px;
-        z-index: 3;
-        padding: 10px;
+        z-index: 11;
     }
 
     .menu-burger.active span {
@@ -424,7 +426,7 @@
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
-        z-index: 5;
+        z-index: 10;
     }
 
     .menu.active {
@@ -467,7 +469,7 @@
         top: 40px;
         width: 30px;
         height: 20px;
-        z-index: 6;
+        z-index: 11;
     }
 
     .menu-burger.active span {
@@ -756,6 +758,7 @@
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
+        z-index: 10;
     }
 
     .menu.active {
@@ -793,10 +796,12 @@
 
     .menu-burger {
         display: block;
-        position: relative;
+        position: fixed;
+        right: 30px;
+        top: 40px;
         width: 30px;
         height: 20px;
-        z-index: 3;
+        z-index: 11;
     }
 
     .menu-burger.active span {

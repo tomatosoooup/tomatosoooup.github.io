@@ -86,6 +86,7 @@ $("#menu").on("click", "a", function (event) {
   $(".menu-burger, .menu").toggleClass("active");
   $("body").toggleClass("lock");
 });
+
 // Здесь я подключаю или отключаю слайдеры, в зависимости от размера экрана
 $(window).resize(function (event) {
   let sliderAdd = true;
