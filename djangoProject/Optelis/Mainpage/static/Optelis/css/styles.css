@@ -312,7 +312,7 @@ body {
 }
 
 
-li {
+.slick-dots li {
     margin: 0 0.25rem;
 }
 
@@ -382,12 +382,14 @@ li.slick-active button {
 }
 
 .question p {
-    margin-top: 18px;
+    margin: 18px 0px 0px 0px;
     max-height: 100px;
+    max-width: 260px;
     overflow: hidden;
-    word-break: keep-all;
-    /*break-all*/
+    word-wrap: break-word;
+    padding: 0px 5px 0px 0px;
 }
+
 
 .question span {
     color: var(--green--color);
@@ -406,9 +408,7 @@ li.slick-active button {
 .question:nth-child(2)>p,
 .question:nth-child(3)>p,
 .question:nth-child(6)>p {
-    word-break: keep-all;
     max-height: 168px;
-    overflow: hidden;
 }
 
 .show_more div {
