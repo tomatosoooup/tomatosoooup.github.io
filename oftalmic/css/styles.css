@@ -659,7 +659,6 @@ input[type='tel'] {
 
 input::placeholder {
     color: white;
-    background-color: #128B59;
 }
 
 .form button {
