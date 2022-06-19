@@ -121,42 +121,17 @@
     <h2>Відгуки</h2>
     <div class="reviews col-lg-11 col-md-11 col-tb-11 col-sm-11" id="reviews">
         <div class="reviews_inner col-lg-10 col-md-10 col-tb-10 col-sm-10" id="slider_3">
+            {% for rewiev in context.rewievs %}
             <div class="review">
                 <img src="{% static 'Optelis/images/man-circle.png' %}" alt="" class="user_photo">
                 <img src="{% static 'Optelis/images/quotes.png' %}" alt="quotes" class="quotes">
                 <div class="review_text">
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
-                        Lorem
-                        Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона
-                    </p>
-                    <h3>Manuel Ross</h3>
-                    <span>Пацієнт</span>
+                    <p>{{ rewiev.rewiev_text }}</p>
+                    <h3>{{ rewiev }}</h3>
+                    <span>{{ rewiev.user_type }}</span>
                 </div>
             </div>
-            <div class="review">
-                <img src="{% static 'Optelis/images/woman-circle.png' %}" alt="" class="user_photo">
-                <img src="{% static 'Optelis/images/quotes.png' %}" alt="quotes" class="quotes">
-                <div class="review_text">
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
-                        Lorem
-                        Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона
-                    </p>
-                    <h3>Manuel Ross</h3>
-                    <span>Пацієнт</span>
-                </div>
-            </div>
-            <div class="review">
-                <img src="{% static 'Optelis/images/woman-circle.png' %}" alt="" class="user_photo">
-                <img src="{% static 'Optelis/images/quotes.png' %}" alt="quotes" class="quotes">
-                <div class="review_text">
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
-                        Lorem
-                        Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона
-                    </p>
-                    <h3>Manuel Ross</h3>
-                    <span>Пацієнт</span>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <div class="show_more" id="show-3">
@@ -202,13 +177,13 @@
         </div>
         <div class="col-lg-4" id="footer_image"></div>
         <div class="form_container col-lg-3 col-md-6 col-tb-8 col-sm-10">
-            <form action="" class="form">
-                <label for="fio">
-                    <input type="text" name="fio" placeholder="Ваше ім'я та прізвище">
+            <form class="form" method="POST" action="{% url 'thanks_page' %}">
+                {% csrf_token %}
+                {% for item in context.form %}
+                <label for="{{ item.id_for_label }}">
+                    {{ item }}
                 </label>
-                <label for="telephone">
-                    <input type="tel" name="telephone" placeholder="Номер телефону">
-                </label>
+                {% endfor %}
                 <button type="submit">Відправити</button>
             </form>
         </div>

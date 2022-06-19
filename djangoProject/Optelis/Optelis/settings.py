@@ -31,6 +31,9 @@ INSTALLED_APPS = [
     'Sertificates.apps.SertificatesConfig',
     'Questions.apps.QuestionsConfig',
     'Options.apps.OptionsConfig',
+    'Rewievs.apps.RewievsConfig',
+    'Order.apps.OrderConfig',
+    'TelebotMessage.apps.TelebotmessageConfig',
 ]
 
 MIDDLEWARE = [
@@ -96,7 +99,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 

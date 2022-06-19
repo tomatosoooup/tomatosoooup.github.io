@@ -13,5 +13,5 @@ class Option(models.Model):
         return self.name_of_option
 
     class Meta:
-        verbose_name = "Послуги"
-        verbose_name_plural = "Послуга"
+        verbose_name = "Послуга"
+        verbose_name_plural = "Послуги"
