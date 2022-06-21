@@ -1,6 +1,11 @@
 ﻿{% extends 'Optelis/base.html' %}
 {% load static %}
 {% block title %}Optelis{% endblock %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'Optelis/css/slider.css' %}">
+<link rel="stylesheet" href="{% static 'Optelis/css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'Optelis/css/media.css' %}">
+{% endblock %}
 {% block content %}
 <div class="header col-lg-11 col-md-11 col-tb-11 col-sm-11" id="header">
     <div class="logo">
@@ -92,7 +97,7 @@
             <div class="question">
                 <h4>{{question}}</h4>
                 <p>{{question.answer}}</p>
-                <span>Детальніше...</span>
+                <a href="question/{{ question.pk }}"><span>Детальніше...</span></a>
             </div>
             {% endfor %}
             <!--question -->
@@ -115,9 +120,6 @@
             {% endfor %}
         </ul> <!-- options inner -->
     </div> <!-- options -->
-    <div class="show_more" id="show-2">
-        <div><a href="#">Показати ще</a></div>
-    </div> <!-- end of block w options -->
     <h2>Відгуки</h2>
     <div class="reviews col-lg-11 col-md-11 col-tb-11 col-sm-11" id="reviews">
         <div class="reviews_inner col-lg-10 col-md-10 col-tb-10 col-sm-10" id="slider_3">

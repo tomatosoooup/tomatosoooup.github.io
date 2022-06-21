@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from Sertificates.models import *
 from Questions.models import *
@@ -37,3 +37,8 @@ def thanks_page(request):
     element.save()
     sendTelegram(tg_name=user, tg_phone=phone)
     return render(request, 'Optelis/thanks_page.html', {'name': user})
+
+
+def single_question(request, pk):
+    question = get_object_or_404(Question, pk=pk)
+    return render(request, 'Optelis/single_question.html', {'question': question})

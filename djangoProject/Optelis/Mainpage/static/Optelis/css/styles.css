@@ -399,6 +399,14 @@ li.slick-active button {
     font-size: 1.1em;
 }
 
+.question span:hover {
+    transform: translateX(2px) translateY(-2px);
+}
+
+.question span a {
+    cursor: pointer;
+}
+
 .question:nth-child(2),
 .question:nth-child(3),
 .question:nth-child(6) {

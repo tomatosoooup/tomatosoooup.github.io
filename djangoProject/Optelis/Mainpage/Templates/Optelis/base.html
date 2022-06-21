@@ -8,9 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{% static 'Optelis/fonts/Futura PT/futura.css' %}">
-    <link rel="stylesheet" href="{% static 'Optelis/css/slider.css' %}">
-    <link rel="stylesheet" href="{% static 'Optelis/css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'Optelis/css/media.css' %}">
+    {% block links %} {% endblock %}
     <title>{% block title %} {% endblock %}</title>
 </head>
 
