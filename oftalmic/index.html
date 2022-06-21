@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="fonts/Futura PT/futura.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/media.css">
     <title>Optelis</title>
 </head>
@@ -109,14 +110,14 @@
                         диагноз водянка яичек</h4>
                     <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem
                         Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</p>
-                    <span>Детальніше...</span>
+                    <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
                 </div>
                 <div class="question">
                     <h4>Моему сыну 3 месяца, ему ставят
                         диагноз водянка яичек</h4>
                     <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem
                         Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</p>
-                    <span>Детальніше...</span>
+                    <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
                 </div>
                 <div class="question">
                     <h4>Моему сыну 3 месяца, ему ставят
@@ -125,28 +126,30 @@
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eaque possimus repudiandae
                         obcaecati blanditiis, qui deleniti sunt amet doloribus quam. Ipsum используют потому, что тот
                         обеспечивает более или менее стандартное заполнение шаблона</p>
-                    <span>Детальніше...</span>
+                    <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
                 </div>
                 <div class="question">
                     <h4>Моему сыну 3 месяца, ему ставят
                         диагноз водянка яичек</h4>
                     <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem
                         Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</p>
-                    <span>Детальніше...</span>
+                    <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
+                </div>
+                <div class="question">
+                    <h4>Моему сыну 3 месяца, ему ставят
+                        диагноз водянка яичек</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam cupiditate inventore tempora
+                        reprehenderit debitis rerum dolor ipsum quas culpa asperiores.Давно выяснено, что при оценке
+                        дизайна и композиции читаемый текст мешает сосредоточиться. Lorem
+                        Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</p>
+                    <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
                 </div>
                 <div class="question">
                     <h4>Моему сыну 3 месяца, ему ставят
                         диагноз водянка яичек</h4>
                     <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem
                         Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</p>
-                    <span>Детальніше...</span>
-                </div>
-                <div class="question">
-                    <h4>Моему сыну 3 месяца, ему ставят
-                        диагноз водянка яичек</h4>
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem
-                        Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</p>
-                    <span>Детальніше...</span>
+                    <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
                 </div>
                 <!--question -->
             </div> <!-- questions inner-->
@@ -288,9 +291,19 @@
             </div>
         </div>
     </div> <!-- container w location information -->
+
+    <div class="popup-wrapper">
+        <div class="popup" id="popup">
+            <div class="popup__body">
+                <div class="popup__content"></div>
+                <a href="#" class="popup__close close-popup">Х</a>
+            </div>
+        </div>
+    </div>
     <!-- Подключение jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/popup.js"></script>
     <script src="js/script.js"></script>
 </body>
 
