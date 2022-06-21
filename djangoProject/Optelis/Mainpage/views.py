@@ -39,6 +39,6 @@ def thanks_page(request):
     return render(request, 'Optelis/thanks_page.html', {'name': user})
 
 
-def single_question(request, pk):
-    question = get_object_or_404(Question, pk=pk)
-    return render(request, 'Optelis/single_question.html', {'question': question})
+# def single_question(request, pk):
+#     question = get_object_or_404(Question, pk=pk)
+#     return render(request, 'Optelis/single_question.html', {'question': question})

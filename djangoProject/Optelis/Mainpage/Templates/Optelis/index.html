@@ -4,6 +4,7 @@
 {% block links %}
 <link rel="stylesheet" href="{% static 'Optelis/css/slider.css' %}">
 <link rel="stylesheet" href="{% static 'Optelis/css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'Optelis/css/popup.css' %}">
 <link rel="stylesheet" href="{% static 'Optelis/css/media.css' %}">
 {% endblock %}
 {% block content %}
@@ -63,7 +64,7 @@
                             практики”</p>
                         <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
                             сосредоточиться. Lorem Ipsum используют потому, что тот </p>
-                        <span>Детальніше...</span>
+                        <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
                     </div>
                     <div class="info col-lg-6 col-md-6 col-tb-11 col-sm-11">
                         <img src="{% static 'Optelis/images/student.png' %}" alt="student">
@@ -72,7 +73,7 @@
                             практики”</p>
                         <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
                             сосредоточиться. Lorem Ipsum используют потому, что тот </p>
-                        <span>Детальніше...</span>
+                        <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
                     </div>
                 </div>
             </div>
@@ -97,7 +98,7 @@
             <div class="question">
                 <h4>{{question}}</h4>
                 <p>{{question.answer}}</p>
-                <a href="question/{{ question.pk }}"><span>Детальніше...</span></a>
+                <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
             </div>
             {% endfor %}
             <!--question -->
@@ -191,8 +192,17 @@
         </div>
     </div>
 </div> <!-- container w location information -->
+<div class="popup-wrapper">
+    <div class="popup" id="popup">
+        <div class="popup__body">
+            <div class="popup__content"></div>
+            <a href="#" class="popup__close close-popup">Х</a>
+        </div>
+    </div>
+</div>
 <!-- Подключение jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{% static 'Optelis/js/slick.min.js' %}"></script>
+<script src="{% static 'Optelis/js/popup.js' %}"></script>
 <script src="{% static 'Optelis/js/script.js' %}"></script>
 {% endblock %}
