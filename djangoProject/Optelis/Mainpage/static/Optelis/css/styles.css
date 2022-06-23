@@ -664,6 +664,7 @@ input[type='tel'] {
     font-size: 16px;
 }
 
+
 input::placeholder {
     color: white;
 }
@@ -681,4 +682,19 @@ input::placeholder {
 
 .form button:hover {
     transform: translateY(-2px);
+}
+
+#id_name_rewiev {
+    background-color: #fff;
+    color: #000;
+}
+
+#id_name_rewiev::placeholder {
+    color: rgba(128, 124, 124, 0.7);
+}
+
+#id_user_text {
+    resize: none;
+    padding: 5px;
+    width: 250px;
 }

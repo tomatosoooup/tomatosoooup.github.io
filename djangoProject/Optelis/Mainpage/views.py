@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 
 from Sertificates.models import *
 from Questions.models import *
 from Options.models import *
 from Rewievs.models import Rewiev
 from TelebotMessage.sendmessage import sendTelegram
-from .forms import ContactForm
+from .forms import ContactForm, ReviewCommentForm
 from Order.models import Order
 
 # Create your views here.
@@ -13,6 +13,7 @@ from Order.models import Order
 
 def index(request):
     form = ContactForm()
+    rewiev_comment = ReviewCommentForm()
     context = {
         'menu': {
             'header': 'Головна',
@@ -20,11 +21,12 @@ def index(request):
             'options': 'Послуги та ціни',
             'contacts': 'Контакти'
         },
-        'sertificates': Sertificate.objects.all()[:4],
-        'questions': Question.objects.all()[:6],
+        'sertificates': Sertificate.objects.filter(publish_or_not=True)[:4],
+        'questions': Question.objects.filter(publish_or_not=True)[:6],
         'options': Option.objects.filter(publish_or_not=True)[:8],
-        'rewievs': Rewiev.objects.filter(publist_or_not=True)[:3],
-        'form': form
+        'rewievs': Rewiev.objects.filter(publish_or_not=True)[:4],
+        'form': form,
+        'comment': rewiev_comment,
     }
 
     return render(request, 'Optelis/index.html', {'context': context})
@@ -39,6 +41,9 @@ def thanks_page(request):
     return render(request, 'Optelis/thanks_page.html', {'name': user})
 
 
-# def single_question(request, pk):
-#     question = get_object_or_404(Question, pk=pk)
-#     return render(request, 'Optelis/single_question.html', {'question': question})
+def rewiev_page(request):
+    user_name = request.POST['name_rewiev']
+    user_rewiev_text = request.POST['user_text']
+    element = Rewiev(username=user_name, rewiev_text=user_rewiev_text)
+    element.save()
+    return render(request, 'Optelis/rewiev.html', {'text': user_rewiev_text, 'user_name': user_name})

@@ -1,0 +1,12 @@
+﻿{% extends 'Optelis/base.html' %}
+{% load static %}
+{% block title %}Замовлення{% endblock %}
+{% block links %}{% endblock %}
+{% block content %}
+<h3> {{ user_name }} </h3>
+<p> {{ text }} </p>
+<div style="width: 250px; height: 30px; background-color: gray; text-align: center; padding-top:10px">
+    <a href="{% url 'mainpage' %}" style="text-decoration: none; color:black; cursor: pointer;">Повернутись на
+        головну</a>
+</div>
+{% endblock %}

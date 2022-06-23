@@ -22,7 +22,7 @@
             {% endfor %}
         </ul>
     </nav> <!-- menu -->
-    <h4 class="phone">+380 (99) 485 27 98</h4> <!-- phone -->
+    <h4 class="phone"><a href="tel:+380 (99) 485 27 98">+380 (99) 485 27 98</a></h4> <!-- phone -->
 </div> <!-- header -->
 <div class="row-flex">
     <div class="fio col-lg-6 col-md-6 col-tb-6 col-sm-12">
@@ -104,10 +104,6 @@
             <!--question -->
         </div> <!-- questions inner-->
     </div> <!-- questions-->
-    <div class="show_more" id="show-1">
-        <div><a href="#">Показати ще</a></div>
-    </div>
-    <!--link to show more info ! can be used in other blocks-->
 
     <h2 id="options">Послуги та ціни</h2>
     <p class="prices">Вартість можна уточнити на консультації або по телефону</p>
@@ -138,7 +134,7 @@
         </div>
     </div>
     <div class="show_more" id="show-3">
-        <div><a href="#">Написати відгук</a></div>
+        <div><a href="#popup2" class="popup-link-2">Написати відгук</a></div>
     </div> <!-- end of block w reviews -->
     <div class="map col-lg-11 col-md-11 col-tb-11 col-sm-11">
         <a href="https://goo.gl/maps/9GW4FhTntYzz5HQ7A" target="_blank">
@@ -197,6 +193,24 @@
         <div class="popup__body">
             <div class="popup__content"></div>
             <a href="#" class="popup__close close-popup">Х</a>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper2">
+    <div class="popup2" id="popup2">
+        <div class="popup__body2">
+            <a href="#" class="popup__close2 close-popup2">Х</a>
+            <div class="popup__content2">
+                <form action="{% url 'rewiev_page' %}" method="post" class="form">
+                    {% csrf_token %}
+                    {% for rew in context.comment %}
+                    <label for="{{ rew.id_for_label }}">
+                        {{ rew }}
+                    </label>
+                    {% endfor %}
+                    <button type="submit">Відправити</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
