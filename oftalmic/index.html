@@ -272,14 +272,14 @@
             </div>
             <div class="col-lg-4" id="footer_image"></div>
             <div class="form_container col-lg-3 col-md-6 col-tb-8 col-sm-10">
-                <form action="" class="form">
+                <form action="" class="form" method="post">
                     <label for="fio">
                         <input type="text" name="fio" placeholder="Ваше ім'я та прізвище">
                     </label>
                     <label for="telephone">
                         <input type="tel" name="telephone" placeholder="Номер телефону">
                     </label>
-                    <button type="submit">Відправити</button>
+                    <button type="submit" name="btn2" onclick="ShowThanksTelegram()">Відправити</button>
                 </form>
             </div>
         </div>
@@ -309,6 +309,7 @@
     </div>
     <!-- Подключение jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/script.js"></script>
