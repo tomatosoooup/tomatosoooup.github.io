@@ -114,8 +114,7 @@ body {
     padding: 20px 0px 5px;
 }
 
-.description h3,
-.description p {
+.description :is(h3, p) {
     color: white;
     margin-top: 15px;
     padding: 0px 10px 0px 0px;
@@ -169,8 +168,7 @@ body {
     height: 30px;
 }
 
-.study h2,
-.study p {
+.study :is(h2, p) {
     margin-top: 15px;
 }
 
@@ -186,8 +184,7 @@ body {
     height: 50px;
 }
 
-.info p,
-.info span {
+.info :is(p, span) {
     margin: 20px 0px 15px;
     padding: 0px 20px 0px 0px;
 }
@@ -220,7 +217,7 @@ body {
 
 .license-container img {
     display: block;
-    width: 100%;
+    width: 160px;
     height: 100%;
 }
 
@@ -407,15 +404,11 @@ li.slick-active button {
     cursor: pointer;
 }
 
-.question:nth-child(2),
-.question:nth-child(3),
-.question:nth-child(6) {
+.question:is(:nth-child(2), :nth-child(3), :nth-child(6)) {
     height: 350px;
 }
 
-.question:nth-child(2)>p,
-.question:nth-child(3)>p,
-.question:nth-child(6)>p {
+.question:is(:nth-child(2), :nth-child(3), :nth-child(6))>p {
     max-height: 168px;
 }
 
@@ -480,8 +473,7 @@ li.slick-active button {
     margin: 0px 100px 0px 0px;
 }
 
-.flex_li:last-child,
-.flex_li:first-child {
+.flex_li:is(:last-child, :first-child) {
     height: 70px;
 }
 
@@ -507,9 +499,7 @@ li.slick-active button {
     width: 450px;
 }
 
-.review_text p,
-.review_text h3,
-.review_text span {
+.review_text :is(p, h3, span) {
     color: white;
     margin: 30px 0px 10px 50px;
     max-width: 200px;
@@ -599,8 +589,7 @@ li.slick-active button {
     max-width: 200px;
 }
 
-.location_item h4,
-.location_item h5 {
+.location_item :is(h4, h5) {
     margin-top: 15px;
 }
 

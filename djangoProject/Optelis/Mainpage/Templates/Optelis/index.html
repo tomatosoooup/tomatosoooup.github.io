@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{% static 'Optelis/css/styles.css' %}">
 <link rel="stylesheet" href="{% static 'Optelis/css/popup.css' %}">
 <link rel="stylesheet" href="{% static 'Optelis/css/media.css' %}">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 {% endblock %}
 {% block content %}
 <div class="header col-lg-11 col-md-11 col-tb-11 col-sm-11" id="header">
@@ -176,14 +177,14 @@
         </div>
         <div class="col-lg-4" id="footer_image"></div>
         <div class="form_container col-lg-3 col-md-6 col-tb-8 col-sm-10">
-            <form class="form" method="POST" action="{% url 'thanks_page' %}">
+            <form class="form" method="POST" id="contact_form">
                 {% csrf_token %}
-                {% for item in context.form %}
+                {% for item in form %}
                 <label for="{{ item.id_for_label }}">
                     {{ item }}
                 </label>
                 {% endfor %}
-                <button type="submit">Відправити</button>
+                <button type="submit" name="btn2" onclick="ShowThanksTelegram()">Відправити</button>
             </form>
         </div>
     </div>
@@ -201,14 +202,14 @@
         <div class="popup__body2">
             <a href="#" class="popup__close2 close-popup2">Х</a>
             <div class="popup__content2">
-                <form action="{% url 'rewiev_page' %}" method="post" class="form">
+                <form method="post" class="form" id="form_r">
                     {% csrf_token %}
-                    {% for rew in context.comment %}
+                    {% for rew in comment %}
                     <label for="{{ rew.id_for_label }}">
                         {{ rew }}
                     </label>
                     {% endfor %}
-                    <button type="submit">Відправити</button>
+                    <button type="submit" name="btn1" onclick="ShowThanksRewiev()">Відправити</button>
                 </form>
             </div>
         </div>
@@ -216,6 +217,8 @@
 </div>
 <!-- Подключение jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.60/inputmask/jquery.inputmask.js"></script>
 <script src="{% static 'Optelis/js/slick.min.js' %}"></script>
 <script src="{% static 'Optelis/js/popup.js' %}"></script>
 <script src="{% static 'Optelis/js/script.js' %}"></script>
