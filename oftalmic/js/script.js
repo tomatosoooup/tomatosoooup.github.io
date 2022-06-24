@@ -83,8 +83,6 @@ $("#menu").on("click", "a", function (event) {
   let id = $(this).attr("href");
   let top = $(id).offset().top;
   $("body,html").animate({ scrollTop: top }, 1500);
-  $(".menu-burger, .menu").toggleClass("active");
-  $("body").toggleClass("lock");
 });
 
 // Здесь я подключаю или отключаю слайдеры, в зависимости от размера экрана
@@ -174,3 +172,44 @@ $(window).resize(function (event) {
   }
   // Конец удаления подключения пунктов
 });
+
+function ShowThanksRewiev() {
+  let name = document.querySelector("#id_name_rewiev");
+  let comment = document.querySelector("#id_user_text");
+  if (name.value && comment.value) {
+    Toastify({
+      text: "Дякую за ваш відгук",
+      duration: 3000,
+      destination: "{% url 'mainpage' %}",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
+  }
+}
+
+function ShowThanksTelegram() {
+  let name = document.querySelector("#id_name");
+  let phone = document.querySelector("#id_phone");
+  if (name.value && phone.value) {
+    Toastify({
+      text: "Ваша заявка прийнята!",
+      duration: 3000,
+      newWindow: false,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
+  }
+}
