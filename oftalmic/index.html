@@ -154,10 +154,6 @@
                 <!--question -->
             </div> <!-- questions inner-->
         </div> <!-- questions-->
-        <div class="show_more" id="show-1">
-            <div><a href="#">Показати ще</a></div>
-        </div>
-        <!--link to show more info ! can be used in other blocks-->
 
         <h2 id="options">Послуги та ціни</h2>
         <p class="prices">Вартість можна уточнити на консультації або по телефону</p>
@@ -192,9 +188,6 @@
                 </li>
             </ul> <!-- options inner -->
         </div> <!-- options -->
-        <div class="show_more" id="show-2">
-            <div><a href="#">Показати ще</a></div>
-        </div> <!-- end of block w options -->
         <h2>Відгуки</h2>
         <div class="reviews col-lg-11 col-md-11 col-tb-11 col-sm-11" id="reviews">
             <div class="reviews_inner col-lg-10 col-md-10 col-tb-10 col-sm-10" id="slider_3">
@@ -237,7 +230,7 @@
             </div>
         </div>
         <div class="show_more" id="show-3">
-            <div><a href="#">Написати відгук</a></div>
+            <div><a href="#popup2" class="popup-link-2">Написати відгук</a></div>
         </div> <!-- end of block w reviews -->
         <div class="map col-lg-11 col-md-11 col-tb-11 col-sm-11">
             <a href="https://goo.gl/maps/9GW4FhTntYzz5HQ7A" target="_blank">
@@ -297,6 +290,20 @@
             <div class="popup__body">
                 <div class="popup__content"></div>
                 <a href="#" class="popup__close close-popup">Х</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup-wrapper2">
+        <div class="popup2" id="popup2">
+            <div class="popup__body2">
+                <a href="#" class="popup__close2 close-popup2">Х</a>
+                <div class="popup__content2">
+                    <form method="post" class="form" id="form_r">
+                        <label for=""><input type="text">Здесь текст</label>
+                        <label for=""><input type="text">В джанго всё есть</label>
+                        <button type="submit" name="btn1" onclick="ShowThanksRewiev()">Відправити</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
