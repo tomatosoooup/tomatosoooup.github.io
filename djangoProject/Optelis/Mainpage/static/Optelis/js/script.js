@@ -1,6 +1,7 @@
-﻿$(":input").inputmask();
+$(":input").inputmask();
 
 $("#id_phone").inputmask({ mask: "+99 (999) 999 9999" });
+$("#id_phone_rewiev").inputmask({ mask: "+99 (999) 999 9999" });
 // Подключение 3-го слайдера с отзывами
 $(".reviews_inner").slick({
   slidesToShow: 2,
@@ -29,29 +30,52 @@ $(".reviews_inner").slick({
   ],
 });
 // Конец слайдера с отзывами
-
-if ($(window).width() <= 768) {
-  //это карусель с лицензиями и сертификатами
-  $(".license-container").removeClass("col-lg-5 col-md-5 col-tb-5 col-sm-5");
-  $(".licenses-wrapper").addClass("carousel");
-  $(".licenses-inner").addClass("carousel_inner");
-  $(".license-container").addClass("carousel_item");
-  $(".carousel_inner").not(".slick-initialized").slick({
-    slidesToShow: 1,
+// Подключение слайдера с сертификатами
+$(".carousel_inner")
+  .not(".slick-initialized")
+  .slick({
+    slidesToShow: 3,
+    centerMode: true,
     speed: 800,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
+    arrows: true,
     variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
+// Конец подключения слайдера с сертификатами
+if ($(window).width() <= 768) {
   // это карусель с вопросами и ответами
   $(".questions").addClass("carousel");
-  $(".questions_inner").addClass("carousel_inner questions_inner_2");
+  $(".questions_inner").addClass("carousel_inner_2 questions_inner_2");
   $(".question").addClass("question_item_2");
   $(".questions_inner_2").removeClass("questions_inner");
   $(".question_item_2").removeClass("question");
-  $(".carousel_inner").not(".slick-initialized").slick({
+  $(".carousel_inner_2").not(".slick-initialized").slick({
     slidesToShow: 2,
     speed: 800,
     infinite: true,
@@ -62,7 +86,6 @@ if ($(window).width() <= 768) {
     adaptiveHeight: true,
     arrows: false,
   });
-
   // Удаление или добавление пунктов услуг
   if ($(window).width() <= 600) {
     let options_li = document.getElementById("li_container").children;
@@ -90,79 +113,32 @@ $("#menu").on("click", "a", function (event) {
 
 // Здесь я подключаю или отключаю слайдеры, в зависимости от размера экрана
 $(window).resize(function (event) {
-  let sliderAdd = true;
-  let sliderClose = true;
   if ($(window).width() <= 768) {
-    sliderClose = false;
-
-    if (sliderClose == false) {
-      let sliders = {
-        1: { slider: "#slider_1", class: "carousel_inner" },
-        2: { slider: "#slider_2", class: "carousel_inner" },
-      };
-      $.each(sliders, function () {
-        $(".licenses-wrapper").addClass("carousel");
-        $(".licenses-inner").addClass("carousel_inner");
-        $(".license-container").addClass("carousel_item");
-        $(".license-container").removeClass(
-          "col-lg-5 col-md-5 col-tb-5 col-sm-5"
-        );
-        // это карусель с лицензиями-сертификатами (ниже)
-        $(".questions_inner").addClass("carousel_inner questions_inner_2");
-        $(".questions_inner_2").removeClass("questions_inner");
-        $(".question").addClass("question_item_2");
-        $(".question_item_2").removeClass("question");
-        $(this.slider).not(".slick-initialized").slick({
-          slidesToShow: 1,
-          speed: 800,
-          infinite: true,
-          autoplay: true,
-          autoplaySpeed: 5000,
-          pauseOnHover: true,
-          variableWidth: true,
-        });
-        $(".questions_inner_2 button").remove();
-        // это карусель с вопросами и ответами (ниже)
-        $(".questions").addClass("carousel");
-        $(this.slider).not(".slick-initialized").slick({
-          slidesToShow: 1,
-          speed: 800,
-          infinite: true,
-          autoplay: true,
-          autoplaySpeed: 5000,
-          pauseOnHover: true,
-          variableWidth: true,
-          arrows: false,
-        });
-      });
-    }
+    // это карусель с вопросами и ответами
+    $(".questions").addClass("carousel");
+    $(".questions_inner").addClass("carousel_inner_2 questions_inner_2");
+    $(".question").addClass("question_item_2");
+    $(".questions_inner_2").removeClass("questions_inner");
+    $(".question_item_2").removeClass("question");
+    $(".carousel_inner_2").not(".slick-initialized").slick({
+      slidesToShow: 2,
+      speed: 800,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      pauseOnHover: true,
+      variableWidth: true,
+      adaptiveHeight: true,
+      arrows: false,
+    });
   }
-
   if ($(window).width() > 768) {
-    sliderAdd = false;
-
-    if (sliderAdd == false) {
-      let sliders = {
-        1: { slider: "#slider_1" },
-        2: { slider: "#slider_2" },
-      };
-      $.each(sliders, function () {
-        if ($(this.slider).hasClass("carousel_inner")) {
-          $(this.slider).slick("unslick");
-        }
-      });
-      // первый слайдер
-      $(".licenses-wrapper").removeClass("carousel");
-      $(".licenses-inner").removeClass("carousel_inner");
-      $(".license-container").removeClass("carousel_item");
-      $(".license-container").addClass("col-lg-5 col-md-5 col-tb-5 col-sm-5");
-      // второй слайдер
-      $(".questions").removeClass("carousel");
-      $(".questions_inner_2").addClass("questions_inner");
-      $(".questions_inner").removeClass("questions_inner_2 carousel_inner");
-      $(".question_item_2").addClass("question");
-      $(".question").removeClass("question_item_2");
-    }
+    $(".questions").removeClass("carousel");
+    $(".questions_inner_2").addClass("questions_inner");
+    $(".questions_inner").removeClass("questions_inner_2 carousel_inner");
+    $(".question_item_2").addClass("question");
+    $(".question").removeClass("question_item_2");
+    $(".carousel_inner_2").slick("unslick");
   }
   // Конец подключения слайдеров
   // Удаление или добавление пунктов услуг
@@ -179,7 +155,8 @@ $(window).resize(function (event) {
 function ShowThanksRewiev() {
   let name = document.querySelector("#id_name_rewiev");
   let comment = document.querySelector("#id_user_text");
-  if (name.value && comment.value) {
+  let phone = document.querySelector("#id_phone_rewiev");
+  if (name.value && comment.value && phone.value) {
     Toastify({
       text: "Дякую за ваш відгук",
       duration: 3000,
@@ -200,7 +177,8 @@ function ShowThanksRewiev() {
 function ShowThanksTelegram() {
   let name = document.querySelector("#id_name");
   let phone = document.querySelector("#id_phone");
-  if (name.value && phone.value) {
+  let text = document.querySelector("#id_text");
+  if (name.value && phone.value && text.value) {
     Toastify({
       text: "Ваша заявка прийнята!",
       duration: 3000,

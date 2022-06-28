@@ -50,6 +50,7 @@ function popupOpen(currentPopup, popupLink) {
   let popup__elem = document.querySelector(".popup__content").innerHTML; // получаю содержимое (пустое)
   document.querySelector(".popup__content").innerHTML =
     popup__elem + parent.innerHTML;
+  $(".menu-burger").addClass("disabled");
 }
 
 function popupClose(popupActive, doUnlock = true) {
@@ -59,6 +60,7 @@ function popupClose(popupActive, doUnlock = true) {
       bodyUnLock();
     }
   }
+  $(".menu-burger").removeClass("disabled");
 }
 
 function bodyLock() {

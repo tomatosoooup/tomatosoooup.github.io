@@ -43,12 +43,18 @@ body.lockTwo {
 
 .popup__close {
     position: absolute;
-    left: 30px;
+    right: 30px;
     top: 30px;
-    z-index: 1;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
+    z-index: 16;
+    font-size: 28px;
+}
+
+.fa-sign-out {
+    color: white
+}
+
+.fa-sign-out:hover {
+    transform: scale(0.8);
 }
 
 .popup.open {
@@ -111,12 +117,10 @@ body.lockTwo {
 
 .popup__close2 {
     position: absolute;
-    left: 30px;
+    right: 30px;
     top: 30px;
-    z-index: 1;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
+    z-index: 16;
+    font-size: 28px;
 }
 
 .popup2.open2 {

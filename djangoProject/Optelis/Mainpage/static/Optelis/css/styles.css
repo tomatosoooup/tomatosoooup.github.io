@@ -31,6 +31,12 @@ body {
     padding-top: 5vh;
 }
 
+.logo img {
+    width: 165px;
+    height: auto;
+    display: block;
+}
+
 .links {
     display: flex;
 }
@@ -62,6 +68,10 @@ body {
 
 .phone {
     font-weight: 500;
+}
+
+.menu-burger.disabled {
+    display: none;
 }
 
 /* Меню конец */
@@ -102,22 +112,23 @@ body {
 }
 
 .photo {
-    width: 100%;
     height: 500px;
     display: block;
-    background: url(../images/photo-doctor.png) no-repeat 60% 100%;
+    background: url(../images/photo-doctor-2.png) no-repeat 60% 100%;
     background-size: contain;
 }
 
 .description {
     align-self: flex-start;
     padding: 20px 0px 5px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .description :is(h3, p) {
     color: white;
     margin-top: 15px;
-    padding: 0px 10px 0px 0px;
+    padding: 0px 20px 0px 10px;
 }
 
 /* Описание и фотка конец */
@@ -129,31 +140,23 @@ body {
 .sertificates>h2 {
     text-align: center;
     padding-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 25px;
     font-weight: bold;
 }
 
-.licenses {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
 .study-wrapper {
     height: fit-content;
+    padding-bottom: 10px;
 }
 
 .study-inner {
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.study {
-    padding: 60px 0px 40px 0px;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px
 }
 
 #hat-text {
@@ -168,65 +171,34 @@ body {
     height: 30px;
 }
 
-.study :is(h2, p) {
-    margin-top: 15px;
-}
-
-.study-2 {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-}
-
-.study-2 img {
-    width: 50px;
-    height: 50px;
-}
-
 .info :is(p, span) {
-    margin: 20px 0px 15px;
-    padding: 0px 20px 0px 0px;
+    margin: 15px 0px;
+    padding: 0px 10px 0px 0px;
+    max-height: 105px;
+    overflow: hidden;
+    font-size: 14px;
 }
 
-.info p:first-of-type {
+.info :is(:nth-child(2)>p, :nth-child(3)>p, :nth-child(4)>p):first-of-type {
     font-weight: bold;
+    margin-top: 5px;
 }
 
 .info span {
     color: var(--green--color);
 }
 
+.info>img {
+    width: 45px;
+    height: 45px;
+}
+
 .licenses-wrapper {
     height: fit-content;
 }
 
-.licenses-inner {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 10px 20px;
-}
-
-.license-container {
-    height: 250px;
-    width: 250px;
-}
-
-.license-container img {
-    display: block;
-    width: 160px;
-    height: 100%;
-}
-
-.license-container img:hover {
-    transform: scale(1.1);
-}
-
 .carousel {
-    margin: 0 auto;
+    margin: 25px auto 0px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -263,6 +235,12 @@ body {
 .carousel_item {
     margin: 0 auto;
     padding: 10px 45px;
+}
+
+.carousel_item img {
+    display: block;
+    width: 150px;
+    height: auto;
 }
 
 .questions_inner_2 {
@@ -308,8 +286,7 @@ body {
     list-style-type: none;
 }
 
-
-.slick-dots li {
+.slick-dots>li {
     margin: 0 0.25rem;
 }
 
@@ -386,7 +363,6 @@ li.slick-active button {
     word-wrap: break-word;
     padding: 0px 5px 0px 0px;
 }
-
 
 .question span {
     color: var(--green--color);
@@ -496,13 +472,13 @@ li.slick-active button {
 
 .review {
     height: fit-content;
-    width: 450px;
 }
 
 .review_text :is(p, h3, span) {
     color: white;
-    margin: 30px 0px 10px 50px;
+    margin: 25px 0px 10px 50px;
     max-width: 200px;
+    word-wrap: break-word;
 }
 
 .review_text {
@@ -530,11 +506,12 @@ li.slick-active button {
 }
 
 .map {
-    height: 250px;
+    width: 95%;
+    height: 300px;
     background-color: #fff;
     position: absolute;
-    left: 4.16%;
-    bottom: -150px;
+    left: 2.5%;
+    bottom: -225px;
 }
 
 .map div {
@@ -559,7 +536,7 @@ li.slick-active button {
 
 .location {
     min-height: fit-content;
-    padding-top: 175px;
+    padding-top: 250px;
 }
 
 .location_inner {
@@ -569,16 +546,16 @@ li.slick-active button {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
 }
 
 .location_item {
     padding: 15px 25px 10px 15px;
     font-weight: bold;
+    border-left: gray 1px solid;
 }
 
-.location_item h3,
-.location_item h4:first-of-type {
+.location_item :is(h3, h4:first-of-type) {
     margin-top: 30px;
 }
 
@@ -596,7 +573,7 @@ li.slick-active button {
 .footer {
     margin: 0 auto;
     background: url(../images/frame-request.jpg) no-repeat 30% 30%;
-    height: 350px;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -619,7 +596,7 @@ li.slick-active button {
 }
 
 #footer_image {
-    background: url(../images/photo-doctor.png) no-repeat;
+    background: url(../images/photo-doctor-2.png) no-repeat;
     background-size: contain;
     display: block;
 }
@@ -629,6 +606,8 @@ li.slick-active button {
     justify-content: center;
     align-self: center;
     padding-right: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 .form {
@@ -673,12 +652,14 @@ input::placeholder {
     transform: translateY(-2px);
 }
 
-#id_name_rewiev {
+#id_name_rewiev,
+#id_phone_rewiev {
     background-color: #fff;
     color: #000;
 }
 
-#id_name_rewiev::placeholder {
+#id_name_rewiev::placeholder,
+#id_phone_rewiev::placeholder {
     color: rgba(128, 124, 124, 0.7);
 }
 
@@ -686,4 +667,22 @@ input::placeholder {
     resize: none;
     padding: 5px;
     width: 250px;
+}
+
+#id_user_text::placeholder {
+    text-align: center;
+    color: rgba(128, 124, 124, 0.7);
+}
+
+#id_text {
+    resize: none;
+    padding: 5px;
+    width: 250px;
+    background-color: #128B59;
+    color: white
+}
+
+#id_text::placeholder {
+    color: white;
+    text-align: center;
 }

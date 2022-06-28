@@ -3,7 +3,7 @@ from .models import TeleSettings
 import emoji
 
 
-def sendTelegram(tg_name, tg_phone):
+def sendTelegram(tg_name, tg_phone, tg_text):
     settings = TeleSettings.objects.get(pk=1)
     token = str(settings.tg_token)
     chat_id = str(settings.tg_chat)
@@ -16,7 +16,7 @@ def sendTelegram(tg_name, tg_phone):
     part_3 = user_text[user_text.rfind('}'):-1]
 
     text_slice = part_1 + tg_name + ' ' + '🙋‍♂️' + \
-        part_2 + tg_phone + part_3 + ' ' + '💶'
+        part_2 + tg_phone + part_3 + ' ' + '💶' + '\n Додатково: ' + tg_text
     req = requests.post(method, data={
         'chat_id': chat_id,
         'text': text_slice,

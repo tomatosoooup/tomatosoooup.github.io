@@ -6,12 +6,13 @@
 <link rel="stylesheet" href="{% static 'Optelis/css/styles.css' %}">
 <link rel="stylesheet" href="{% static 'Optelis/css/popup.css' %}">
 <link rel="stylesheet" href="{% static 'Optelis/css/media.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 {% endblock %}
 {% block content %}
 <div class="header col-lg-11 col-md-11 col-tb-11 col-sm-11" id="header">
     <div class="logo">
-        <img src="{% static 'Optelis/images/logo.png' %}" alt="optelis">
+        <a href="{% url 'admin:index' %}"><img src="{% static 'Optelis/images/logo.png' %}" alt="optelis"></a>
     </div> <!-- logo -->
     <div class="menu-burger">
         <span></span>
@@ -34,67 +35,78 @@
 </div> <!-- row with fio -->
 <div class="photo-description col-lg-11 col-md-11 col-tb-12 col-sm-12">
     <div class="photo col-lg-5 col-md-5 col-tb-6 col-sm-6"></div>
-    <div class="description col-lg-5 col-md-5 col-tb-5 col-sm-5">
+    <div class="description col-lg-5 col-md-5 col-tb-11 col-sm-11">
         <h3>Досвід та досягнення</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum dolorem, consectetur corporis in
-            perspiciatis quos, repellendus iste natus velit obcaecati atque? At dolorum deserunt veritatis
-            distinctio molestias deleniti laborum ad?</p>
+        <p>Кваліфікація: Лікар-офтальмолог прийом дорослих і дітей <br>
+            Категорія: Спеціаліст <br>
+            Стаж: 5 років клінічного досвіду <br>
+            Закінчив ХНМУ
+            Лікар спеціаліст
+            Діагностика та лікування захворювання очей
+            Індивідуальний підхід
+            Підбір окулярів і контактних лінз будь-якої складності
+        </p>
     </div>
 </div>
 <div class="sertificates col-lg-12 col-md-12 col-tb-12 col-sm-12" id="sertificates">
     <h2>Сертифікати та ліцензії</h2>
-    <div class="licenses">
-        <div class="study-wrapper col-lg-6 col-md-6 col-tb-12 col-sm-12">
-            <div class="study-inner col-lg-10 col-md-10 col-tb-10 col-sm-10">
-                <div class="study col-lg-12 col-md-12 col-tb-11 col-sm-11">
-                    <div id="hat-text">
-                        <img src="{% static 'Optelis/images/hat.png' %}" alt="">
-                        <span>Професійна освіта</span>
-                    </div>
-                    <h2>ВГМУ им. Н.Н. Бурденко</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae expedita nisi dicta impedit
-                        optio
-                        corrupti cumque ad ducimus delectus iure officiis autem, excepturi tenetur libero, molestias
-                        quisquam voluptas ipsum molestiae.</p>
+    <div class="study-wrapper col-lg-12 col-md-12 col-tb-12 col-sm-12">
+        <div class="study-inner col-lg-11 col-md-11 col-tb-11 col-sm-11">
+            <div class="info col-lg-5 col-md-5 col-tb-12 col-sm-12">
+                <div id="hat-text">
+                    <img src="{% static 'Optelis/images/hat.png' %}" alt="">
+                    <span>Професійна освіта</span>
                 </div>
-                <div class="study-2 col-lg-12 col-md-12 col-tb-12 col-sm-12">
-                    <div class="info col-lg-6 col-md-6 col-tb-11 col-sm-11">
-                        <img src="{% static 'Optelis/images/books.png' %}" alt="books">
-                        <p>Курс профессиональной
-                            переподготовки “Врач общей
-                            практики”</p>
-                        <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                            сосредоточиться. Lorem Ipsum используют потому, что тот </p>
-                        <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
-                    </div>
-                    <div class="info col-lg-6 col-md-6 col-tb-11 col-sm-11">
-                        <img src="{% static 'Optelis/images/student.png' %}" alt="student">
-                        <p>Курс профессиональной
-                            переподготовки “Врач общей
-                            практики”</p>
-                        <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                            сосредоточиться. Lorem Ipsum используют потому, что тот </p>
-                        <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
-                    </div>
-                </div>
+                <h4>ХНМУ - Харківський національний медичний університет</h4>
+                <p>У 2019 році закінчив навчання в Харківському національному медичному університеті ( І медичний
+                    факультет, спеціальність «Лікувальна справа») та здобув кваліфікацію лікаря. </p>
+            </div>
+            <div class="info col-lg-5 col-md-5 col-tb-12 col-sm-12">
+                <img src="{% static 'Optelis/images/student.png' %}" alt="books">
+                <p>Національна медична академія післядипломної освіти імені П.Л. Шупика</p>
+                <p>Від 2021 року Мучаку А.І. було присвоєно звання лікаря-спеціаліста за спеціальністю «Офтальмологія».
+                    Проходив інтернатуру на базі Центру мікрохірургії ока. А також працював у клініці Новий Зір. </p>
+                <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
+            </div>
+            <div class="info col-lg-5 col-md-5 col-tb-12 col-sm-12">
+                <img src="{% static 'Optelis/images/student.png' %}" alt="student">
+                <p>НУОЗ України імені П.Л. Шупика</p>
+                <p>У 2021 році закінчив навчання за спеціальністю «Дитяча офтальмологія». На даний момент приймає своїх
+                    пацієнтів в приватному кабінеті Optelis, або в Київській клінічній лікарні на залізничному
+                    транспорті №2</p>
+                <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
+            </div>
+            <div class="info col-lg-5 col-md-5 col-tb-12 col-sm-12">
+                <img src="{% static 'Optelis/images/books.png' %}" alt="student">
+                <p>Шляхи і напрямки професійного розвитку</p>
+                <p>Регулярно бере участь у міжнародних офтальмологічних конференціях, таких як Ophthalmic Hub 2021;
+                    проходить тренінги, майстер-класи для вдосконалення своїх знань та вмінь.</p>
+                <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
             </div>
         </div>
-        <div class="licenses-wrapper col-lg-6 col-md-6 col-tb-12 col-sm-12">
-            <div class="licenses-inner col-lg-10 col-md-10 col-tb-9 col-sm-9" id="slider_1">
+        <div class="col-lg-12 col-md-12 col-tb-12 col-sm-12 carousel">
+            <div class="col-lg-11 col-md-11 col-tb-11 col-sm-11 carousel_inner" id="slider_1">
+                {% if context.sertificates %}
                 {% for sertificate in context.sertificates %}
-                <div class="license-container col-lg-4 col-md-4 col-tb-5 col-sm-5">
+                <div class="carousel_item">
                     <h1>{{sertificare}}</h1>
                     <img src="{{ MEDIA_URL }} {{ sertificate.image.url }}" alt="">
                 </div>
                 {% endfor %}
+                {% else %}
+                <h3 style="width: 300px; margin: 30px auto 0px; text-align: center; padding-bottom:50px">Нажаль зараз
+                    сертифікати
+                    відсутні</h3>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
 <div class="big-wrapper col-lg-12 col-md-12 col-tb-12 col-sm-12">
-    <h2>Часто задавані питання</h2>
+    <h2>Найпоширеніщі питання</h2>
     <div class="questions col-lg-11 col-md-11 col-tb-11 col-sm-11" id="questions">
         <div class="questions_inner" id="slider_2">
+            {% if context.questions %}
             {% for question in context.questions %}
             <div class="question">
                 <h4>{{question}}</h4>
@@ -102,20 +114,26 @@
                 <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
             </div>
             {% endfor %}
+            {% else %}
+            <h3 style="width: 200px; margin: 0 auto; text-align: center; color:white;">На даний момент питання відсутні
+            </h3>
+            {% endif %}
             <!--question -->
         </div> <!-- questions inner-->
     </div> <!-- questions-->
-
     <h2 id="options">Послуги та ціни</h2>
     <p class="prices">Вартість можна уточнити на консультації або по телефону</p>
     <div class="options col-lg-10 col-md-10 col-tb-11 col-sm-11">
         <ul class="options_inner" id="li_container">
+            {% if context.options %}
             {% for opt in context.options %}
             <li class="flex_li">
                 <h4>{{ opt }}</h4><span>{{ opt.price_of_option }}</span>
-                <!-- <h4>Консультація</h4><span>Безкоштовно</span> -->
             </li>
             {% endfor %}
+            {% else %}
+            <h3 style="color:white; text-align: center;">Зараз послуги відсутні</h3>
+            {% endif %}
         </ul> <!-- options inner -->
     </div> <!-- options -->
     <h2>Відгуки</h2>
@@ -137,11 +155,11 @@
     <div class="show_more" id="show-3">
         <div><a href="#popup2" class="popup-link-2">Написати відгук</a></div>
     </div> <!-- end of block w reviews -->
-    <div class="map col-lg-11 col-md-11 col-tb-11 col-sm-11">
-        <a href="https://goo.gl/maps/9GW4FhTntYzz5HQ7A" target="_blank">
+    <div class="map">
+        <a href="https://goo.gl/maps/A4rxsbheL2WDHLuK8" target="_blank">
             <div>
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4733783192128!2d30.47659789999999!3d50.4509091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce8668c99a23%3A0xab703b8837af2264!2zMUEsINGD0LsuINCo0L7Qu9GD0LTQtdC90LrQviwgMdCQLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1655408705190!5m2!1sru!2sua"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4767610691138!2d30.4765679!3d50.4508461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce866f9a8bbb%3A0x91f6208c1226bcbc!2z0JbQmiAi0JLQvtC30LTRg9GF0L7RhNC70L7RgtGB0LrQuNC5INC60LLQsNGA0YLQsNC7Ig!5e0!3m2!1sru!2sua!4v1656092104851!5m2!1sru!2sua"
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <span>Де ми знаходимось</span>
@@ -154,20 +172,16 @@
         <div class="location_item col-lg-4 col-md-4 col-tb-4 col-sm-12">
             <span>м.Київ</span>
             <h3>вул. Шолуденко, 1А, Київ</h3>
-            <p>Парковка со стороны двора
-                на домофоне набрать кв 7</p>
         </div>
         <div class="location_item col-lg-4 col-md-4 col-tb-4 col-sm-12">
             <span>Режим роботи:</span>
-            <h4>ПН,ЧТ,СБ - Прийом у кабінеті</h4>
-            <h4>ВТ,СР,ПТ - Виїзд до лікарні</h4>
+            <h4>ПН-СБ - Прийом у кабінеті</h4>
             <h4>НД - Вихідний</h4>
         </div>
         <div class="location_item col-lg-4 col-md-4 col-tb-4 col-sm-12">
             <span>Контакти:</span>
             <h3>+380 (99) 485 27 98</h3>
-            <h5>Щоденно з 08:00 до 23:00</h5>
-            <h5>Email: doc@kyiv.ua</h5>
+            <h5>Щоденно з 10:00 до 18:00</h5>
         </div>
     </div> <!-- location inner -->
     <div class="footer col-lg-11 col-md-12 col-tb-12 col-sm-12" id="contacts">
@@ -193,14 +207,14 @@
     <div class="popup" id="popup">
         <div class="popup__body">
             <div class="popup__content"></div>
-            <a href="#" class="popup__close close-popup">Х</a>
+            <a href="#" class="popup__close close-popup"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
         </div>
     </div>
 </div>
 <div class="popup-wrapper2">
     <div class="popup2" id="popup2">
         <div class="popup__body2">
-            <a href="#" class="popup__close2 close-popup2">Х</a>
+            <a href="#" class="popup__close2 close-popup2"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
             <div class="popup__content2">
                 <form method="post" class="form" id="form_r">
                     {% csrf_token %}

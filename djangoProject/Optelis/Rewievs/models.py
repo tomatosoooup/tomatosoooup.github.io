@@ -13,6 +13,8 @@ class Rewiev(models.Model):
         (FAMILIAR, 'Знайомий(а)'),
     ]
     username = models.CharField(max_length=25, verbose_name="Ім'я та фамілія")
+    user_phone = models.CharField(
+        max_length=30, verbose_name='Телефон клієнта')
     user_type = models.CharField(
         default=PATIENT, max_length=15, choices=TYPE_OF_USER, verbose_name='Тип клієнта')
     rewiev_text = models.TextField(

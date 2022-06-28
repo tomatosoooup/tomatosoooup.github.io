@@ -3,7 +3,7 @@
 }
 
 /********** Large devices only **********/
-@media screen and (min-width: 993px) and (max-width: 1280px) {
+@media screen and (min-width: 993px) {
 
     /* Блок отзывов */
     .review {
@@ -124,9 +124,7 @@
         flex-wrap: wrap;
     }
 
-    .review_text p,
-    .review_text h3,
-    .review_text span {
+    .review_text :is(p, h3, span) {
         max-width: 300px;
     }
 
@@ -246,10 +244,6 @@
         height: 65vh;
     }
 
-    .photo {
-        height: 575px;
-    }
-
     .col-md-1 {
         width: 8.33%;
     }
@@ -301,6 +295,15 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+    .description :is(h3, p) {
+        color: white;
+        margin-top: 15px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .photo {
+        display: none;
+    }
 
     .location_inner {
         padding-bottom: 60px;
@@ -398,22 +401,6 @@
 
     .big-wrapper h2 {
         margin-bottom: 30px;
-    }
-
-    .license-container img:hover {
-        transform: scale(1);
-    }
-
-    .study {
-        margin: 0;
-    }
-
-    .study-2 {
-        gap: 40px;
-    }
-
-    .licenses-wrapper {
-        height: fit-content;
     }
 
     body.lock {
@@ -586,9 +573,17 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+    .location_item {
+        border-left: none;
+        border-bottom: gray 1px solid;
+    }
+
+    .photo {
+        display: none;
+    }
 
     .form_container {
-        padding: 0;
+        padding: 0px 0px 20px 0px;
     }
 
     .location_inner {
@@ -652,9 +647,7 @@
         align-items: center;
     }
 
-    .review_text p,
-    .review_text h3,
-    .review_text span {
+    .review_text :is(p, h3, span) {
         max-width: 300px;
         text-align: center;
     }
@@ -716,8 +709,7 @@
         font-size: 18px;
     }
 
-    .flex_li:last-child,
-    .flex_li:first-child {
+    .flex_li :is(:last-child, :first-child) {
         height: 200px;
     }
 
@@ -736,18 +728,6 @@
 
     .big-wrapper h2 {
         margin-bottom: 35px;
-    }
-
-    .license-container img:hover {
-        transform: scale(1);
-    }
-
-    .study {
-        margin: 0;
-    }
-
-    .study-2 {
-        gap: 40px;
     }
 
     body.lock {

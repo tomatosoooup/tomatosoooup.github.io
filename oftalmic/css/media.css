@@ -400,18 +400,6 @@
         margin-bottom: 30px;
     }
 
-    .license-container img:hover {
-        transform: scale(1);
-    }
-
-    .study {
-        margin: 0;
-    }
-
-    .study-2 {
-        gap: 40px;
-    }
-
     .licenses-wrapper {
         height: fit-content;
     }
@@ -736,18 +724,6 @@
 
     .big-wrapper h2 {
         margin-bottom: 35px;
-    }
-
-    .license-container img:hover {
-        transform: scale(1);
-    }
-
-    .study {
-        margin: 0;
-    }
-
-    .study-2 {
-        gap: 40px;
     }
 
     body.lock {

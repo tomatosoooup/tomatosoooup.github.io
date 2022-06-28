@@ -130,31 +130,23 @@ body {
 .sertificates>h2 {
     text-align: center;
     padding-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 25px;
     font-weight: bold;
 }
 
-.licenses {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
 .study-wrapper {
     height: fit-content;
+    padding-bottom: 10px;
 }
 
 .study-inner {
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.study {
-    padding: 60px 0px 40px 0px;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px
 }
 
 #hat-text {
@@ -169,67 +161,34 @@ body {
     height: 30px;
 }
 
-.study h2,
-.study p {
-    margin-top: 15px;
+.info :is(p, span) {
+    margin: 15px 0px;
+    padding: 0px 10px 0px 0px;
+    max-height: 105px;
+    overflow: hidden;
+    font-size: 14px;
 }
 
-.study-2 {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-}
-
-.study-2 img {
-    width: 50px;
-    height: 50px;
-}
-
-.info p,
-.info span {
-    margin: 20px 0px 15px;
-    padding: 0px 20px 0px 0px;
-}
-
-.info p:first-of-type {
+.info :is(:nth-child(2)>p, :nth-child(3)>p, :nth-child(4)>p):first-of-type {
     font-weight: bold;
+    margin-top: 5px;
 }
 
 .info span {
     color: var(--green--color);
 }
 
+.info>img {
+    width: 45px;
+    height: 45px;
+}
+
 .licenses-wrapper {
     height: fit-content;
 }
 
-.licenses-inner {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 10px 20px;
-}
-
-.license-container {
-    height: 250px;
-    width: 250px;
-}
-
-.license-container img {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.license-container img:hover {
-    transform: scale(1.1);
-}
-
 .carousel {
-    margin: 0 auto;
+    margin: 25px auto 0px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -266,6 +225,12 @@ body {
 .carousel_item {
     margin: 0 auto;
     padding: 10px 45px;
+}
+
+.carousel_item img {
+    display: block;
+    width: 150px;
+    height: auto;
 }
 
 .questions_inner_2 {
