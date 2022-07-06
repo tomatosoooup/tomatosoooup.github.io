@@ -8,24 +8,37 @@
 <link rel="stylesheet" href="{% static 'Optelis/css/media.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<meta name="keywords"
+    content="оптика, optelis, врач, глаза, Мучак,Мучак А.І., киев, kiev, лечение, лечение киев, глаза киев, врач Украина">
+<meta name="description"
+    content="Мучак Андрій Іванович – лікар-офтальмолог доказової медицини. Огляд проводиться на сучасному обладнанні згідно з міжнародними протоколами.">
+<meta property="og:type" content="Лікар-офтальмолог">
+<meta property="og:image" content="{% static 'Optelis/images/site-image.png'%}">
+<meta property="og:site_name" content="Optelis">
+<meta property="og:url" content="https://dr-muchak.com/">
 {% endblock %}
 {% block content %}
-<div class="header col-lg-11 col-md-11 col-tb-11 col-sm-11" id="header">
-    <div class="logo">
-        <a href="{% url 'admin:index' %}"><img src="{% static 'Optelis/images/logo.png' %}" alt="optelis"></a>
-    </div> <!-- logo -->
-    <div class="menu-burger">
-        <span></span>
-    </div> <!-- burger -->
-    <nav class="menu" id="menu">
-        <ul class="links">
-            {% for key, value in context.menu.items %}
-            <li><a href="#{{ key }}">{{ value }}</a></li>
-            {% endfor %}
-        </ul>
-    </nav> <!-- menu -->
-    <h4 class="phone"><a href="tel:+380 (99) 485 27 98">+380 (99) 485 27 98</a></h4> <!-- phone -->
-</div> <!-- header -->
+<div id="header"></div>
+<div class="fix col-lg-12 col-md-12 col-tb-12 col-sm-12">
+    <div class="header col-lg-11 col-md-11 col-tb-11 col-sm-11">
+        <div class="logo">
+            <img src="{% static 'Optelis/images/logo.png' %}" alt="optelis">
+        </div> <!-- logo -->
+        <div class="menu-burger">
+            <span></span>
+        </div> <!-- burger -->
+        <nav class="menu" id="menu">
+            <ul class="links">
+                {% for key, value in context.menu.items %}
+                <li><a href="#{{ key }}">{{ value }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav> <!-- menu -->
+        <h4 class="phone"><a href="tel:+380 (99) 485 27 98">+380 (99) 485 27 98</a></h4> <!-- phone -->
+    </div> <!-- header -->
+</div>
+<div class="leave_application"><a href="#contacts">Запишіться на прийом</a></div>
+<div class="leave_rewiev"><a href="#reviews"><img src="{% static 'Optelis/images/rewiev.png' %}" alt=""></a></div>
 <div class="row-flex">
     <div class="fio col-lg-6 col-md-6 col-tb-6 col-sm-12">
         <h2>Мучак <br> Андрій Іванович</h2>
@@ -34,18 +47,18 @@
 </div> <!-- fio -->
 </div> <!-- row with fio -->
 <div class="photo-description col-lg-11 col-md-11 col-tb-12 col-sm-12">
-    <div class="photo col-lg-5 col-md-5 col-tb-6 col-sm-6"></div>
+    <div class="col-lg-6 col-md-6 col-tb-6 col-sm-6">
+        <div class="photo"></div>
+    </div>
     <div class="description col-lg-5 col-md-5 col-tb-11 col-sm-11">
         <h3>Досвід та досягнення</h3>
         <p>Кваліфікація: Лікар-офтальмолог прийом дорослих і дітей <br>
             Категорія: Спеціаліст <br>
             Стаж: 5 років клінічного досвіду <br>
-            Закінчив ХНМУ
-            Лікар спеціаліст
-            Діагностика та лікування захворювання очей
-            Індивідуальний підхід
-            Підбір окулярів і контактних лінз будь-якої складності
         </p>
+        <div class="show_more">
+            <div><a href="#popup3" class="popup-link-3">Детальніше</a></div>
+        </div>
     </div>
 </div>
 <div class="sertificates col-lg-12 col-md-12 col-tb-12 col-sm-12" id="sertificates">
@@ -152,7 +165,7 @@
             {% endfor %}
         </div>
     </div>
-    <div class="show_more" id="show-3">
+    <div class="show_more">
         <div><a href="#popup2" class="popup-link-2">Написати відгук</a></div>
     </div> <!-- end of block w reviews -->
     <div class="map">
@@ -185,11 +198,15 @@
         </div>
     </div> <!-- location inner -->
     <div class="footer col-lg-11 col-md-12 col-tb-12 col-sm-12" id="contacts">
-        <div class="col-lg-3 col-md-12 col-tb-12 col-sm-12" id="footer_request">
-            <h2>Запишіться на прийом</h2>
-            <p>Залиште свій номер телефону і я з вами зв'яжусь</p>
+        <div class="col-lg-9 col-md-6 col-tb-9 col-sm-10" id="footer_request">
+            <div>
+                <h2>Запишіться на прийом</h2>
+                <p>Залиште свій номер телефону і я з вами зв'яжусь</p>
+            </div>
+            <div class="footer_image col-lg-8 col-md-2 col-tb-2 col-sm-2">
+                <img src="{% static 'Optelis/images/photo-doctor-2.png' %}" alt="">
+            </div>
         </div>
-        <div class="col-lg-4" id="footer_image"></div>
         <div class="form_container col-lg-3 col-md-6 col-tb-8 col-sm-10">
             <form class="form" method="POST" id="contact_form">
                 {% csrf_token %}
@@ -225,6 +242,20 @@
                     {% endfor %}
                     <button type="submit" name="btn1" onclick="ShowThanksRewiev()">Відправити</button>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper3">
+    <div class="popup3" id="popup3">
+        <div class="popup__body3">
+            <a href="#" class="popup__close3 close-popup3"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            <div class="popup__content3">
+                Закінчив ХНМУ
+                Лікар спеціаліст
+                Діагностика та лікування захворювання очей
+                Індивідуальний підхід
+                Підбір окулярів і контактних лінз будь-якої складності
             </div>
         </div>
     </div>

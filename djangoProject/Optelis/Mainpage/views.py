@@ -1,4 +1,5 @@
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import redirect, render
+from django.views.decorators.cache import never_cache
 
 from Sertificates.models import *
 from Questions.models import *
@@ -8,11 +9,13 @@ from TelebotMessage.sendmessage import sendTelegram
 from .forms import ContactForm, ReviewCommentForm
 from Order.models import Order
 
+
 import time
 
 # Create your views here.
 
 
+@never_cache
 def index(request):
     form = ContactForm()
     rewiev_comment = ReviewCommentForm()

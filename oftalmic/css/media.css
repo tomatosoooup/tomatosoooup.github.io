@@ -141,11 +141,19 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--orange--color);
+        background: url(/images/frame-request-2.jpg) no-repeat 100% 100%;
+        background-size: cover;
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
         z-index: 10;
+    }
+
+    .logo.active {
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        z-index: 11;
     }
 
     .menu.active {
@@ -159,22 +167,18 @@
 
     .links {
         display: block;
+        text-align: center;
     }
 
     .links li {
         margin: 0;
         padding: 10px 0px 10px 20px;
         color: aliceblue;
-        font-size: 18px;
-        border-top: 2px solid #000;
-    }
-
-    .links:last-child {
-        border-bottom: 2px solid #000;
     }
 
     .links li a {
         color: aliceblue;
+        font-size: 30px;
     }
 
     .links li:hover {
@@ -414,7 +418,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--orange--color);
+        background: url(/images/frame-request-2.jpg) no-repeat 100% 100%;
+        background-size: cover;
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
@@ -426,8 +431,16 @@
         transition: all 0.6s ease 0s;
     }
 
+    .logo.active {
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        z-index: 11;
+    }
+
     .links {
         display: block;
+        text-align: center;
     }
 
     .phone {
@@ -438,20 +451,11 @@
         margin: 0;
         padding: 10px 0px 10px 20px;
         color: aliceblue;
-        font-size: 18px;
-        border-top: 2px solid #000;
-    }
-
-    .links:last-child {
-        border-bottom: 2px solid #000;
     }
 
     .links li a {
         color: aliceblue;
-    }
-
-    .links li:hover {
-        transform: scale(1);
+        font-size: 30px;
     }
 
     .menu-burger {
@@ -736,7 +740,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--orange--color);
+        background: url(/images/frame-request-2.jpg) no-repeat 100% 100%;
+        background-size: cover;
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
@@ -748,8 +753,16 @@
         transition: all 0.6s ease 0s;
     }
 
+    .logo.active {
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        z-index: 11;
+    }
+
     .links {
         display: block;
+        text-align: center;
     }
 
     .phone {
@@ -759,21 +772,11 @@
     .links li {
         margin: 0;
         padding: 10px 0px 10px 20px;
-        color: aliceblue;
-        font-size: 18px;
-        border-top: 2px solid #000;
-    }
-
-    .links:last-child {
-        border-bottom: 2px solid #000;
     }
 
     .links li a {
         color: aliceblue;
-    }
-
-    .links li:hover {
-        transform: scale(1);
+        font-size: 27px;
     }
 
     .menu-burger {
@@ -830,11 +833,6 @@
         bottom: 0;
     }
 
-    .photo>img {
-        height: 375px;
-        width: 350px;
-    }
-
     .row-flex {
         width: 100%;
         margin-top: 5vh;
@@ -853,10 +851,6 @@
 
     .row-flex>div.fio {
         padding-left: 5%;
-    }
-
-    .photo {
-        height: 375px;
     }
 
     .col-sm-1 {

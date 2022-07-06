@@ -93,7 +93,7 @@ if ($(window).width() <= 768) {
 $(document).ready(function () {
   // Включение меню бургера при нажатии на кнопку
   $(".menu-burger").click(function (event) {
-    $(".menu-burger, .menu").toggleClass("active");
+    $(".menu-burger, .menu, .logo").toggleClass("active");
     $("body").toggleClass("lock");
   });
 });

@@ -99,17 +99,27 @@ if ($(window).width() <= 768) {
 $(document).ready(function () {
   // Включение меню бургера при нажатии на кнопку
   $(".menu-burger").click(function (event) {
-    $(".menu-burger, .menu").toggleClass("active");
+    $(
+      ".menu-burger, .menu, .logo, .leave_application, .leave_rewiev"
+    ).toggleClass("active");
     $("body").toggleClass("lock");
   });
 });
 // это плавный переход ко всем слайдам по нажатию пункта меню
-$("#menu").on("click", "a", function (event) {
-  event.preventDefault();
-  let id = $(this).attr("href");
-  let top = $(id).offset().top;
-  $("body,html").animate({ scrollTop: top }, 1500);
-});
+$("#menu, .leave_rewiev, .leave_application").on(
+  "click",
+  "a",
+  function (event) {
+    event.preventDefault();
+    let id = $(this).attr("href");
+    let top = $(id).offset().top - 70;
+    $("body,html").animate({ scrollTop: top }, 1500);
+    $(
+      ".menu-burger, .menu, .logo, .leave_application, .leave_rewiev"
+    ).removeClass("active");
+    $("body").removeClass("lock");
+  }
+);
 
 // Здесь я подключаю или отключаю слайдеры, в зависимости от размера экрана
 $(window).resize(function (event) {
