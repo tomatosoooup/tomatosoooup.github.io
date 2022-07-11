@@ -82,25 +82,28 @@
         width: 150px;
         border-radius: 50%;
         margin: 20px auto 0px;
-        background: url(../images/photo-doctor-2.png) no-repeat;
-        background-size: contain;
-        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+        background: url(../images/photo-doctor-3.png) no-repeat;
+        background-size: cover;
+        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
     }
 
     .footer_image>img {
-        height: auto;
-        width: 75px;
-        display: block;
-        margin: 0 auto;
-        border-radius: 50%;
-        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-        position: static;
+        display: none;
     }
 
     .footer_image {
-        margin-right: 20px;
+        background: url(../images/photo-doctor-3.png) no-repeat;
+        background-size: cover;
+        width: 75px !important;
+        height: 75px;
+        display: block;
+        margin: 0px 20px 0px 0px;
+        border-radius: 50%;
+        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+        position: static;
+        background-color: rgba(180, 180, 180, 1);
     }
 
     .form_container {
@@ -335,10 +338,10 @@
         width: 150px;
         border-radius: 50%;
         margin: 20px auto 0px;
-        background: url(../images/photo-doctor-2.png) no-repeat;
-        background-size: contain;
-        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+        background: url(../images/photo-doctor-3.png) no-repeat;
+        background-size: cover;
+        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
     }
 
     .form_container {
@@ -361,18 +364,21 @@
     }
 
     .footer_image>img {
-        height: auto;
-        width: 75px;
-        display: block;
-        margin: 0 auto;
-        border-radius: 50%;
-        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-        position: static;
+        display: none;
     }
 
     .footer_image {
-        margin-right: 20px;
+        background: url(../images/photo-doctor-3.png) no-repeat;
+        background-size: cover;
+        width: 75px !important;
+        height: 75px;
+        display: block;
+        margin: 0px 20px 0px 0px;
+        border-radius: 50%;
+        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+        position: static;
+        background-color: rgba(180, 180, 180, 1);
     }
 
     .footer {
@@ -382,7 +388,7 @@
         background: url(../images/frame-request-2.jpg) no-repeat;
         background-size: cover;
         align-items: center;
-        gap: 40px;
+        gap: 20px;
         margin-top: 50px;
     }
 
@@ -647,10 +653,10 @@
         width: 150px;
         border-radius: 50%;
         margin: 20px auto 0px;
-        background: url(../images/photo-doctor-2.png) no-repeat;
-        background-size: contain;
-        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+        background: url(../images/photo-doctor-3.png) no-repeat;
+        background-size: cover;
+        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
     }
 
     .form_container {
@@ -678,18 +684,21 @@
     }
 
     .footer_image>img {
-        height: auto;
-        width: 75px;
-        display: block;
-        margin: 0 auto;
-        border-radius: 50%;
-        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-        position: static;
+        display: none;
     }
 
     .footer_image {
-        margin-right: 20px;
+        background: url(../images/photo-doctor-3.png) no-repeat;
+        background-size: cover;
+        width: 75px !important;
+        height: 75px;
+        display: block;
+        margin: 0px 20px 0px 0px;
+        border-radius: 50%;
+        -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+        position: static;
+        background-color: rgba(180, 180, 180, 1);
     }
 
     .footer {
@@ -699,7 +708,7 @@
         align-items: center;
         background: url(../images/frame-request-2.jpg) no-repeat;
         background-size: cover;
-        gap: 40px;
+        gap: 20px;
         margin-top: 50px;
     }
 
