@@ -100,7 +100,7 @@ $(document).ready(function () {
   // Включение меню бургера при нажатии на кнопку
   $(".menu-burger").click(function (event) {
     $(
-      ".menu-burger, .menu, .logo, .leave_application, .leave_rewiev"
+      ".menu-burger, .menu, .logo, .logo-2, .leave_application, .leave_rewiev"
     ).toggleClass("active");
     $("body").toggleClass("lock");
   });
@@ -115,7 +115,7 @@ $("#menu, .leave_rewiev, .leave_application").on(
     let top = $(id).offset().top - 70;
     $("body,html").animate({ scrollTop: top }, 1500);
     $(
-      ".menu-burger, .menu, .logo, .leave_application, .leave_rewiev"
+      ".menu-burger, .menu, .logo, .logo-2, .leave_application, .leave_rewiev"
     ).removeClass("active");
     $("body").removeClass("lock");
   }
@@ -204,3 +204,21 @@ function ShowThanksTelegram() {
     }).showToast();
   }
 }
+
+$(window).resize(function (event) {
+  let photo = document.getElementById("photo");
+  let newWidth = window.innerWidth;
+  let newHeight = window.innerHeight;
+  if (newHeight < 600 && newWidth > 992) {
+    photo.style.height = "500px";
+  }
+  if (newHeight < 500 && newWidth > 992) {
+    photo.style.height = "400px";
+  }
+  if (newHeight > 600) {
+    photo.style.height = "600px";
+  }
+  if (newWidth < 992) {
+    photo.style.height = "150px";
+  }
+});

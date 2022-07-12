@@ -6,7 +6,7 @@ from Optelis import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Mainpage.urls'))
+    path('', include('Mainpage.urls')),
 ]
 
 if settings.DEBUG:

@@ -174,20 +174,18 @@
     .links>li:hover,
     .links>li>a:hover {
         transform: scale(1);
-        opacity: 1;
     }
 
     .logo.active {
-        position: fixed;
-        top: 30px;
-        left: 30px;
-        z-index: 11;
+        display: none;
     }
 
-    .logo.active>img {
+    .logo-2.active>img {
         width: 150px;
         height: auto;
         animation: fadeIn 3s;
+        top: 30px;
+        left: 30px;
     }
 
     .phone {
@@ -494,16 +492,16 @@
     }
 
     .logo.active {
-        position: fixed;
-        top: 30px;
-        left: 30px;
-        z-index: 11;
+        display: none;
     }
 
-    .logo.active>img {
+    .logo-2.active>img {
         width: 150px;
         height: auto;
         animation: fadeIn 3s;
+        top: 30px;
+        left: 30px;
+        z-index: 11;
     }
 
     .links {
@@ -856,16 +854,16 @@
     }
 
     .logo.active {
-        position: fixed;
-        top: 30px;
-        left: 30px;
-        z-index: 11;
+        display: none;
     }
 
-    .logo.active>img {
+    .logo-2.active>img {
         width: 150px;
         height: auto;
         animation: fadeIn 3s;
+        top: 30px;
+        left: 30px;
+        z-index: 11;
     }
 
     .links {
