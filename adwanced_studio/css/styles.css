@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green--color: #8AC248;
+    --light--green-color: #7FB948;
+}
+
+body,
+html {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+/* Слайд №1 */
+.slide {
+    background: url(../images/fone.png) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/* Меню */
+.menu__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo>img {
+    width: 120px;
+    height: auto;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.links>a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.links>a {
+    font-size: 15px;
+    margin: 0px 25px;
+}
+
+.links>a:hover {
+    background: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(138, 194, 72, 1) 35%, rgb(34, 84, 95) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.links>a:first-child>li {
+    border-bottom: 1px solid var(--green--color);
+    border-radius: 1px;
+}
+
+.links>a:last-child {
+    border: 1px solid var(--green--color);
+    border-radius: 5px;
+}
+
+.links>a:last-child>li {
+    padding: 5px 15px;
+}
+
+/* Конец меню */
+/* Блок с названием и ссылками */
+.studio {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.studio__inner {
+    color: white;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.studio__inner h1 {
+    font-size: 60px;
+}
+
+.studio__inner p {
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav>ul>a>li {
+    border-radius: 50%;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav>ul>a>li.active {
+    padding: 8px;
+    background-color: var(--green--color);
+}
+
+.nav>ul>a>li.non-active:hover {
+    transform: scale(1.4);
+    background-color: var(--green--color);
+}
+
+/* Конец блока с названием и ссылками */
+/* Стрелочка для спуска вниз */
+
+.arrow__container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.arrow span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--green--color);
+    border-right: 5px solid var(--green--color);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: arrow-down 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+.bottom-line {
+    position: absolute;
+    left: 0px;
+    bottom: -75px;
+    width: 100%;
+    height: 150px;
+    background: url(../images/bottom-line.png) no-repeat;
+    background-size: inherit;
+}
+
+/* Конец стрелочка вниз */
+/* Конец слайда №1 */
+/* Слайд №2 */
+.slide-2 {
+    min-height: 100vh;
+}
+
+/* Заголовки */
+.portfolio {
+    font-family: 'Montserrat', 'sans-serif';
+    margin-top: 100px;
+    text-align: center;
+}
+
+.portfolio h4 {
+    color: var(--light--green-color)
+}
+
+.portfolio h2 {
+    font-size: 35px;
+    margin: 5px 0px 0px 0px;
+}
+
+.portfolio h3 {
+    margin: 5px 0px 0px 0px;
+    font-weight: 400;
+}
+
+/* Конец заголовков */
+/* Начало карусели */
+.carousel {
+    margin: 50px 0px 0px 0px;
+}
+
+.carousel_inner {
+    margin: 0 auto;
+}
+
+.slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.carousel .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -30px 0 0 0;
+    z-index: 4;
+    font-size: 0;
+    width: 30px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel .slick-arrow.slick-prev {
+    left: 30px;
+    background: url(../images/chevron-left-solid.svg) 0 0 /100% no-repeat;
+    opacity: 0.5;
+}
+
+.carousel .slick-arrow.slick-next {
+    right: 30px;
+    background: url(../images/chevron-right-solid.svg) 0 0 /100% no-repeat;
+    opacity: 0.5;
+}
+
+.portfolio-item {
+    width: 220px;
+    height: 325px;
+    background-color: gray;
+    margin: 0px 20px;
+    border-radius: 25px;
+}
+
+.slick-current>.portfolio-item {
+    height: 375px;
+    width: 260px;
+}
+
+/* Конец карусели */
+/* Конец слайда №2 */

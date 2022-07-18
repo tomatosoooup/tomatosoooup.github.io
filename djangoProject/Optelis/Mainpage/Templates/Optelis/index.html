@@ -1,0 +1,273 @@
+﻿{% extends 'Optelis/base.html' %}
+{% load static %}
+{% block title %}Optelis{% endblock %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'Optelis/css/slider.css' %}">
+<link rel="stylesheet" href="{% static 'Optelis/css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'Optelis/css/popup.css' %}">
+<link rel="stylesheet" href="{% static 'Optelis/css/media.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<meta name="keywords"
+    content="оптика, optelis, врач, глаза, Мучак,Мучак А.І., киев, kiev, лечение, лечение киев, глаза киев, врач Украина">
+<meta name="description"
+    content="Мучак Андрій Іванович – лікар-офтальмолог доказової медицини. Огляд проводиться на сучасному обладнанні згідно з міжнародними протоколами.">
+<meta property="og:type" content="Лікар-офтальмолог">
+<meta property="og:image" content="{% static 'Optelis/images/site-image.png'%}">
+<meta property="og:site_name" content="Optelis">
+<meta property="og:url" content="https://dr-muchak.com/">
+{% endblock %}
+{% block content %}
+<div id="header"></div>
+<div class="fix col-lg-12 col-md-12 col-tb-12 col-sm-12">
+    <div class="header col-lg-11 col-md-11 col-tb-11 col-sm-11">
+        <div class="logo">
+            <img src="{% static 'Optelis/images/logo.png' %}" alt="Optelis, сімейний лікар, офтальміка">
+        </div> <!-- logo -->
+        <div class="logo-2">
+            <img src="{% static 'Optelis/images/optelis-full-logo-white.png' %}" alt="Optelis, офтальмолог">
+        </div>
+        <div class="menu-burger">
+            <span></span>
+        </div> <!-- burger -->
+        <nav class="menu" id="menu">
+            <ul class="links">
+                {% for key, value in context.menu.items %}
+                <li><a href="#{{ key }}">{{ value }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav> <!-- menu -->
+        <h4 class="phone"><a href="tel:+380 (99) 485 27 98">+380 (99) 485 27 98</a></h4> <!-- phone -->
+    </div> <!-- header -->
+</div>
+<div class="leave_application"><a href="#contacts">Запишіться на прийом</a></div>
+<div class="leave_rewiev"><a href="#reviews"><img src="{% static 'Optelis/images/rewiev.png' %}" alt=""></a></div>
+<div class="row-flex">
+    <div class="fio col-lg-6 col-md-6 col-tb-6 col-sm-12">
+        <h2>Мучак <br> Андрій Іванович</h2>
+        <span>Лікар Офтальмолог</span>
+    </div> <!-- div with info -->
+</div> <!-- fio -->
+</div> <!-- row with fio -->
+<div class="photo-description col-lg-11 col-md-11 col-tb-12 col-sm-12">
+    <div class="col-lg-6 col-md-6 col-tb-6 col-sm-6">
+        <div class="photo" id="photo"></div>
+    </div>
+    <div class="description col-lg-5 col-md-5 col-tb-11 col-sm-11">
+        <h3>Досвід та досягнення</h3>
+        <p>Кваліфікація: Лікар-офтальмолог прийом дорослих і дітей <br>
+            Категорія: Спеціаліст <br>
+            Стаж: 5 років клінічного досвіду <br>
+        </p>
+        <div class="show_more">
+            <div><a href="#popup3" class="popup-link-3">Детальніше</a></div>
+        </div>
+    </div>
+</div>
+<div class="sertificates col-lg-12 col-md-12 col-tb-12 col-sm-12" id="sertificates">
+    <h2>Сертифікати та ліцензії</h2>
+    <div class="study-wrapper col-lg-12 col-md-12 col-tb-12 col-sm-12">
+        <div class="study-inner col-lg-11 col-md-11 col-tb-11 col-sm-11">
+            <div class="info col-lg-5 col-md-5 col-tb-12 col-sm-12">
+                <div id="hat-text">
+                    <img src="{% static 'Optelis/images/hat.png' %}" alt="">
+                    <span>Професійна освіта</span>
+                </div>
+                <h4>ХНМУ - Харківський національний медичний університет</h4>
+                <p>У 2019 році закінчив навчання в Харківському національному медичному університеті ( І медичний
+                    факультет, спеціальність «Лікувальна справа») та здобув кваліфікацію лікаря. </p>
+            </div>
+            <div class="info col-lg-5 col-md-5 col-tb-12 col-sm-12">
+                <img src="{% static 'Optelis/images/student.png' %}" alt="books">
+                <p>Національна медична академія післядипломної освіти імені П.Л. Шупика</p>
+                <p>Від 2021 року Мучаку А.І. було присвоєно звання лікаря-спеціаліста за спеціальністю «Офтальмологія».
+                    Проходив інтернатуру на базі Центру мікрохірургії ока. А також працював у клініці Новий Зір. </p>
+                <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
+            </div>
+            <div class="info col-lg-5 col-md-5 col-tb-12 col-sm-12">
+                <img src="{% static 'Optelis/images/student.png' %}" alt="student">
+                <p>НУОЗ України імені П.Л. Шупика</p>
+                <p>У 2021 році закінчив навчання за спеціальністю «Дитяча офтальмологія». На даний момент приймає своїх
+                    пацієнтів в приватному кабінеті Optelis, або в Київській клінічній лікарні на залізничному
+                    транспорті №2</p>
+                <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
+            </div>
+            <div class="info col-lg-5 col-md-5 col-tb-12 col-sm-12">
+                <img src="{% static 'Optelis/images/books.png' %}" alt="student">
+                <p>Шляхи і напрямки професійного розвитку</p>
+                <p>Регулярно бере участь у міжнародних офтальмологічних конференціях, таких як Ophthalmic Hub 2021;
+                    проходить тренінги, майстер-класи для вдосконалення своїх знань та вмінь.</p>
+                <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-tb-12 col-sm-12 carousel">
+            <div class="col-lg-11 col-md-11 col-tb-11 col-sm-11 carousel_inner" id="slider_1">
+                {% if context.sertificates %}
+                {% for sertificate in context.sertificates %}
+                <div class="carousel_item">
+                    <h1>{{sertificare}}</h1>
+                    <img src="{{ MEDIA_URL }} {{ sertificate.image.url }}" alt="">
+                </div>
+                {% endfor %}
+                {% else %}
+                <h3 style="width: 300px; margin: 30px auto 0px; text-align: center; padding-bottom:50px">Нажаль зараз
+                    сертифікати
+                    відсутні</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="big-wrapper col-lg-12 col-md-12 col-tb-12 col-sm-12">
+    <h2>Найпоширеніщі питання</h2>
+    <div class="questions col-lg-11 col-md-11 col-tb-11 col-sm-11" id="questions">
+        <div class="questions_inner" id="slider_2">
+            {% if context.questions %}
+            {% for question in context.questions %}
+            <div class="question">
+                <h4>{{question}}</h4>
+                <p>{{question.answer}}</p>
+                <a href="#popup" class="popup-link"><span>Детальніше...</span></a>
+            </div>
+            {% endfor %}
+            {% else %}
+            <h3 style="width: 200px; margin: 0 auto; text-align: center; color:white;">На даний момент питання відсутні
+            </h3>
+            {% endif %}
+            <!--question -->
+        </div> <!-- questions inner-->
+    </div> <!-- questions-->
+    <h2 id="options">Послуги та ціни</h2>
+    <p class="prices">Вартість можна уточнити на консультації або по телефону</p>
+    <div class="options col-lg-10 col-md-10 col-tb-11 col-sm-11">
+        <ul class="options_inner" id="li_container">
+            {% if context.options %}
+            {% for opt in context.options %}
+            <li class="flex_li">
+                <h4>{{ opt }}</h4><span>{{ opt.price_of_option }}</span>
+            </li>
+            {% endfor %}
+            {% else %}
+            <h3 style="color:white; text-align: center;">Зараз послуги відсутні</h3>
+            {% endif %}
+        </ul> <!-- options inner -->
+    </div> <!-- options -->
+    <h2>Відгуки</h2>
+    <div class="reviews col-lg-11 col-md-11 col-tb-11 col-sm-11" id="reviews">
+        <div class="reviews_inner col-lg-10 col-md-10 col-tb-10 col-sm-10" id="slider_3">
+            {% for rewiev in context.rewievs %}
+            <div class="review">
+                <img src="{% static 'Optelis/images/man-circle.png' %}" alt="" class="user_photo">
+                <img src="{% static 'Optelis/images/quotes.png' %}" alt="quotes" class="quotes">
+                <div class="review_text">
+                    <p>{{ rewiev.rewiev_text }}</p>
+                    <h3>{{ rewiev }}</h3>
+                    <span>{{ rewiev.user_type }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="show_more">
+        <div><a href="#popup2" class="popup-link-2">Написати відгук</a></div>
+    </div> <!-- end of block w reviews -->
+    <div class="map">
+        <a href="https://goo.gl/maps/A4rxsbheL2WDHLuK8" target="_blank">
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4767610691138!2d30.4765679!3d50.4508461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce866f9a8bbb%3A0x91f6208c1226bcbc!2z0JbQmiAi0JLQvtC30LTRg9GF0L7RhNC70L7RgtGB0LrQuNC5INC60LLQsNGA0YLQsNC7Ig!5e0!3m2!1sru!2sua!4v1656092104851!5m2!1sru!2sua"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <span>Де ми знаходимось</span>
+            </div>
+        </a>
+    </div>
+</div> <!-- big wrapper for 3 slides-->
+<div class="location">
+    <div class="location_inner col-lg-10 col-md-10 col-tb-10">
+        <div class="location_item col-lg-4 col-md-4 col-tb-4 col-sm-12">
+            <span>м.Київ</span>
+            <h3>вул. Шолуденко, 1А, Київ</h3>
+        </div>
+        <div class="location_item col-lg-4 col-md-4 col-tb-4 col-sm-12">
+            <span>Режим роботи:</span>
+            <h4>ПН-СБ - Прийом у кабінеті</h4>
+            <h4>НД - Вихідний</h4>
+        </div>
+        <div class="location_item col-lg-4 col-md-4 col-tb-4 col-sm-12">
+            <span>Контакти:</span>
+            <h3>+380 (99) 485 27 98</h3>
+            <h5>Щоденно з 10:00 до 18:00</h5>
+        </div>
+    </div> <!-- location inner -->
+    <div class="footer col-lg-11 col-md-12 col-tb-12 col-sm-12" id="contacts">
+        <div class="col-lg-9 col-md-6 col-tb-9 col-sm-10" id="footer_request">
+            <div>
+                <h2>Запишіться на прийом</h2>
+                <p>Залиште свій номер телефону і я з вами зв'яжусь</p>
+            </div>
+            <div class="footer_image col-lg-8 col-md-2 col-tb-2 col-sm-2">
+                <img src="{% static 'Optelis/images/photo-doctor-2.png' %}" alt="">
+            </div>
+        </div>
+        <div class="form_container col-lg-3 col-md-6 col-tb-8 col-sm-10">
+            <form class="form" method="POST" id="contact_form">
+                {% csrf_token %}
+                {% for item in form %}
+                <label for="{{ item.id_for_label }}">
+                    {{ item }}
+                </label>
+                {% endfor %}
+                <button type="submit" name="btn2" onclick="ShowThanksTelegram()">Відправити</button>
+            </form>
+        </div>
+    </div>
+</div> <!-- container w location information -->
+<div class="popup-wrapper">
+    <div class="popup" id="popup">
+        <div class="popup__body">
+            <div class="popup__content"></div>
+            <a href="#" class="popup__close close-popup"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper2">
+    <div class="popup2" id="popup2">
+        <div class="popup__body2">
+            <a href="#" class="popup__close2 close-popup2"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            <div class="popup__content2">
+                <form method="post" class="form" id="form_r">
+                    {% csrf_token %}
+                    {% for rew in comment %}
+                    <label for="{{ rew.id_for_label }}">
+                        {{ rew }}
+                    </label>
+                    {% endfor %}
+                    <button type="submit" name="btn1" onclick="ShowThanksRewiev()">Відправити</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper3">
+    <div class="popup3" id="popup3">
+        <div class="popup__body3">
+            <a href="#" class="popup__close3 close-popup3"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            <div class="popup__content3">
+                Закінчив ХНМУ
+                Лікар спеціаліст
+                Діагностика та лікування захворювання очей
+                Індивідуальний підхід
+                Підбір окулярів і контактних лінз будь-якої складності
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Подключение jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.60/inputmask/jquery.inputmask.js"></script>
+<script src="{% static 'Optelis/js/slick.min.js' %}"></script>
+<script src="{% static 'Optelis/js/popup.js' %}"></script>
+<script src="{% static 'Optelis/js/script.js' %}"></script>
+{% endblock %}
