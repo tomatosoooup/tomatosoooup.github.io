@@ -52,6 +52,90 @@
 
 /********** Laptops devices only **********/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+    .links {
+        position: fixed;
+        top: -100%;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        padding: 100px 10px 20px 10px;
+        transition: all 0.8s ease 0s;
+        overflow: auto;
+        z-index: 1;
+        display: block;
+    }
+
+    .links.active {
+        top: 0;
+        transition: all 0.8s ease 0s;
+    }
+
+    .links.active>a {
+        color: black;
+    }
+
+    .menu-burger {
+        display: block;
+        position: fixed;
+        right: 30px;
+        top: 40px;
+        width: 30px;
+        height: 20px;
+        z-index: 2;
+    }
+
+    .menu-burger.active span {
+        transform: scale(0);
+    }
+
+    .menu-burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .menu-burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .menu-burger span {
+        position: absolute;
+        background-color: black;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.4s;
+    }
+
+    .menu-burger:before,
+    .menu-burger:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.6s;
+    }
+
+    .menu-burger:before {
+        top: 0;
+    }
+
+    .menu-burger:after {
+        bottom: 0;
+    }
 
     .col-md-1 {
         width: 8.33%;
@@ -104,6 +188,92 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+
+    .links {
+        position: fixed;
+        top: -100%;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        padding: 100px 10px 20px 10px;
+        transition: all 0.8s ease 0s;
+        overflow: auto;
+        z-index: 1;
+        display: block;
+    }
+
+    .links.active {
+        top: 0;
+        transition: all 0.8s ease 0s;
+    }
+
+    .links.active>a {
+        color: black;
+    }
+
+    .menu-burger {
+        display: block;
+        position: fixed;
+        right: 30px;
+        top: 40px;
+        width: 30px;
+        height: 20px;
+        z-index: 2;
+    }
+
+    .menu-burger.active span {
+        transform: scale(0);
+    }
+
+    .menu-burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .menu-burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .menu-burger span {
+        position: absolute;
+        background-color: black;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.4s;
+    }
+
+    .menu-burger:before,
+    .menu-burger:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.6s;
+    }
+
+    .menu-burger:before {
+        top: 0;
+    }
+
+    .menu-burger:after {
+        bottom: 0;
+    }
+
     .col-tb-1 {
         width: 8.33%;
     }
@@ -155,6 +325,90 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+    .links {
+        position: fixed;
+        top: -100%;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        padding: 100px 10px 20px 10px;
+        transition: all 0.8s ease 0s;
+        overflow: auto;
+        z-index: 1;
+        display: block;
+    }
+
+    .links.active {
+        top: 0;
+        transition: all 0.8s ease 0s;
+    }
+
+    .links.active>a {
+        color: black;
+    }
+
+    .menu-burger {
+        display: block;
+        position: fixed;
+        right: 30px;
+        top: 40px;
+        width: 30px;
+        height: 20px;
+        z-index: 2;
+    }
+
+    .menu-burger.active span {
+        transform: scale(0);
+    }
+
+    .menu-burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .menu-burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .menu-burger span {
+        position: absolute;
+        background-color: black;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.4s;
+    }
+
+    .menu-burger:before,
+    .menu-burger:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.6s;
+    }
+
+    .menu-burger:before {
+        top: 0;
+    }
+
+    .menu-burger:after {
+        bottom: 0;
+    }
 
     .col-sm-1 {
         width: 8.33%;
@@ -218,5 +472,19 @@
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }

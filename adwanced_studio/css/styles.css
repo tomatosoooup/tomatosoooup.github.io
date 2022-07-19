@@ -23,6 +23,10 @@ html {
     min-height: 100vh;
 }
 
+body.lock {
+    overflow: hidden;
+}
+
 /* Слайд №1 */
 .slide {
     background: url(../images/fone.png) no-repeat;

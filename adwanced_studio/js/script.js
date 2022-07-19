@@ -1,10 +1,23 @@
-$("#arrow__container, .links, .nav, .nav-2").on("click", "a", function (event) {
-  event.preventDefault();
-  let id = $(this).attr("href");
-  let top = $(id).offset().top;
-  $("body,html").animate({ scrollTop: top }, 1500);
+$(document).ready(function () {
+  // Переход по якорям сайта
+  $("#arrow__container, .links, .nav, .nav-2").on(
+    "click",
+    "a",
+    function (event) {
+      event.preventDefault();
+      let id = $(this).attr("href");
+      let top = $(id).offset().top;
+      $("body,html").animate({ scrollTop: top }, 1500);
+    }
+  );
+  // Переключение меню бургера
+  $(".menu-burger").click(function (event) {
+    $(".menu-burger, .links").toggleClass("active");
+    $("body").toggleClass("lock");
+  });
 });
 
+// Инициализация слайдера
 $(".carousel_inner")
   .not(".slick-initialized")
   .slick({
