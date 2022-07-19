@@ -1,4 +1,4 @@
-$("#arrow__container, .links").on("click", "a", function (event) {
+$("#arrow__container, .links, .nav, .nav-2").on("click", "a", function (event) {
   event.preventDefault();
   let id = $(this).attr("href");
   let top = $(id).offset().top;
