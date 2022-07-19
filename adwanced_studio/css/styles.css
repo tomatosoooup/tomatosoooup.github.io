@@ -4,11 +4,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', 'sans-serif';
 }
 
 :root {
     --green--color: #8AC248;
     --light--green-color: #7FB948;
+    --light--link: #394F58;
+    --headers--fill: #232439;
+    --light--gray: #727272;
 }
 
 body,
@@ -29,6 +35,12 @@ html {
     margin: 0 auto;
 }
 
+.container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 /* Меню */
 .menu__inner {
     display: flex;
@@ -42,10 +54,8 @@ html {
 }
 
 .links {
-    list-style: none;
     display: flex;
     align-items: center;
-    font-family: 'Montserrat', 'sans-serif';
 }
 
 .links>a {
@@ -90,7 +100,6 @@ html {
 
 .studio__inner {
     color: white;
-    font-family: 'Montserrat', 'sans-serif';
 }
 
 .studio__inner h1 {
@@ -102,8 +111,8 @@ html {
     margin-top: 10px;
 }
 
-.nav ul {
-    list-style: none;
+.nav ul,
+.nav-2 ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,12 +125,20 @@ html {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.nav>ul>a>li.active {
+.nav-2>ul>a>li {
+    border-radius: 50%;
+    padding: 6px;
+    background-color: rgba(57, 79, 88, 0.15);
+}
+
+.nav>ul>a>li.active,
+.nav-2>ul>a>li.active {
     padding: 8px;
     background-color: var(--green--color);
 }
 
-.nav>ul>a>li.non-active:hover {
+.nav>ul>a>li.non-active:hover,
+.nav-2>ul>a>li.non-active:hover {
     transform: scale(1.4);
     background-color: var(--green--color);
 }
@@ -166,14 +183,16 @@ html {
 /* Конец стрелочка вниз */
 /* Конец слайда №1 */
 /* Слайд №2 */
-.slide-2 {
+.slide-2,
+.slide-3,
+.slide-4 {
     min-height: 100vh;
+    border-top: 1px solid black;
 }
 
 /* Заголовки */
 .portfolio {
-    font-family: 'Montserrat', 'sans-serif';
-    margin-top: 100px;
+    padding-top: 80px;
     text-align: center;
 }
 
@@ -184,11 +203,11 @@ html {
 .portfolio h2 {
     font-size: 35px;
     margin: 5px 0px 0px 0px;
+    color: var(--headers--fill)
 }
 
 .portfolio h3 {
     margin: 5px 0px 0px 0px;
-    font-weight: 400;
 }
 
 /* Конец заголовков */
@@ -206,6 +225,7 @@ html {
     align-items: center;
 }
 
+/* Стрелки */
 .carousel .slick-arrow {
     position: absolute;
     top: 50%;
@@ -230,6 +250,8 @@ html {
     opacity: 0.5;
 }
 
+/* Конец стрелок */
+/* Вид блоков */
 .portfolio-item {
     width: 220px;
     height: 325px;
@@ -243,5 +265,89 @@ html {
     width: 260px;
 }
 
+/* Конец видов блока */
 /* Конец карусели */
 /* Конец слайда №2 */
+/* Начало третьего блока */
+
+.container-flex-2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container-flex-3 {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+/* Блок описания */
+.options {
+    padding: 50px 0px 0px 0px;
+}
+
+.options>span {
+    color: var(--green--color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.options>h2 {
+    color: var(--headers--fill);
+    font-size: 30px;
+    margin: 5px 0px 0px 0px;
+    font-weight: 600;
+}
+
+.options>p {
+    font-size: 20px;
+    margin: 3px 0px 0px 0px;
+}
+
+/* Конец блока описания */
+.feedback {
+    background-color: var(--green--color);
+    border-radius: 5px;
+    padding: 10px 25px;
+    text-align: center;
+    margin: 15px 95px 0px 0px;
+}
+
+.feedback>a {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Начало фоток и текста */
+.options-2 {
+    margin: 60px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.option>img {
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+}
+
+.option>h3 {
+    font-weight: bold;
+    margin: 10px 0px 0px 5px;
+}
+
+.option>p {
+    margin: 10px 0px 0px 5px;
+    color: var(--light--gray)
+}
+
+/* Конец фоток и текста */
+/* Конец слайда 3 */
+/* Начало слайда 4 */
+
+/* Конец слайда 4 */
