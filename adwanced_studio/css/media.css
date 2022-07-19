@@ -1,5 +1,5 @@
 /********** Large devices only **********/
-@media screen and (min-width: 993px) and (max-width: 2000px) {
+@media screen and (min-width: 993px) {
 
     .col-lg-1 {
         width: 8.33%;
@@ -52,6 +52,12 @@
 
 /********** Laptops devices only **********/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+
+    .links>a:first-child>li {
+        border-bottom: none;
+        border-radius: none
+    }
+
     .links {
         position: fixed;
         top: -100%;
@@ -188,6 +194,15 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+    .links>a:first-child>li {
+        border-bottom: none;
+        border-radius: none
+    }
+
+    .nav,
+    .nav-2 {
+        display: none;
+    }
 
     .links {
         position: fixed;
@@ -325,6 +340,16 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+    .links>a:first-child>li {
+        border-bottom: none;
+        border-radius: none
+    }
+
+    .nav,
+    .nav-2 {
+        display: none;
+    }
+
     .links {
         position: fixed;
         top: -100%;

@@ -187,11 +187,14 @@ body.lock {
 /* Конец стрелочка вниз */
 /* Конец слайда №1 */
 /* Слайд №2 */
-.slide-2,
+.slide-2 {
+    min-height: 70vh;
+    padding: 0px 0px 10px 0px;
+}
+
 .slide-3,
 .slide-4 {
     min-height: 100vh;
-    border-top: 1px solid black;
 }
 
 /* Заголовки */
