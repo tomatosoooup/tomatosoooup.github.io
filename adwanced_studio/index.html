@@ -134,29 +134,36 @@
                 <a href="#">Зв'язатися з нами</a>
             </div>
         </div>
+        <!-- Нужно обернуть option в div с flex свойствами -->
         <div class="container container-flex-3 col-lg-11 col-md-11 col-tb-11 col-sm-11">
             <div class="options-2 col-lg-11 col-md-11 col-tb-11 col-sm-11">
-                <div class="option col-lg-3 col-md-3 col-tb-3 col-sm-3">
-                    <img src="images/code.png" alt="">
-                    <h3>Веб розробка</h3>
-                    <p>Ми робимо повний
-                        функціонал сайту, для
-                        зручної роботи та зручності
-                        клієнта</p>
+                <div class="option-wrapper col-lg-3 col-md-3 col-tb-12 col-sm-12">
+                    <div class="option col-lg-12 col-md-12 col-tb-6 col-sm-8">
+                        <img src="images/code.png" alt="">
+                        <h3>Веб розробка</h3>
+                        <p>Ми робимо повний
+                            функціонал сайту, для
+                            зручної роботи та зручності
+                            клієнта</p>
+                    </div>
                 </div>
-                <div class="option col-lg-3 col-md-3 col-tb-3 col-sm-3">
-                    <img src="images/laptop.png" alt="">
-                    <h3>UI/UX</h3>
-                    <p>Розробляємо дизайн,
-                        роблячи сайт приємним для
-                        око та бажанням повернутися знову</p>
+                <div class="option-wrapper col-lg-3 col-md-3 col-tb-12 col-sm-12">
+                    <div class="option col-lg-12 col-md-12 col-tb-6 col-sm-8">
+                        <img src="images/laptop.png" alt="">
+                        <h3>UI/UX</h3>
+                        <p>Розробляємо дизайн,
+                            роблячи сайт приємним для
+                            око та бажанням повернутися знову</p>
+                    </div>
                 </div>
-                <div class="option col-lg-3 col-md-3 col-tb-3 col-sm-3">
-                    <img src="images/money.png" alt="">
-                    <h3>Моб. програми</h3>
-                    <p>Робимо зручний концепт
-                        програми для зручностей
-                        користування на смартфоні</p>
+                <div class="option-wrapper col-lg-3 col-md-3 col-tb-12 col-sm-12">
+                    <div class="option col-lg-12 col-md-12 col-tb-6 col-sm-8">
+                        <img src="images/money.png" alt="">
+                        <h3>Моб. програми</h3>
+                        <p>Робимо зручний концепт
+                            програми для зручностей
+                            користування на смартфоні</p>
+                    </div>
                 </div>
             </div>
             <div class="nav-2">
@@ -177,7 +184,81 @@
             </div>
         </div>
     </div>
-    <div class="slide-4" id="slide-4"></div>
+    <div class="slide-4" id="slide-4">
+        <div class="container col-lg-11 col-md-11 col-tb-11 col-sm-11">
+            <div class="steps col-lg-12 col-md-12 col-tb-12 col-sm-12">
+                <h4>Як ми працюємо</h4>
+                <h2>Послідовність роботи</h2>
+            </div>
+        </div>
+        <div class="container container-flex-4 col-lg-11 col-md-11 col-tb-11 col-sm-11">
+            <div class="schedule col-lg-11 col-md-11 col-tb-11 col-sm-11">
+                <div class="schedule-wrapper col-lg-12 col-md-12 col-tb-12 col-sm-12">
+                    <div class="schedule-item-1 col-lg-3 col-md-6 col-tb-6 col-sm-6" id="flex-order-1">
+                        <img src="images/arrow-1.png" alt="">
+                        <div class="schedule-line-img-1">
+                            <img src="images/phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Зв'язок з нами</span>
+                            <p>Ви зв'язуєтеся з нами по телефону
+                                або залишаєте заявку, після чого ми
+                                передзвонюємо</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item-2 col-lg-3 col-md-6 col-tb-6 col-sm-6" id="flex-order-2">
+                        <div class="schedule-line-img-2">
+                            <img src="images/room-chat.png" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Обговорення та складання Т.З</span>
+                            <p>Вислуховуючи Ваші побажання, ми ставимо додаткові питання, висловлюємо своє бачення та
+                                фіксуємо підсумок</p>
+                        </div>
+                        <img src="images/arrow-2.png" alt="">
+                    </div>
+                    <div class="schedule-item-1 col-lg-3 col-md-6 col-tb-6 col-sm-6" id="flex-order-3">
+                        <img src="images/arrow-3.png" alt="">
+                        <div class="schedule-line-img-1">
+                            <img src="images/task.png" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Підписання договору</span>
+                            <p>Після складання технічного завдання ми укладаємо офіційний договір, що має юридичну силу
+                            </p>
+                        </div>
+                    </div>
+                    <div class="schedule-item-2 col-lg-3 col-md-6 col-tb-6 col-sm-6" id="flex-order-4">
+                        <div class="schedule-line-img-2">
+                            <img src="images/check-laptop.png" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Здача роботи та передача доступів</span>
+                            <p>Після завершення робіт ми передаємо Вам усі файли у вихідних форматах, доступи до
+                                адміністративної панелі та всі матеріали, які були розроблені.</p>
+                        </div>
+                        <img src="images/arrow-4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-2">
+                <ul>
+                    <a href="#slide">
+                        <li class="non-active"></li>
+                    </a>
+                    <a href="#slide-2">
+                        <li class="non-active"></li>
+                    </a>
+                    <a href="#slide-3">
+                        <li class="non-active"></li>
+                    </a>
+                    <a href="#slide-4">
+                        <li class="active"></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>

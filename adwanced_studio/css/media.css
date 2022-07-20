@@ -194,6 +194,10 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+    .options-2 {
+        gap: 30px;
+    }
+
     .links>a:first-child>li {
         border-bottom: none;
         border-radius: none
@@ -340,6 +344,25 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+
+    .schedule-item-1>img,
+    .schedule-item-2>img {
+        width: 100px;
+        height: auto;
+    }
+
+    .schedule-line-img-1 {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .schedule-item-2>img {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .options-2 {
+        gap: 25px;
+    }
+
     .links>a:first-child>li {
         border-bottom: none;
         border-radius: none
