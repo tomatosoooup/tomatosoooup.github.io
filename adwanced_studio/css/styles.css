@@ -305,6 +305,16 @@ body.lock {
     align-items: center;
 }
 
+.container-flex-5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-flex-5>.nav {
+    margin: 0px 25px 0px 0px;
+}
+
 /* Блок описания */
 .options {
     padding: 50px 0px 0px 0px;
@@ -483,10 +493,12 @@ body.lock {
     width: 100%;
     padding: 10px;
     margin: 10px 0px;
+    font-size: 0.8em;
 }
 
 .form>label>textarea {
     padding: 10px;
+    margin: 5px 0px 0px 0px;
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -499,6 +511,62 @@ body.lock {
     outline: none;
     border: none;
     margin-left: auto;
+    cursor: pointer;
 }
 
 /* Конец 5-го слайда */
+/* Футер */
+footer {
+    min-height: fit-content;
+    background-color: #2B2B2B;
+    padding: 0px 0px 25px 0px;
+}
+
+hr {
+    background-color: var(--light--gray);
+    height: 1px;
+}
+
+.menu__bottom__inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.adress {
+    display: flex;
+    gap: 70px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.adress_links h4 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.adress_links span {
+    font-size: 14px;
+}
+
+.adress_links ul {
+    padding: 20px 0px 0px 0px;
+}
+
+.media_links {
+    display: flex;
+    gap: 15px;
+}
+
+.media_links>a>li>img {
+    width: 25px;
+    height: 25px;
+}
+
+.adress_email {
+    padding: 0px 0px 20px 0px;
+}
+
+
+/* Конец футера */
