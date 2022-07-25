@@ -191,7 +191,7 @@ body.lock {
 /* Конец слайда №1 */
 /* Слайд №2 */
 .slide-2 {
-    min-height: 80vh;
+    min-height: fit-content;
     padding: 0px 0px 10px 0px;
 }
 
@@ -546,7 +546,12 @@ hr {
     font-size: 18px;
 }
 
-.adress_links span {
+.adress_links>a {
+    text-decoration: none;
+    color: white
+}
+
+.adress_links>a>span {
     font-size: 14px;
 }
 
