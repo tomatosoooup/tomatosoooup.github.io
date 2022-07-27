@@ -52,6 +52,10 @@
 
 /********** Laptops devices only **********/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+    .adress {
+        gap: 20px;
+        flex-direction: column;
+    }
 
     .links>a:first-child>li {
         border-bottom: none;
@@ -194,6 +198,16 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+    .menu__bottom__inner {
+        display: block;
+    }
+
+    .adress {
+        gap: 20px;
+        flex-direction: column;
+        margin: 0;
+    }
+
     .application-form {
         padding: 50px 0px 0px 0px;
         margin: 0 auto;
@@ -349,6 +363,16 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+    .menu__bottom__inner {
+        display: block;
+    }
+
+    .adress {
+        gap: 20px;
+        flex-direction: column;
+        margin: 0;
+    }
+
     .application-form {
         padding: 50px 0px 0px 0px;
         margin: 0 auto;

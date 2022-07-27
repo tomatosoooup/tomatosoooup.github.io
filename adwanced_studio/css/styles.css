@@ -32,8 +32,31 @@ body.lock {
 .slide {
     background: url(../images/fone.png) no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: fit-content;
     position: relative;
+    padding: 0px 0px 200px 0px;
+}
+
+.slide-2,
+.slide-3,
+.slide-4,
+.slide-5 {
+    min-height: fit-content;
+}
+
+.slide-2,
+.slide-3 {
+    padding: 0px 0px 20px 0px;
+}
+
+.slide-4 {
+    position: relative;
+    padding: 0px 0px 150px 0px;
+}
+
+.slide-5 {
+    background-color: #2B2B2B;
+    padding: 0px 0px 85px 0px;
 }
 
 .container {
@@ -97,10 +120,11 @@ body.lock {
 /* Конец меню */
 /* Блок с названием и ссылками */
 .studio {
-    height: 65vh;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding: 100px 0px 0px 0px;
 }
 
 .studio__inner {
@@ -150,6 +174,12 @@ body.lock {
 
 /* Конец блока с названием и ссылками */
 /* Стрелочка для спуска вниз */
+#arrow__container {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+}
 
 .arrow__container {
     width: fit-content;
@@ -192,22 +222,6 @@ body.lock {
 /* Конец стрелочка вниз */
 /* Конец слайда №1 */
 /* Слайд №2 */
-.slide-2 {
-    min-height: fit-content;
-    padding: 0px 0px 10px 0px;
-}
-
-.slide-3,
-.slide-4 {
-    min-height: 100vh;
-    position: relative;
-}
-
-.slide-5 {
-    min-height: 100vh;
-    background-color: #2B2B2B;
-}
-
 /* Заголовки */
 .portfolio {
     padding-top: 100px;
@@ -460,7 +474,7 @@ body.lock {
 /* Конец слайда 4 */
 /* Начало 5-го слайда */
 .application-text {
-    padding: 80px 0px 0px 0px;
+    padding: 60px 0px 0px 0px;
     text-align: center;
 }
 
@@ -476,7 +490,7 @@ body.lock {
 }
 
 .application-form {
-    padding: 50px 0px 0px 0px;
+    padding: 30px 0px 0px 0px;
 }
 
 .application-form h3 {
