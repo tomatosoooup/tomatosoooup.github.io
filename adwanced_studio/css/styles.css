@@ -32,9 +32,8 @@ body.lock {
 .slide {
     background: url(../images/fone.png) no-repeat;
     background-size: cover;
-    min-height: fit-content;
+    min-height: 100vh;
     position: relative;
-    padding: 0px 0px 200px 0px;
 }
 
 .slide-2,
@@ -120,11 +119,11 @@ body.lock {
 /* Конец меню */
 /* Блок с названием и ссылками */
 .studio {
-    height: fit-content;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 100px 0px 0px 0px;
+    /* padding: 10vh 0px 0px 0px; */
 }
 
 .studio__inner {
