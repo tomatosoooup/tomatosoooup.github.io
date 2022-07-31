@@ -504,6 +504,7 @@ body.lock {
     justify-content: space-between;
 }
 
+.form>select,
 .form>label>input {
     width: 100%;
     padding: 10px;
