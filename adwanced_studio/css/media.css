@@ -59,7 +59,6 @@
 
     .links>a:first-child>li {
         border-bottom: none;
-        border-radius: none
     }
 
     .links {
@@ -68,23 +67,27 @@
         right: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
         z-index: 1;
         display: block;
+        background: url(../images/fone.png);
+        text-align: center;
+        color: white;
     }
 
     .links.active {
         top: 0;
-        transition: all 0.8s ease 0s;
     }
 
     .links.active>a {
-        color: black;
+        color: white;
     }
 
+    .links.active>li {
+        display: none;
+    }
 
     .links>a:last-child {
         border: none;
@@ -208,6 +211,43 @@
 
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
+
+    .schedule {
+        padding: 50px 0px 0px 0px;
+    }
+
+    .schedule-wrapper {
+        display: block;
+    }
+
+    .schedule-item-1>img,
+    .schedule-item-2>img {
+        display: none;
+    }
+
+    .schedule-item-1,
+    .schedule-item-2 {
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        margin: 15px 0px 0px 0px;
+    }
+
+    .schedule-line-img-1>,
+    .schedule-line-img-2> {
+        margin: 0;
+    }
+
+    .schedule-line-img-1>img,
+    .schedule-line-img-2>img {
+        width: auto;
+        height: 55px;
+    }
+
+    .text {
+        text-align: left;
+    }
+
     .menu__bottom__inner {
         display: block;
     }
@@ -234,7 +274,6 @@
 
     .links>a:first-child>li {
         border-bottom: none;
-        border-radius: none
     }
 
     .nav,
@@ -248,21 +287,25 @@
         right: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
         z-index: 1;
         display: block;
+        background: url(../images/fone.png);
+        text-align: center;
     }
 
     .links.active {
         top: 0;
-        transition: all 0.8s ease 0s;
     }
 
     .links.active>a {
-        color: black;
+        color: white;
+    }
+
+    .links.active>li {
+        display: none;
     }
 
     .links>a:last-child {
@@ -384,6 +427,46 @@
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
 
+    .schedule {
+        padding: 50px 0px 0px 0px;
+    }
+
+    .schedule-wrapper {
+        display: block;
+    }
+
+    .schedule-item-1>img,
+    .schedule-item-2>img {
+        display: none;
+    }
+
+    .schedule-item-1,
+    .schedule-item-2 {
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+        margin: 15px 0px 0px 0px;
+    }
+
+    .schedule-line-img-1>,
+    .schedule-line-img-2> {
+        margin: 0;
+    }
+
+    .schedule-line-img-1>img,
+    .schedule-line-img-2>img {
+        width: auto;
+        height: 55px;
+    }
+
+    .text {
+        text-align: left;
+    }
+
+    .studio {
+        text-align: center;
+    }
+
     .portfolio-item {
         height: 225px;
     }
@@ -423,7 +506,6 @@
 
     .links>a:first-child>li {
         border-bottom: none;
-        border-radius: none
     }
 
     .links>a:last-child>li {
@@ -447,12 +529,13 @@
         right: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
         padding: 100px 10px 20px 10px;
         transition: all 0.8s ease 0s;
         overflow: auto;
         z-index: 1;
         display: block;
+        background: url(../images/fone.png);
+        text-align: center;
     }
 
     .links.active {
@@ -461,7 +544,12 @@
     }
 
     .links.active>a {
-        color: black;
+        color: white;
+        font-size: 23px;
+    }
+
+    .links.active>li {
+        display: none;
     }
 
     .menu-burger {
