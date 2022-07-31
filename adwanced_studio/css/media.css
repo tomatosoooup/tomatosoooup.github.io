@@ -85,6 +85,16 @@
         color: black;
     }
 
+
+    .links>a:last-child {
+        border: none;
+        border-radius: none;
+    }
+
+    .links>a:last-child>li {
+        padding: 0;
+    }
+
     .menu-burger {
         display: block;
         position: fixed;
@@ -217,6 +227,11 @@
         gap: 30px;
     }
 
+
+    .links>a:last-child>li {
+        padding: 0;
+    }
+
     .links>a:first-child>li {
         border-bottom: none;
         border-radius: none
@@ -248,6 +263,11 @@
 
     .links.active>a {
         color: black;
+    }
+
+    .links>a:last-child {
+        border: none;
+        border-radius: none;
     }
 
     .menu-burger {
@@ -363,6 +383,11 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+
+    .portfolio-item {
+        height: 225px;
+    }
+
     .menu__bottom__inner {
         display: block;
     }
@@ -399,6 +424,16 @@
     .links>a:first-child>li {
         border-bottom: none;
         border-radius: none
+    }
+
+    .links>a:last-child>li {
+        padding: 0;
+    }
+
+
+    .links>a:last-child {
+        border: none;
+        border-radius: none;
     }
 
     .nav,

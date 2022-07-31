@@ -291,10 +291,11 @@ body.lock {
     border-radius: 25px;
 }
 
-.slick-current>.portfolio-item {
+/* Пока что не использовать */
+/* .slick-current>.portfolio-item {
     height: 375px;
     width: 260px;
-}
+} */
 
 /* Конец видов блока */
 /* Конец карусели */
@@ -511,7 +512,7 @@ body.lock {
     font-size: 0.8em;
 }
 
-.form>label>textarea {
+.form>textarea {
     padding: 10px;
     margin: 5px 0px 0px 0px;
     width: 100%;
@@ -525,8 +526,9 @@ body.lock {
     background-color: var(--green--color);
     outline: none;
     border: none;
-    margin-left: auto;
+    margin: 5px 0px 0px auto;
     cursor: pointer;
+    color: white;
 }
 
 /* Конец 5-го слайда */
@@ -579,26 +581,60 @@ hr {
     display: flex;
     gap: 15px;
     align-items: center;
-}
-
-.media_links>a>i {
     position: relative;
-    font-size: 35px;
-    color: white;
 }
 
-.media_links>a>i:after {
-    content: var(--ico);
-    position: absolute;
-    font-size: 35px;
-    top: 0px;
-    left: 0px;
-    width: 51px;
-    height: 0px;
-    overflow: hidden;
-    color: var(--clr);
-    transition: 0.8s ease-in-out;
+.media_links li {
+    position: relative;
 }
+
+.media_links li a .fa {
+    font-size: 2em;
+    color: rgb(225, 220, 220);
+}
+
+.media_links li::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.media_links li:nth-child(1)::before {
+    content: '\f082';
+    color: #2d8eca;
+    border-bottom: 2px solid #2d8eca;
+}
+
+.media_links li:nth-child(2)::before {
+    content: '\f16d';
+    background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%,
+            #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 2px solid #dc2743;
+}
+
+.media_links li:nth-child(3)::before {
+    content: '\f1b5';
+    color: #38a8ed;
+    border-bottom: 2px solid #38a8ed;
+}
+
+.media_links li:nth-child(4)::before {
+    content: '\f08c';
+    color: #0035a8a7;
+    border-bottom: 2px solid #0035a8a7;
+}
+
+.media_links li:hover::before {
+    height: 100%;
+}
+
 
 .media_links>a>i:hover::after {
     height: 100%;
