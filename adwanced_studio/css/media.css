@@ -427,6 +427,14 @@
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
 
+    .adress_home {
+        order: 3;
+    }
+
+    .adress_email {
+        order: 2;
+    }
+
     .schedule {
         padding: 50px 0px 0px 0px;
     }
@@ -476,9 +484,21 @@
     }
 
     .adress {
-        gap: 20px;
+        gap: 10px;
         flex-direction: column;
         margin: 0;
+    }
+
+    .application-text h3 {
+        display: none;
+    }
+
+    .menu__bottom__inner {
+        padding: 10px 0px 0px 0px;
+    }
+
+    .menu__bottom__inner>.logo {
+        display: none;
     }
 
     .application-form {

@@ -54,7 +54,9 @@ body.lock {
 }
 
 .slide-5 {
-    background-color: #2B2B2B;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/contact-fone.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 0px 0px 85px 0px;
 }
 
@@ -115,6 +117,58 @@ body.lock {
 .links>a:last-child>li {
     padding: 5px 15px;
 }
+
+
+/* Настройка списка с языкам */
+
+.links>li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 70px;
+}
+
+.menu_link {}
+
+.menu_link img,
+.sub_menu_list img {
+    width: 25px;
+    height: 25px;
+}
+
+.links>li:hover .sub_menu_list {
+    display: block;
+}
+
+.sub_menu_list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    padding: 30px 0px 0px 0px;
+}
+
+.sub_menu_list>li>a {
+    margin: 7px 0px 0px 0px;
+    border: 1px solid white;
+    width: 70px;
+    border-radius: 5px;
+    display: flex;
+    padding: 0px 0px 0px 5px;
+}
+
+.drop_arrow {
+    width: 0;
+    height: 0;
+    border-top: 6px solid #fff;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
+/* Конец настройки */
 
 /* Конец меню */
 /* Блок с названием и ссылками */
@@ -510,6 +564,7 @@ body.lock {
     padding: 10px;
     margin: 10px 0px;
     font-size: 0.7em;
+    border-radius: 5px;
 }
 
 .form>textarea {
@@ -519,6 +574,7 @@ body.lock {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .form-button {
@@ -529,13 +585,14 @@ body.lock {
     margin: 5px 0px 0px auto;
     cursor: pointer;
     color: white;
+    border-radius: 5px;
 }
 
 /* Конец 5-го слайда */
 /* Футер */
 footer {
     min-height: fit-content;
-    background-color: #2B2B2B;
+    background-color: #10280B;
     padding: 0px 0px 25px 0px;
 }
 
@@ -643,6 +700,5 @@ hr {
 .adress_email {
     padding: 0px 0px 20px 0px;
 }
-
 
 /* Конец футера */
