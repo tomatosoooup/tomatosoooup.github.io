@@ -238,12 +238,6 @@
         margin: 0;
     }
 
-    .schedule-line-img-1>img,
-    .schedule-line-img-2>img {
-        width: auto;
-        height: 55px;
-    }
-
     .text {
         text-align: left;
     }
@@ -459,12 +453,6 @@
     .schedule-line-img-1>,
     .schedule-line-img-2> {
         margin: 0;
-    }
-
-    .schedule-line-img-1>img,
-    .schedule-line-img-2>img {
-        width: auto;
-        height: 55px;
     }
 
     .text {
