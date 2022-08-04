@@ -12,7 +12,7 @@ $(document).ready(function () {
   );
   // Переключение меню бургера
   $(".menu-burger").click(function (event) {
-    $(".menu-burger, .links").toggleClass("active");
+    $(".menu-burger, .links, .logo-popup").toggleClass("active");
     $("body").toggleClass("lock");
   });
 });

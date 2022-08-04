@@ -105,7 +105,7 @@
         top: 40px;
         width: 30px;
         height: 20px;
-        z-index: 2;
+        z-index: 3;
     }
 
     .menu-burger.active span {
@@ -314,7 +314,7 @@
         top: 40px;
         width: 30px;
         height: 20px;
-        z-index: 2;
+        z-index: 3;
     }
 
     .menu-burger.active span {
@@ -420,6 +420,9 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+    .studio__inner h1 {
+        font-size: 8vw;
+    }
 
     .adress_home {
         order: 3;
@@ -567,7 +570,7 @@
         top: 40px;
         width: 30px;
         height: 20px;
-        z-index: 2;
+        z-index: 3;
     }
 
     .menu-burger.active span {
