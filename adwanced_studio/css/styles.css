@@ -131,8 +131,6 @@ body.lock {
     width: 70px;
 }
 
-.menu_link {}
-
 .menu_link img,
 .sub_menu_list img {
     width: 25px;
@@ -169,7 +167,6 @@ body.lock {
 }
 
 /* Конец настройки */
-
 /* Конец меню */
 /* Блок с названием и ссылками */
 .studio {
@@ -565,6 +562,8 @@ body.lock {
     margin: 10px 0px;
     font-size: 0.7em;
     border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .form>textarea {
