@@ -12,8 +12,19 @@ $(document).ready(function () {
   );
   // Переключение меню бургера
   $(".menu-burger").click(function (event) {
-    $(".menu-burger, .links, .logo-popup").toggleClass("active");
+    $(".menu-burger, .links, .logo-popup ").toggleClass("active");
     $("body").toggleClass("lock");
+  });
+  // Получение значений флагов
+  $(".sub_menu_list").on("click", "a", function (e) {
+    e.preventDefault();
+    let language = $(this).attr("href");
+
+    if (language == "#USA") {
+      $(".studio__inner p").html(
+        "Creation of digital products <br> that transform business"
+      );
+    }
   });
 });
 
