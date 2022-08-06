@@ -454,7 +454,7 @@ body.lock {
 .option>img {
     border-radius: 25px;
     width: 100%;
-    height: auto;
+    height: 240px;
 }
 
 .option>h3 {
