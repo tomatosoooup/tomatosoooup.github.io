@@ -18,7 +18,9 @@ $(document).ready(function () {
 
   // Переключение меню бургера
   $(".menu-burger").click(function (event) {
-    $(".menu-burger, .links, .logo-popup ").toggleClass("active");
+    $(".menu-burger, .links, .logo-popup, .pulse, .block").toggleClass(
+      "active"
+    );
     $("body").toggleClass("lock");
   });
 
