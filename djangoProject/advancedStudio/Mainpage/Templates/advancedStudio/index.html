@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,37 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Studio</title>
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/media.css">
-
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta property="og:type" content="Advanced Studio">
-    <!-- <meta property="og:image" content="{% static 'Optelis/images/site-image.png'%}"> -->
-    <meta property="og:site_name" content="Advanced Studio">
-    <!-- <meta property="og:url" content="https://dr-muchak.com/"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="{% static 'advancedStudio/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'advancedStudio/css/slider.css' %}">
+    <link rel="stylesheet" href="{% static 'advancedStudio/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'advancedStudio/css/media.css' %}">
 </head>
 
 <body>
-    <div class="logo-popup"><img src="images/logo.png" alt="Advanced Studio Logo"></div>
+    <div class="logo-popup"><img src="{% static 'advancedStudio/images/logo.png' %}" alt="Advanced Studio Logo"></div>
     <div class="pulse">
-        <div class="block">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-        </div>
-    </div>
-    <div class="ll">
-        <label for="change-lang" class="change-lang">
-            <input type="checkbox" name="" id="change-lang">
-            <span class="lang-ball">EN</span>
-        </label>
+        <div class="block"></div>
     </div>
     <div class="slide" id="slide">
         <div class="container col-lg-11 col-md-11 col-tb-11 col-sm-11">
             <div class="menu">
                 <nav class="menu__inner">
-                    <div class="logo"><img src="images/logo.png" alt="Advanced Studio Logo"></div>
+                    <div class="logo"><img src="{% static 'advancedStudio/images/logo.png' %}"
+                            alt="Advanced Studio Logo"></div>
                     <div class="menu-burger">
                         <span></span>
                     </div>
@@ -50,23 +38,28 @@
                         <a href="#slide-3">
                             <li>Послуги</li>
                         </a>
-                        <a href="#slide-5">
+                        <a href="#slide-4">
                             <li>Контакти</li>
                         </a>
                         <li>
                             <a href="#UKR" class="menu_link">
-                                <img src="images/ukraine-fl.png" alt="">
+                                <img src="{% static 'advancedStudio/images/ukraine-fl.png' %}" alt="">
                             </a>
                             <span class="menu_arrow drop_arrow"></span>
                             <ul class="sub_menu_list">
                                 <li>
                                     <a href="#USA" class="sub_menu_link">
-                                        <img src="images/usa-fl.png" alt="">
+                                        <img src="{% static 'advancedStudio/images/usa-fl.png' %}" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#RU" class="sub_menu_link">
+                                        <img src="{% static 'advancedStudio/images/ru-fl.png' %}" alt="">
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <a href="">
+                        <a href="#slide-5">
                             <li>Зв'язатися з нами</li>
                         </a>
                     </ul>
@@ -113,7 +106,7 @@
             </div>
         </div>
         <div class="bottom-line">
-            <img src="images/bottom-line.png" alt="">
+            <img src="{% static 'advancedStudio/images/bottom-line.png' %}" alt="">
         </div>
     </div>
     <div class="slide-2" id="slide-2">
@@ -170,21 +163,21 @@
                 <p>Вибери потрібну послугу і ми почнемо працювати</p>
             </div>
             <div class="feedback">
-                <a href="#">Зв'язатися з нами</a>
+                <a href="#slide-5">Зв'язатися з нами</a>
             </div>
         </div>
         <div class="container container-flex-3 col-lg-11 col-md-11 col-tb-11 col-sm-11">
             <div class="options-2 col-lg-11 col-md-11 col-tb-11 col-sm-11">
                 <div class="option-wrapper col-lg-3 col-md-3 col-tb-12 col-sm-12">
                     <div class="option col-lg-12 col-md-12 col-tb-7 col-sm-9">
-                        <img src="images/code.png" alt="">
+                        <img src="{% static 'advancedStudio/images/code.png' %}" alt="">
                         <h3>Веб розробка</h3>
                         <p>Ми робимо повний функціонал сайту зручним для користування клієнта</p>
                     </div>
                 </div>
                 <div class="option-wrapper col-lg-3 col-md-3 col-tb-12 col-sm-12">
                     <div class="option col-lg-12 col-md-12 col-tb-7 col-sm-9">
-                        <img src="images/laptop.png" alt="">
+                        <img src="{% static 'advancedStudio/images/laptop.png' %}" alt="">
                         <h3>UI/UX</h3>
                         <p>Розробляємо дизайн,
                             роблячи сайт приємним для
@@ -193,7 +186,7 @@
                 </div>
                 <div class="option-wrapper col-lg-3 col-md-3 col-tb-12 col-sm-12">
                     <div class="option col-lg-12 col-md-12 col-tb-7 col-sm-9">
-                        <img src="images/money.png" alt="">
+                        <img src="{% static 'advancedStudio/images/money.png' %}" alt="">
                         <h3>Моб. програми</h3>
                         <p>Робимо зручний концепт
                             програми для зручностей
@@ -233,9 +226,9 @@
             <div class="schedule col-lg-11 col-md-11 col-tb-11 col-sm-11">
                 <div class="schedule-wrapper col-lg-12 col-md-12 col-tb-12 col-sm-12">
                     <div class="schedule-item-1 col-lg-3 col-md-6 col-tb-12 col-sm-12" id="flex-order-1">
-                        <img src="images/arrow-1.png" alt="">
+                        <img src="{% static 'advancedStudio/images/arrow-1.png' %}" alt="">
                         <div class="schedule-line-img-1">
-                            <img src="images/phone.png" alt="">
+                            <img src="{% static 'advancedStudio/images/phone.png' %}" alt="">
                         </div>
                         <div class="text">
                             <span>Зв'язок з нами</span>
@@ -246,19 +239,19 @@
                     </div>
                     <div class="schedule-item-2 col-lg-3 col-md-6 col-tb-12 col-sm-12" id="flex-order-2">
                         <div class="schedule-line-img-2">
-                            <img src="images/room-chat.png" alt="">
+                            <img src="{% static 'advancedStudio/images/room-chat.png' %}" alt="">
                         </div>
                         <div class="text">
                             <span>Обговорення та складання Т.З</span>
                             <p>Вислуховуючи ваші побажання ми ставимо додаткові питання, висловлюємо своє бачення та
                                 фіксуємо підсумок</p>
                         </div>
-                        <img src="images/arrow-2.png" alt="">
+                        <img src="{% static 'advancedStudio/images/arrow-2.png' %}" alt="">
                     </div>
                     <div class="schedule-item-1 col-lg-3 col-md-6 col-tb-12 col-sm-12" id="flex-order-3">
-                        <img src="images/arrow-3.png" alt="">
+                        <img src="{% static 'advancedStudio/images/arrow-3.png' %}" alt="">
                         <div class="schedule-line-img-1">
-                            <img src="images/task.png" alt="">
+                            <img src="{% static 'advancedStudio/images/task.png' %}" alt="">
                         </div>
                         <div class="text">
                             <span>Підписання договору</span>
@@ -268,14 +261,14 @@
                     </div>
                     <div class="schedule-item-2 col-lg-3 col-md-6 col-tb-12 col-sm-12" id="flex-order-4">
                         <div class="schedule-line-img-2">
-                            <img src="images/check-laptop.png" alt="">
+                            <img src="{% static 'advancedStudio/images/check-laptop.png' %}" alt="">
                         </div>
                         <div class="text">
                             <span>Здача роботи та передача доступів</span>
                             <p>Після завершення робіт ми передаємо Вам усі файли у вихідних форматах, доступи до
                                 адміністративної панелі та всі матеріали, які були розроблені.</p>
                         </div>
-                        <img src="images/arrow-4.png" alt="">
+                        <img src="{% static 'advancedStudio/images/arrow-4.png' %}" alt="">
                     </div>
                 </div>
             </div>
@@ -300,7 +293,7 @@
             </div>
         </div>
         <div class="bottom-line">
-            <img src="images/bottom-line.png" alt="">
+            <img src="{% static 'advancedStudio/images/bottom-line.png' %}" alt="">
         </div>
     </div>
     <div class="slide-5" id="slide-5">
@@ -313,21 +306,20 @@
         <div class="container container-flex-5 col-lg-11 col-md-11 col-tb-11 col-sm-11">
             <div class="application-form col-lg-6 col-md-7 col-tb-11 col-sm-11">
                 <h3>Напиши нам</h3>
-                <form action="" class="form col-lg-11 col-md-11 col-tb-10 col-sm-11">
+                <form action="" class="form col-lg-11 col-md-11 col-tb-10 col-sm-11" method="POST">
                     <select name="" id="">
                         <option value="">Виберіть послугу</option>
                         <option value="">Приклад №1</option>
                         <option value="">Приклад №2</option>
                     </select>
-                    <label for="ПІБ" class="col-lg-3 col-md-3 col-tb-3 col-sm-3">
-                        <input type="text" name="ПІБ" placeholder="Ім'я">
+                    {% csrf_token %}
+                    {% for row in form %}
+                    <label for="{{ row.id_for_label }}">
+                        {{ row }}
                     </label>
-                    <label for="email" class="col-lg-8 col-md-8 col-tb-8 col-sm-8">
-                        <input type="email" name="email" placeholder="Електронна пошта">
-                    </label>
-                    <textarea name="" id="" cols="100%" rows="10" style="resize: none;"
-                        placeholder="Яким би ви хотіли бачити свій сайт ?"></textarea>
-                    <button type="submit" class="form-button">Надіслати замовлення</button>
+                    {% endfor %}
+                    <button type="submit" class="form-button" onclick="ShowThanksTelegram()">Надіслати
+                        замовлення</button>
                 </form>
             </div>
             <div class="nav">
@@ -355,7 +347,8 @@
         <div class="container col-lg-11 col-md-11 col-tb-11 col-sm-11">
             <div class="menu">
                 <div class="menu__bottom__inner">
-                    <div class="logo"><img src="images/logo.png" alt="Advanced Studio Logo"></div>
+                    <div class="logo"><img src="{% static 'advancedStudio/images/logo.png' %}"
+                            alt="Advanced Studio Logo"></div>
                     <div class="adress">
                         <div class="adress_links">
                             <h4>Advanced Studio</h4>
@@ -386,13 +379,11 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
 
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'advancedStudio/js/slick.min.js'%}"></script>
+    <script src="{% static 'advancedStudio/js/script.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

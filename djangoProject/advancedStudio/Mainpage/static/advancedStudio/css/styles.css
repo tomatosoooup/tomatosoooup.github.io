@@ -16,7 +16,6 @@
     --light--link: #394F58;
     --headers--fill: #232439;
     --light--gray: #727272;
-    --form--gray: #D9DADB;
 }
 
 body,
@@ -70,82 +69,11 @@ body.lock {
     left: 50px;
     bottom: 50px;
     z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.block i {
-    font-size: 45px;
-    animation: tremor 1.5s ease 2s infinite;
-}
-
-.ll {
-    position: absolute;
-    top: -100%;
-}
-
-.ll.active {
-    right: 80px;
-    top: 36px;
-}
-
-.ll.active_2 {
-    display: none;
-}
-
-.change-lang {
-    display: block;
-    height: 31px;
-    width: 60px;
-    border: 1px solid rgba(127, 185, 72, 0.95);
-    background: var(--light--green-color);
-    border-radius: 30px;
-    position: relative;
-    cursor: pointer;
-    z-index: 3;
-}
-
-.change-lang #change-lang {
-    position: absolute;
-    visibility: hidden;
-    top: -100%;
-}
-
-input[type="checkbox" i] {
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
-    box-sizing: border-box;
-    margin: 3px 3px 3px 4px;
-    padding: initial;
-    border: initial;
-}
-
-.change-lang #change-lang:checked+.lang-ball {
-    transform: translateX(28px);
-}
-
-.change-lang .lang-ball {
-    position: absolute;
-    width: 27px;
-    height: 27px;
-    top: 1px;
-    left: 1px;
-    border-radius: 50%;
-    background: white;
-    z-index: 3;
-    transition: 300ms;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 11px;
-    color: var(--light--green-color);
-    font-weight: 600;
-}
 
 .logo-popup>img {
-    width: 150px;
+    width: 136px;
     height: auto;
 }
 
@@ -316,9 +244,30 @@ input[type="checkbox" i] {
     color: white;
 }
 
-.studio__inner h1 {
+.studio__inner>h1 {
     font-size: 5vw;
 }
+
+/* overflow: hidden;
+    width: fit-content;
+}
+
+.studio__inner>ul>li>span {
+    position: relative;
+    overflow: hidden;
+}
+
+.studio__inner>ul>li>span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(20, 23, 24, 1);
+    border-left: 2px solid #16f37d;
+    animation: typing 6s steps(5) infinite;
+    filter: blur(2px);
+} */
 
 .studio__inner p {
     font-size: 19px;
@@ -470,19 +419,18 @@ input[type="checkbox" i] {
 /* Конец стрелок */
 /* Вид блоков */
 .portfolio-item {
-    height: 350px;
+    width: 220px;
+    height: 325px;
+    background-color: gray;
     margin: 0px 20px;
     border-radius: 25px;
-    width: 100%;
-    background: transparent;
-    border: 2px solid var(--form--gray);
 }
 
 /* Пока что не использовать */
-/* .slick-active>.portfolio-item, */
-.slick-center>.portfolio-item {
+/* .slick-current>.portfolio-item {
     height: 375px;
-}
+    width: 260px;
+} */
 
 /* Конец видов блока */
 /* Конец карусели */
@@ -573,7 +521,7 @@ input[type="checkbox" i] {
     border-radius: 25px;
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .option>h3 {
@@ -602,7 +550,7 @@ input[type="checkbox" i] {
 
 .steps h2 {
     margin: 5px 0px 0px 0px;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
 }
 
@@ -692,7 +640,7 @@ input[type="checkbox" i] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 450px;
+    max-width: 550px;
 }
 
 .form>select,
@@ -704,17 +652,9 @@ input[type="checkbox" i] {
     border-radius: 5px;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: var(--form--gray);
 }
 
-.form>select::placeholder,
-.form>label>input::placeholder,
-.form>textarea::placeholder {
-    color: black;
-    font-weight: 500;
-}
-
-.form>textarea {
+.form>label>textarea {
     padding: 10px;
     margin: 5px 0px 0px 0px;
     width: 100%;
@@ -722,7 +662,7 @@ input[type="checkbox" i] {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
-    background: var(--form--gray);
+    resize: none;
 }
 
 .form-button {

@@ -138,8 +138,11 @@
         height: 2px;
         top: 9px;
         transition: all 0.3s ease 0s;
-        background: white;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
         z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.4s;
     }
 
     .menu-burger:before,
@@ -150,8 +153,11 @@
         height: 2px;
         left: 0;
         transition: all 0.3s ease 0s;
-        background: white;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
         z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.6s;
     }
 
     .menu-burger:before {
@@ -214,7 +220,7 @@
 /********** Tablet devices only **********/
 @media screen and (min-width: 601px) and (max-width: 768px) {
     .links>a {
-        font-size: 5vw;
+        font-size: 3vw;
     }
 
     .links>a:hover {
@@ -250,43 +256,9 @@
         margin: 15px 0px 0px 0px;
     }
 
-    .schedule-line-img-1,
-    .schedule-line-img-2 {
+    .schedule-line-img-1>,
+    .schedule-line-img-2> {
         margin: 0;
-        position: relative;
-    }
-
-    .schedule-line-img-1::before,
-    .schedule-line-img-2::before {
-        content: '';
-        position: absolute;
-        right: -5px;
-        top: -8px;
-        width: 25px;
-        height: 25px;
-        background: rgb(166, 226, 97);
-        border-radius: 50%;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 600px;
-    }
-
-    #flex-order-1 .schedule-line-img-1::before {
-        content: '1';
-    }
-
-    #flex-order-2 .schedule-line-img-2::before {
-        content: '2';
-    }
-
-    #flex-order-3 .schedule-line-img-1::before {
-        content: '3';
-    }
-
-    #flex-order-4 .schedule-line-img-2::before {
-        content: '4';
     }
 
     .text {
@@ -387,8 +359,11 @@
         height: 2px;
         top: 9px;
         transition: all 0.3s ease 0s;
-        background: white;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
         z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.4s;
     }
 
     .menu-burger:before,
@@ -399,8 +374,11 @@
         height: 2px;
         left: 0;
         transition: all 0.3s ease 0s;
-        background: white;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
         z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.6s;
     }
 
     .menu-burger:before {
@@ -462,34 +440,8 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
-
-    .carousel .slick-arrow {
-        width: 20px;
-        height: 40px;
-        margin: -20px 0 0 0;
-    }
-
-
-    .carousel .slick-arrow.slick-prev {
-        left: 35px;
-    }
-
-    .carousel .slick-arrow.slick-next {
-        right: 35px;
-    }
-
-    .slick-initialized .slick-slide {
-        width: 330px;
-    }
-
-    .portfolio-item {
-        width: 100%;
-        background: transparent;
-        border: 2px solid var(--form--gray);
-    }
-
     .links>a {
-        font-size: 6vw;
+        font-size: 4vw;
     }
 
     .links>a:hover {
@@ -525,47 +477,13 @@
     .schedule-item-2 {
         flex-direction: row;
         gap: 30px;
-        align-items: center;
+        align-items: flex-start;
         margin: 15px 0px 0px 0px;
     }
 
-    .schedule-line-img-1,
-    .schedule-line-img-2 {
+    .schedule-line-img-1>,
+    .schedule-line-img-2> {
         margin: 0;
-        position: relative;
-    }
-
-    .schedule-line-img-1::before,
-    .schedule-line-img-2::before {
-        content: '';
-        position: absolute;
-        right: -5px;
-        top: -8px;
-        width: 25px;
-        height: 25px;
-        background: rgb(166, 226, 97);
-        border-radius: 50%;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 600px;
-    }
-
-    #flex-order-1 .schedule-line-img-1::before {
-        content: '1';
-    }
-
-    #flex-order-2 .schedule-line-img-2::before {
-        content: '2';
-    }
-
-    #flex-order-3 .schedule-line-img-1::before {
-        content: '3';
-    }
-
-    #flex-order-4 .schedule-line-img-2::before {
-        content: '4';
     }
 
     .text {
@@ -697,8 +615,11 @@
         height: 2px;
         top: 9px;
         transition: all 0.3s ease 0s;
-        background: white;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
         z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.4s;
     }
 
     .menu-burger:before,
@@ -709,8 +630,11 @@
         height: 2px;
         left: 0;
         transition: all 0.3s ease 0s;
-        background: white;
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
         z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        animation-delay: -0.6s;
     }
 
     .menu-burger:before {
@@ -770,17 +694,6 @@
     }
 }
 
-@media screen and (max-width: 300px) {
-
-    .slick-initialized .slick-slide {
-        width: 250px;
-    }
-
-    .portfolio-item {
-        width: 100%;
-    }
-}
-
 @keyframes arrow-down {
     0% {
         opacity: 0;
@@ -794,6 +707,20 @@
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
 
@@ -813,21 +740,13 @@
     }
 }
 
-@keyframes tremor {
+/* @keyframes typing {
 
-    0% {
-        transform: rotate(-1deg);
-    }
-
-    25% {
-        transform: rotate(3deg);
-    }
-
-    50% {
-        transform: rotate(-2deg);
+    60% {
+        left: calc(100% + 45px);
     }
 
     100% {
-        transform: rotate(3deg);
+        left: 0;
     }
-}
+} */
