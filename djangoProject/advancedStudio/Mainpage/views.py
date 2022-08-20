@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.views.decorators.cache import never_cache
 from .forms import ApplicationForm
 from Orders.models import Orders
+from Portfolio.models import Portfolio
 import time
 
 # from TelebotMessage.sendmessage import sendTelegram
@@ -12,6 +13,9 @@ import time
 
 def index(request):
     form = ApplicationForm()
+    context = {
+        'sites': Portfolio.objects.all()
+    }
 
     if request.method == 'POST':
         user = request.POST['username']
@@ -24,4 +28,4 @@ def index(request):
         time.sleep(1)
         return redirect('mainpage')
 
-    return render(request, 'advancedStudio/index.html', {'form': form})
+    return render(request, 'advancedStudio/index.html', {'form': form, 'context': context})

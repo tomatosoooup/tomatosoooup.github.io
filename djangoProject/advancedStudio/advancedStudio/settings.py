@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Mainpage.apps.MainpageConfig',
     'Orders.apps.OrdersConfig',
+    'Portfolio.apps.PortfolioConfig',
     'TelebotMessage.apps.TelebotmessageConfig',
 ]
 
