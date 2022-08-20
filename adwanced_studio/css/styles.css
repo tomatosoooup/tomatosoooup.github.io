@@ -475,6 +475,7 @@ input[type="checkbox" i] {
     border-radius: 25px;
     width: 100%;
     border: 2px solid var(--form--gray);
+    overflow: hidden;
 }
 
 .portfolio-item>img {
@@ -482,12 +483,7 @@ input[type="checkbox" i] {
     background-size: cover;
     width: 100%;
     height: 100%;
-}
-
-.portfolio-item>img {
-    /* width: 100%;
-    height: 100%; */
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 
 /* Пока что не использовать */
