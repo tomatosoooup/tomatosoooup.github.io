@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'Mainpage.apps.MainpageConfig',
     'Orders.apps.OrdersConfig',
     'Portfolio.apps.PortfolioConfig',
+    'Options.apps.OptionsConfig',
     'TelebotMessage.apps.TelebotmessageConfig',
 ]
 

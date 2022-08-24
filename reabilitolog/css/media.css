@@ -1,0 +1,5 @@
+@media (min-width:576px) {
+    .why-we {
+        width: calc(50% - 1rem);
+    }
+}

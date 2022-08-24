@@ -161,31 +161,15 @@
         </div>
         <div class="container container-flex-3 col-lg-11 col-md-11 col-tb-11 col-sm-11">
             <div class="options-2 col-lg-11 col-md-11 col-tb-11 col-sm-11">
+                {% for opt in context.options %}
                 <div class="option-wrapper col-lg-3 col-md-3 col-tb-12 col-sm-12">
                     <div class="option col-lg-12 col-md-12 col-tb-7 col-sm-9">
-                        <img src="{% static 'advancedStudio/images/code.png' %}" alt="">
-                        <h3>Веб розробка</h3>
-                        <p>Ми робимо повний функціонал сайту зручним для користування клієнта</p>
+                        <img src="{{ MEDIA_URL }} {{ opt.image.url }}" alt="">
+                        <h3>{{ opt.name_of_option }}</h3>
+                        <p>{{ opt.description }}</p>
                     </div>
                 </div>
-                <div class="option-wrapper col-lg-3 col-md-3 col-tb-12 col-sm-12">
-                    <div class="option col-lg-12 col-md-12 col-tb-7 col-sm-9">
-                        <img src="{% static 'advancedStudio/images/laptop.png' %}" alt="">
-                        <h3>UI/UX</h3>
-                        <p>Розробляємо дизайн,
-                            роблячи сайт приємним для
-                            очей та бажанням повернутися знову</p>
-                    </div>
-                </div>
-                <div class="option-wrapper col-lg-3 col-md-3 col-tb-12 col-sm-12">
-                    <div class="option col-lg-12 col-md-12 col-tb-7 col-sm-9">
-                        <img src="{% static 'advancedStudio/images/money.png' %}" alt="">
-                        <h3>Моб. програми</h3>
-                        <p>Робимо зручний концепт
-                            програми для зручностей
-                            користування на смартфоні</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <div class="nav-2">
                 <ul>
@@ -301,9 +285,9 @@
                 <h3>Напиши нам</h3>
                 <form action="" class="form col-lg-11 col-md-11 col-tb-10 col-sm-11" method="POST">
                     <select name="" id="">
-                        <option value="">Виберіть послугу</option>
-                        <option value="">Приклад №1</option>
-                        <option value="">Приклад №2</option>
+                        {% for opt in context.options %}
+                        <option value="">{{ opt.name_of_option }}</option>
+                        {% endfor %}
                     </select>
                     {% csrf_token %}
                     {% for row in form %}

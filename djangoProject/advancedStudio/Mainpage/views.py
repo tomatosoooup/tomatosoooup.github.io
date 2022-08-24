@@ -3,6 +3,7 @@ from django.views.decorators.cache import never_cache
 from .forms import ApplicationForm
 from Orders.models import Orders
 from Portfolio.models import Portfolio
+from Options.models import Options
 import time
 
 # from TelebotMessage.sendmessage import sendTelegram
@@ -14,7 +15,8 @@ import time
 def index(request):
     form = ApplicationForm()
     context = {
-        'sites': Portfolio.objects.all()
+        'sites': Portfolio.objects.all(),
+        'options': Options.objects.all()
     }
 
     if request.method == 'POST':
