@@ -84,7 +84,7 @@ body.lock {
 }
 
 .take {
-    height: calc(10vh + 15rem);
+    height: calc(10vh + 10rem);
     width: 100%;
     background: url(../images/first-img.png) no-repeat;
     background-size: 100% 100%;
