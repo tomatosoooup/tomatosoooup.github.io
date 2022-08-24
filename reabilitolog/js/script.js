@@ -1,3 +1,7 @@
+$(window).on("load", function () {
+  $(".preloader").fadeOut().end().delay(400).fadeOut("slow");
+});
+
 $(document).ready(function () {
   $(window).resize(function () {
     const img = $(".take");
