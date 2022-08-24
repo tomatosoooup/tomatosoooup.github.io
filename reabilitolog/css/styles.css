@@ -100,29 +100,30 @@ body {
     max-height: 250px;
 }
 
-
 /* Чому ми (блок) */
-.why-we {
+.gray-border,
+.gray-border-2,
+.gray-border-3,
+.gray-border-3-1 {
     border: 1px solid var(--gray--color);
-    border-radius: 25px;
+    border-radius: 10px;
     display: flex;
-    justify-content: center;
     padding: 5px 10px 10px;
     flex-wrap: wrap;
-}
-
-.why-we>div {
-    display: flex;
     align-items: center;
 }
 
-.why-we p {
+.gray-border>div {
+    display: flex;
+}
+
+.gray-border p {
     padding: 0px 10px;
     text-transform: uppercase;
     color: var(--p--color);
 }
 
-.why-we>div>span {
+.span-dot {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -133,8 +134,34 @@ body {
     color: white;
 }
 
-.why-we img {
-    width: 100%;
+.gray-border img {
+    min-height: 200px;
 }
 
 /* Конец блока Чому ми */
+.green-span {
+    text-decoration: none;
+}
+
+.green-span>span {
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: var(--burger--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.gray-border-3>h4,
+.gray-border-3-1>h4 {
+    font-size: 18px;
+    color: var(--p--color)
+}
+
+.gray-border-3>p,
+.gray-border-3-1>p {
+    font-size: 17px;
+    max-width: 280px;
+    color: var(--p--color)
+}
