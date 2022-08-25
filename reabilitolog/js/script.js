@@ -1,10 +1,10 @@
-$(window).on("load", function () {
-  $(".preloader").fadeOut().end().delay(400).fadeOut("slow");
-  $("body").toggleClass("lock");
-});
+// $(window).on("load", function () {
+//   $(".preloader").fadeOut().end().delay(400).fadeOut("slow");
+//   $("body").toggleClass("lock");
+// });
 
 $(document).ready(function () {
-  $("body").toggleClass("lock");
+  // $("body").toggleClass("lock");
   $(window).resize(function () {
     const img = $(".take");
     if ($(window).width() >= 576) {
