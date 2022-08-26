@@ -175,11 +175,11 @@
         </div>
     </div>
     <div class="container">
-        <div class="container-fluid d-flex justify-content-between align-items-center mt-5 flex-wrap">
-            <h2>ПОСЛУГИ</h2>
+        <div class="container-fluid d-flex justify-content-between align-items-center mt-5 flex-wrap p-0">
+            <h2 class="m-0">ПОСЛУГИ</h2>
             <a href="#" class="green-span"><span>ПЕРЕЙТИ ДО ВСІХ</span></a>
         </div>
-        <div class="container-fluid p-0 mt-4 d-flex flex-column gap-2 flex-sm-row flex-wrap justify-content-sm-evenly">
+        <div class="container-fluid p-0 mt-4 d-flex flex-column gap-2 flex-sm-row flex-wrap justify-content-sm-between">
             <div class="gray-border-3 col-12">
                 <img src="images/table.png" alt="" class="img-fluid mt-2 w-100">
                 <h4 class="mt-2 mb-1">ПЕРВИННА КОНСУЛЬТАЦІЯ ФАХІВЦЯ
@@ -216,18 +216,108 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="container-fluid p-0">
-            <h2 class="mt-5">СПЕЦІАЛІСТИ</h2>
-            <div class="col-12 mt-2" style="color:var(--p--color)">
-                <img src="images/boxing.png" alt="" class="img-fluid w-100">
-                <h4 class="mb-0 mt-2">МИХАЙЛО ВЛАСЕНКО</h4>
-                <span>Реабілітолог</span>
+    <div class="container p-sm-0">
+        <div
+            class="container-fluid mt-5 p-0 d-flex flex-wrap align-items-center justify-content-between gap-2 gap-sm-0">
+            <h2 class="col-sm-4 order-sm-1 m-0 ps-sm-3">ФАХІВЦІ</h2>
+            <div class="w-100"></div>
+            <div class="order-sm-3 container p-0 d-flex flex-wrap">
+                <div class="col-12 mt-3 col-sm-7 p-0 p-sm-3" style="color:var(--p--color)">
+                    <img src="images/boxing.png" alt="" class="img-fluid w-100">
+                    <h4 class="mb-0 mt-3">МИХАЙЛО ВЛАСЕНКО</h4>
+                    <span>Реабілітолог</span>
+                </div>
+                <div class="col-12 mt-3 col-sm-5 p-0 p-sm-3" style="color:var(--p--color)">
+                    <img src="images/boxing.png" alt="" class="img-fluid w-100">
+                    <h4 class="mb-0 mt-3">МИХАЙЛО ВЛАСЕНКО</h4>
+                    <span>Реабілітолог</span>
+                </div>
             </div>
-            <div class="col-12 mt-2" style="color:var(--p--color)">
-                <img src="images/boxing.png" alt="" class="img-fluid w-100">
-                <h4 class="mb-0 mt-2">МИХАЙЛО ВЛАСЕНКО</h4>
-                <span>Реабілітолог</span>
+            <div class="col-12 col-sm-5 order-sm-2">
+                <a href="#" class="green-span"><span class="me-sm-3 ms-sm-3">ПЕРЕЙТИ ДО ВСІХ</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-fluid p-0 mt-5">
+            <h2>НАЙГОЛОВНІШІ ПИТАННЯ</h2>
+        </div>
+        <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        ЭФФЕКТИВНІСТЬ ДІАГНОСТИКИ
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        <p>В статье предлагается анализ различных направлений диагностики: медицинской, педагогической,
+                            психологической, экспертной, реабилитационной.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        Основні методи лікування
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                        <strong>Это тело аккордеона второго элемента.</strong> По умолчанию он скрыт, пока плагин
+                        свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого
+                        элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью
+                        переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши
+                        переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в
+                        <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        Результатом эффективності
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body">
+                        <strong>Это тело аккордеона третьего элемента.</strong> По умолчанию он скрыт, пока плагин
+                        свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого
+                        элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью
+                        переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши
+                        переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в
+                        <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFour">
+                        Результатом эффективності
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFour">
+                    <div class="accordion-body">
+                        <strong>Это тело аккордеона третьего элемента.</strong> По умолчанию он скрыт, пока плагин
+                        свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого
+                        элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью
+                        переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши
+                        переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в
+                        <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
