@@ -24,4 +24,10 @@ $(document).ready(function () {
     const div2 = $(".wrapper");
     img.appendTo(div2);
   }
+
+  $(".accordion-button").click(function () {
+    $(this).toggleClass("collapsed");
+    let val = "#" + $(this).attr("value");
+    $(val).toggleClass("show");
+  });
 });
