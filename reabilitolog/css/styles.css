@@ -4,6 +4,9 @@
     --h1--color: #2C2B2B;
     --p--color: #404040;
     --gray--color: #A5A5A5;
+    --span--gray--color: #9F9F9F;
+    --help--type--color: #B2B1B1;
+    --border--bottom--form: #E7E7E7;
 }
 
 * {
@@ -110,23 +113,24 @@ body.lock {
 
 /* Чому ми (блок) */
 .gray-border,
-.gray-border-2,
 .gray-border-3,
 .gray-border-3-1 {
     border: 1px solid var(--gray--color);
     border-radius: 20px;
+    height: fit-content;
+}
+
+.why-we,
+.work,
+.gray-border-3,
+.gray-border-3-1 {
     display: flex;
     padding: 5px 10px 10px;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.gray-border>div {
-    display: flex;
-}
-
-.gray-border p,
-.gray-border-2>p {
+.gray-border>p {
     padding: 0px 10px 0px 20px;
     text-transform: uppercase;
     color: var(--p--color);
@@ -143,9 +147,10 @@ body.lock {
     color: white;
 }
 
+/* 
 .gray-border img {
     min-height: 200px;
-}
+} */
 
 /* Конец блока Чому ми */
 .green-span {
@@ -160,6 +165,7 @@ body.lock {
     justify-content: center;
     align-items: center;
     color: white;
+    text-transform: uppercase;
 }
 
 .gray-border-3>h4,
@@ -191,4 +197,114 @@ video.w-100 {
     margin-left: auto;
     content: "";
     transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.review {
+    padding: 15px 10px;
+    display: flex;
+    align-items: stretch;
+}
+
+.photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.review>div>:nth-child(1) {
+    text-transform: uppercase;
+    color: var(--h1--color);
+    font-size: 18px;
+}
+
+.review>div>p {
+    font-size: 15px;
+    max-height: 135px;
+    overflow: hidden;
+}
+
+.review>div>p.show {
+    max-height: fit-content;
+}
+
+.review>div>:nth-child(3),
+.blog a {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--burger--color);
+}
+
+.review>div>:nth-child(3):hover,
+.blog a:hover {
+    text-decoration: underline;
+}
+
+.review>div>:nth-child(4),
+.blog>span:first-of-type {
+    font-size: 13px;
+    color: var(--span--gray--color);
+}
+
+.blog>p:first-of-type {
+    margin: 0;
+}
+
+.blog>p:not(:first-of-type) {
+    margin: 0px 0px 5px 0px;
+}
+
+.help>span {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.type {
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: 0px 0px 10px 0px;
+    gap: 5px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.type::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.type span {
+    padding: 3px 10px;
+    border: 1px solid var(--help--type--color);
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--help--type--color);
+    cursor: pointer;
+}
+
+.type span.active {
+    border: 2px solid var(--burger--color);
+    color: var(--burger--color);
+}
+
+.form label>input {
+    all: unset;
+    font-size: 14px;
+    padding: 0px 0px 5px 0px;
+    border-bottom: 1px solid var(--border--bottom--form);
+}
+
+.form label>input::placeholder {
+    color: var(--help--type--color)
+}
+
+.help-text {
+    resize: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: transparent;
+    color: var(--help--type--color);
+    outline: none;
 }

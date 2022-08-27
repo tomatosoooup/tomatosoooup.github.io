@@ -30,4 +30,14 @@ $(document).ready(function () {
     let val = "#" + $(this).attr("value");
     $(val).toggleClass("show");
   });
+
+  $(".review a").click(function (e) {
+    e.preventDefault();
+    $(this).prev().toggleClass("show");
+  });
+
+  $(".type span").click(function () {
+    $(".type span").removeClass("active");
+    $(this).toggleClass("active");
+  });
 });

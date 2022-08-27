@@ -1,5 +1,5 @@
 @media (min-width:576px) {
-    .gray-border {
+    .fix .gray-border {
         width: calc(50% - 1rem);
     }
 
