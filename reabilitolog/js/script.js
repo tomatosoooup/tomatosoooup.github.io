@@ -3,26 +3,37 @@
 //   $("body").toggleClass("lock");
 // });
 
+const img = $(".take");
+const insert = $(".insert");
+const terms = $(".terms");
+const insert_button = $(".insert-button");
+const button_move = $(".button-move");
+const logo = $("#logo").parent();
+const div = $(".button");
+const div2 = $(".wrapper");
+
 $(document).ready(function () {
   // $("body").toggleClass("lock");
   $(window).resize(function () {
-    const img = $(".take");
     if ($(window).width() >= 576) {
-      const div = $(".button");
       img.appendTo(div);
+      terms.appendTo(insert);
+      button_move.appendTo(insert_button);
     } else {
-      const div2 = $(".wrapper");
       img.appendTo(div2);
+      button_move.appendTo(logo);
+      terms.appendTo(insert_button);
     }
   });
 
-  const img = $(".take");
   if ($(window).width() >= 576) {
-    const div = $(".button");
     img.appendTo(div);
+    terms.appendTo(insert);
+    button_move.appendTo(insert_button);
   } else {
-    const div2 = $(".wrapper");
     img.appendTo(div2);
+    button_move.appendTo(logo);
+    terms.appendTo(insert_button);
   }
 
   $(".accordion-button").click(function () {
