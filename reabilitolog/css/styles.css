@@ -4,6 +4,7 @@
     --h1--color: #2C2B2B;
     --p--color: #404040;
     --gray--color: #A5A5A5;
+    --male--figure--bg: #EDEDED;
     --span--gray--color: #9F9F9F;
     --help--type--color: #B2B1B1;
     --border--bottom--form: #E7E7E7;
@@ -28,6 +29,10 @@ body.lock {
 
 .container-fluid>h2 {
     text-transform: uppercase;
+}
+
+.r-20 {
+    border-radius: 20px;
 }
 
 /* Меню всплывашка */
@@ -69,8 +74,6 @@ body.lock {
 
 .button>h1 {
     color: var(--h1--color);
-    font-size: calc(2rem + 1.5vw);
-    text-shadow: 1px 3px 4px rgba(150, 150, 150, 1);
 }
 
 .wrapper>p {
@@ -80,7 +83,7 @@ body.lock {
 
 .wrapper>div.p-0 {
     background-color: var(--burger--color);
-    border-radius: 5px;
+    border-radius: 10px;
     max-width: 576px;
 }
 
@@ -90,21 +93,16 @@ body.lock {
     text-transform: uppercase;
 }
 
-.take {
-    height: calc(10vh + 10rem);
-    width: 100%;
-    background: url(../images/first-img.png) no-repeat;
-    background-size: 100% 100%;
-    border-radius: 25px;
-    margin: 0 auto;
-}
-
 #options span {
     padding: 10px 15px;
     border: 2px solid var(--burger--color);
     border-radius: 10px;
     margin: 10px 10px 0px 0px;
     height: fit-content;
+}
+
+#options>div:not(:first-of-type) {
+    background-color: var(--male--figure--bg);
 }
 
 #options img {
@@ -179,10 +177,6 @@ body.lock {
     font-size: 17px;
     max-width: 300px;
     color: var(--p--color)
-}
-
-video.w-100 {
-    border-radius: 10px;
 }
 
 .accordion-button:not(.collapsed) {
