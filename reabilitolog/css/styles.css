@@ -26,7 +26,7 @@ body.lock {
 }
 
 body>section:first-of-type {
-    padding: 6rem 0px 3rem 0px;
+    padding: 7rem 0px 3rem 0px;
     background-color: var(--body--color);
 }
 
@@ -36,6 +36,10 @@ body>section:first-of-type {
 
 .r-20 {
     border-radius: 20px;
+}
+
+.navbar-brand img {
+    width: 55px;
 }
 
 /* Меню всплывашка */
