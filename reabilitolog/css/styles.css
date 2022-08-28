@@ -26,7 +26,7 @@ body.lock {
 }
 
 body>section:first-of-type {
-    padding: 7rem 0px 3rem 0px;
+    padding: 6rem 0px 3rem 0px;
     background-color: var(--body--color);
 }
 
@@ -75,33 +75,33 @@ body>section:first-of-type {
 
 /* Конец меню */
 
-.button>h1 {
+.header>h1 {
     color: var(--h1--color);
 }
 
-.wrapper>p {
+.header-text>p {
     color: var(--p--color);
-    font-size: calc(0.75rem + 1.5vw);
+    font-size: calc(0.6rem + 0.6vw);
 }
 
-.wrapper>div:first-of-type {
+.header-text>div:first-of-type {
     background-color: var(--burger--color);
     border-radius: 10px;
-    max-width: 576px;
 }
 
-.wrapper div>a {
+.header-text div>a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
 }
 
 #options span {
-    padding: 10px 15px;
+    padding: 10px 11px;
     border: 2px solid var(--burger--color);
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 10px 10px 0px 0px;
     height: fit-content;
+    text-transform: uppercase;
 }
 
 #options>div:not(:first-of-type) {
@@ -135,6 +135,7 @@ body>section:first-of-type {
     padding: 0px 10px 0px 20px;
     text-transform: uppercase;
     color: var(--p--color);
+    font-size: 0.9rem;
 }
 
 .span-dot {
@@ -148,10 +149,17 @@ body>section:first-of-type {
     color: white;
 }
 
-/* 
-.gray-border img {
+.fix-border img {
     min-height: 200px;
-} */
+    max-height: 200px;
+}
+
+.white-div {
+    background-color: #fff;
+    padding: 10px 15px;
+    font-size: calc(0.8rem);
+    /* max-width: 25%; пока что не использовать */
+}
 
 /* Конец блока Чому ми */
 .green-span {
@@ -169,9 +177,9 @@ body>section:first-of-type {
     text-transform: uppercase;
 }
 
-.gray-border-3>h4,
-.gray-border-3-1>h4 {
-    font-size: 18px;
+.gray-border-3>span,
+.gray-border-3-1>span {
+    text-transform: uppercase;
     color: var(--p--color)
 }
 

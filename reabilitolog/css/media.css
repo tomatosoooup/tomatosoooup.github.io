@@ -1,23 +1,25 @@
 @media (min-width:576px) {
-    .fix .gray-border {
+    .fix-border .gray-border {
         width: calc(50% - 1rem);
     }
 
     .gray-border-3,
     .blog.col-sm-7 {
         width: calc(58.33333333% - 1rem);
-        align-items: baseline;
     }
 
     .gray-border-3-1,
     .blog.col-sm-5 {
         width: calc(41.66666667% - 1rem);
-        align-items: baseline;
     }
 
     .gray-border-3>img,
     .gray-border-3-1>img {
         min-height: 200px;
         max-height: 200px;
+    }
+
+    .header-text>div:first-of-type {
+        max-width: 400px;
     }
 }

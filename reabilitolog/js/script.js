@@ -3,14 +3,14 @@
 //   $("body").toggleClass("lock");
 // });
 
-const img = $(".take");
+const img = $(".append-header-img");
 const insert = $(".insert");
 const terms = $(".terms");
 const insert_button = $(".insert-button");
 const button_move = $(".button-move");
 const logo = $("#logo").parent();
-const div = $(".button");
-const div2 = $(".wrapper");
+const div = $(".header");
+const div2 = $(".header-text");
 
 $(document).ready(function () {
   // $("body").toggleClass("lock");
@@ -45,9 +45,13 @@ $(document).ready(function () {
   $(".review a").click(function (e) {
     e.preventDefault();
     $(this).prev().toggleClass("show");
+    if ($(this).prev().hasClass("show")) {
+      $(this).html("Згорнути");
+    }
   });
 
-  $(".type span").click(function () {
+  $(".type span").click(function (e) {
+    e.preventDefault();
     $(".type span").removeClass("active");
     $(this).toggleClass("active");
   });

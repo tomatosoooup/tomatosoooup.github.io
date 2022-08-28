@@ -22,62 +22,68 @@
             <div class="preloader__item"></div>
         </div>
     </div> -->
-    <nav class="navbar navbar-white bg-white fixed-top navbar-expand-sm">
-        <div class="container-fluid justify-content-between">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <div class="burger burger-arrow">
-                    <div class="burger-lines"></div>
+    <div class="containe-fluid fixed-top bg-white">
+        <div class="container">
+            <nav class="navbar navbar-white navbar-expand-sm">
+                <div class="container-fluid justify-content-between">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                        <div class="burger burger-arrow">
+                            <div class="burger-lines"></div>
+                        </div>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-white" tabindex="-1" id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Опції сайту</h5>
+                            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-5 fs-lg-4">
+                                <li class="nav-item pe-4">
+                                    <a class="nav-link active" aria-current="page" href="#">Наші спеціалісти</a>
+                                </li>
+                                <li class="nav-item pe-4">
+                                    <a class="nav-link" href="#">Послуги</a>
+                                </li>
+                                <li class="nav-item pe-4">
+                                    <a class="nav-link" href="#">Блог</a>
+                                </li>
+                                <li class="nav-item pe-4">
+                                    <a class="nav-link" href="#">Відео</a>
+                                </li>
+                                <li class="nav-item pe-4">
+                                    <a class="nav-link" href="#">Контакти</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-white" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Опції сайту</h5>
-                    <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-5">
-                        <li class="nav-item pe-4">
-                            <a class="nav-link active" aria-current="page" href="#">Наші спеціалісти</a>
-                        </li>
-                        <li class="nav-item pe-4">
-                            <a class="nav-link" href="#">Послуги</a>
-                        </li>
-                        <li class="nav-item pe-4">
-                            <a class="nav-link" href="#">Блог</a>
-                        </li>
-                        <li class="nav-item pe-4">
-                            <a class="nav-link" href="#">Відео</a>
-                        </li>
-                        <li class="nav-item pe-4">
-                            <a class="nav-link" href="#">Контакти</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </nav>
         </div>
-    </nav>
+    </div>
     <section>
-        <div class="container d-flex flex-column flex-sm-row flex-sm-wrap justify-content-sm-between button">
-            <h1 class="col-sm-3">Клініка сучасної неврології</h1>
-            <div class="d-flex flex-column col-sm-7 justify-content-sm-between wrapper">
-                <p class="order-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quos?</p>
-                <div class="mt-sm-5 order-2 take container-sm p-0">
+        <div class="container d-flex flex-column flex-sm-row flex-sm-wrap justify-content-sm-between header">
+            <h1 class="col-sm-3 display-4">Клініка сучасної неврології</h1>
+            <div class="d-flex flex-column col-sm-7 justify-content-sm-between header-text">
+                <p class="order-1 mt-sm-4">Допоможемо пройти шлях від болю та дискомфорту до підтягнутого тіла та
+                    красивої
+                    постави за допомогою оздоровчих занять, остеопатії та масажу</p>
+                <div class="mt-sm-5 order-2 append-header-img container-sm p-0">
                     <img src="images/first-img.png" alt="" class="img-fluid">
                 </div>
-                <div class="container p-0 pt-3 pb-3 mt-3 text-center m-sm-0 order-3 align-self-sm-end">
+                <div class="container p-0 pt-3 pb-3 mt-3 text-center m-sm-0 order-3">
                     <a href="#">ОТРИМАТИ КОНСУЛЬТАЦІЮ</a>
                 </div>
             </div>
         </div>
         </div>
         <div class="container">
-            <h2 class="mt-5">З ЧИМ ДО НАС ЗВЕРТАЮТЬСЯ</h2>
+            <h2 class="mt-5" style="text-transform: uppercase;">З ЧИМ ДО НАС ЗВЕРТАЮТЬСЯ</h2>
             <div class="container d-flex flex-column p-0 flex-sm-row align-items-center mt-4" id="options">
                 <div class="col-12 d-flex flex-wrap col-sm-6">
                     <span>Головний біль</span>
@@ -93,16 +99,21 @@
             </div>
         </div>
         <div class="container">
-            <h2 class="mt-5">ЧОМУ МИ</h2>
             <div
-                class="container-fluid mt-3 p-0 d-flex flex-column flex-wrap gap-3 flex-sm-row justify-content-sm-between fix">
+                class="container-fluid mt-5 p-0 d-flex flex-column flex-wrap gap-3 flex-sm-row justify-content-sm-between fix-border">
+                <h2>ЧОМУ МИ</h2>
+                <div class="col-8 white-div r-20 d-none d-sm-block">
+                    Якщо ви активно шукаєте альтернативу YouTube, щоб розміщувати свої відео, нижче ви знайдете кілька
+                    варіантів, до яких варто придивитися.
+                </div>
+                <div class="w-100"></div>
                 <div class="gray-border why-we col-12">
                     <div class="col-2">
                         <span class="span-dot">1</span>
                     </div>
                     <p class="col-10 mt-1 mb-0 pb-2">індивідуальний підхід до кожного клієнта
                     </p>
-                    <img src="images/knee.png" alt="" class="img-fluid w-100 r-20">
+                    <img src="images/knee.png" alt="" class="img-fluid w-100 r-20 mt-1">
                 </div>
                 <div class="gray-border why-we col-12">
                     <div class="col-2">
@@ -110,7 +121,7 @@
                     </div>
                     <p class="col-10 mt-1 mb-0 pb-2">щомісячне тестування та зріз знань співробітників
                     </p>
-                    <img src="images/elbow.png" alt="" class="img-fluid w-100 r-20">
+                    <img src="images/elbow.png" alt="" class="img-fluid w-100 r-20 mt-1">
                 </div>
                 <div class="gray-border why-we col-12">
                     <div class="col-2">
@@ -118,7 +129,7 @@
                     </div>
                     <p class="col-10 mt-1 mb-0 pb-2">комплексні програми для досягнення кращого
                     </p>
-                    <img src="images/knee-2.png" alt="" class="img-fluid w-100 r-20">
+                    <img src="images/knee-2.png" alt="" class="img-fluid w-100 r-20 mt-1">
                 </div>
                 <div class="gray-border why-we col-12">
                     <div class="col-2">
@@ -126,14 +137,14 @@
                     </div>
                     <p class="col-10 mt-1 mb-0 pb-2">крокуємо в ногу із сучасною медициною
                     </p>
-                    <img src="images/stretch.png" alt="" class="img-fluid w-100 r-20">
+                    <img src="images/stretch.png" alt="" class="img-fluid w-100 r-20 mt-1">
                 </div>
             </div>
         </div>
         <div class="container">
             <h2 class="mt-5">ЯК ЦЕ ПРАЦЮЄ</h2>
             <img src="images/table.png" alt="" class="img-fluid mt-2 w-100 r-20">
-            <div class="container-fluid p-0 mt-4 d-flex flex-column gap-2">
+            <div class="container-fluid p-0 mt-4 d-flex flex-column gap-3">
                 <div class="gray-border work col-12">
                     <div class="col-2 col-sm-1">
                         <span class="span-dot">1</span>
@@ -181,35 +192,41 @@
         <div class="container">
             <div class="container-fluid d-flex justify-content-between align-items-center mt-5 flex-wrap p-0">
                 <h2 class="m-0">ПОСЛУГИ</h2>
-                <a href="#" class="green-span mt-2 mt-sm-0"><span>ПЕРЕЙТИ ДО ВСІХ</span></a>
+                <div class="mt-2 mt-sm-0 col-sm-5">
+                    <a href="#" class="green-span"><span class="ms-sm-3">ПЕРЕЙТИ ДО ВСІХ</span></a>
+                </div>
             </div>
             <div
-                class="container-fluid p-0 mt-4 d-flex flex-column gap-2 flex-sm-row flex-wrap justify-content-sm-between">
+                class="container-fluid p-0 mt-4 d-flex flex-column gap-3 flex-sm-row flex-wrap justify-content-sm-between">
                 <div class="gray-border-3 col-12">
                     <img src="images/table.png" alt="" class="img-fluid mt-2 w-100 r-20">
-                    <h4 class="mt-2 mb-1">ПЕРВИННА КОНСУЛЬТАЦІЯ ФАХІВЦЯ
-                    </h4>
+                    <span class="mt-2 mb-1">ПЕРВИННА КОНСУЛЬТАЦІЯ ФАХІВЦЯ
+                    </span>
+                    <div class="w-100"></div>
                     <p class="p-0 m-0">збір анамнезу (аналіз МРТ, рентген
                         фізикальний огляд</p>
                 </div>
                 <div class="gray-border-3-1 col-12">
                     <img src="images/table.png" alt="" class="img-fluid mt-2 w-100 r-20">
-                    <h4 class="mt-2 mb-1">ПЕРВИННА КОНСУЛЬТАЦІЯ ФАХІВЦЯ
-                    </h4>
+                    <span class="mt-2 mb-1">Неврологічна реабілітація
+                    </span>
+                    <div class="w-100"></div>
                     <p class="p-0 m-0">збір анамнезу (аналіз МРТ, рентген
                         фізикальний огляд</p>
                 </div>
                 <div class="gray-border-3-1 col-12">
                     <img src="images/table.png" alt="" class="img-fluid mt-2 w-100 r-20">
-                    <h4 class="mt-2 mb-1">ПЕРВИННА КОНСУЛЬТАЦІЯ ФАХІВЦЯ
-                    </h4>
+                    <span class="mt-2 mb-1">Неврологічна реабілітація
+                    </span>
+                    <div class="w-100"></div>
                     <p class="p-0 m-0">збір анамнезу (аналіз МРТ, рентген
                         фізикальний огляд</p>
                 </div>
                 <div class="gray-border-3 col-12">
                     <img src="images/table.png" alt="" class="img-fluid mt-2 w-100 r-20">
-                    <h4 class="mt-2 mb-1">ПЕРВИННА КОНСУЛЬТАЦІЯ ФАХІВЦЯ
-                    </h4>
+                    <span class="mt-2 mb-1">ПЕРВИННА КОНСУЛЬТАЦІЯ ФАХІВЦЯ
+                    </span>
+                    <div class="w-100"></div>
                     <p class="p-0 m-0">збір анамнезу (аналіз МРТ, рентген
                         фізикальний огляд</p>
                 </div>
@@ -228,13 +245,13 @@
                 <div class="w-100"></div>
                 <div class="order-sm-3 container p-0 d-flex flex-wrap">
                     <div class="col-12 mt-3 col-sm-7 p-0 p-sm-3" style="color:var(--p--color)">
-                        <img src="images/boxing.png" alt="" class="img-fluid r-20">
-                        <h4 class="mb-0 mt-3">МИХАЙЛО ВЛАСЕНКО</h4>
+                        <img src="images/boxing.png" alt="" class="img-fluid r-20 w-100">
+                        <h5 class="mb-0 mt-3">МИХАЙЛО ВЛАСЕНКО</h5>
                         <span>Реабілітолог</span>
                     </div>
                     <div class="col-12 mt-3 col-sm-5 p-0 p-sm-3" style="color:var(--p--color)">
-                        <img src="images/boxing.png" alt="" class="img-fluid r-20">
-                        <h4 class="mb-0 mt-3">МИХАЙЛО ВЛАСЕНКО</h4>
+                        <img src="images/boxing.png" alt="" class="img-fluid r-20 w-100">
+                        <h5 class="mb-0 mt-3">МИХАЙЛО ВЛАСЕНКО</h5>
                         <span>Реабілітолог</span>
                     </div>
                 </div>
@@ -332,7 +349,7 @@
                             коліні, ще рік тому мав консультацію в Центрі, з Володимиром. Через проблеми в коліні, ще
                             рік
                             тому мав консультацію в Центрі, з Володимиром. </p>
-                        <a href="#"><span>читати далі...</span></a>
+                        <a href="#" class="d-md-none"><span>читати далі...</span></a>
                         <span>01.08.2022</span>
                     </div>
                 </div>
@@ -347,7 +364,7 @@
                             коліні, ще рік тому мав консультацію в Центрі, з Володимиром. Через проблеми в коліні, ще
                             рік
                             тому мав консультацію в Центрі, з Володимиром. </p>
-                        <a href="#"><span>читати далі...</span></a>
+                        <a href="#" class="d-md-none"><span>читати далі...</span></a>
                         <span>01.08.2022</span>
                     </div>
                 </div>
@@ -362,7 +379,7 @@
                             коліні, ще рік тому мав консультацію в Центрі, з Володимиром. Через проблеми в коліні, ще
                             рік
                             тому мав консультацію в Центрі, з Володимиром. </p>
-                        <a href="#"><span>читати далі...</span></a>
+                        <a href="#" class="d-md-none"><span>читати далі...</span></a>
                         <span>01.08.2022</span>
                     </div>
                 </div>
@@ -377,7 +394,7 @@
                             коліні, ще рік тому мав консультацію в Центрі, з Володимиром. Через проблеми в коліні, ще
                             рік
                             тому мав консультацію в Центрі, з Володимиром. </p>
-                        <a href="#"><span>читати далі...</span></a>
+                        <a href="#" class="d-md-none"><span>читати далі...</span></a>
                         <span>01.08.2022</span>
                     </div>
                 </div>
