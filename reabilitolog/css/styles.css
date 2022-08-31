@@ -155,15 +155,15 @@ footer button {
 }
 
 .gray-border>p {
-    padding: 0px 10px 0px 20px;
+    padding: 0px 10px 0px 25px;
     text-transform: uppercase;
     color: var(--p--color);
     font-size: 0.7rem;
 }
 
 .span-dot {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: var(--burger--color);
     display: flex;
@@ -216,12 +216,14 @@ footer button {
 }
 
 .accordion-button::after {
-    flex-shrink: 0;
-    width: var(--bs-accordion-btn-icon-width);
-    height: var(--bs-accordion-btn-icon-width);
-    margin-left: auto;
-    content: "";
-    transition: var(--bs-accordion-btn-icon-transition);
+    background-image: url(../images/accordion-arrow.png);
+    transition-duration: 0.5s;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../images/accordion-arrow.png);
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
 }
 
 .review {
