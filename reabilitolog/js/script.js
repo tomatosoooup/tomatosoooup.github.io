@@ -55,4 +55,16 @@ $(document).ready(function () {
     $(".type span").removeClass("active");
     $(this).toggleClass("active");
   });
+
+  // $(".form button.move-next").click(function (e) {
+  //   e.preventDefault();
+  //   links = $(".type");
+  //   $(links).animate({ scrollLeft: 45 }, 400);
+  // });
+
+  // $(".form button.move-back").click(function (e) {
+  //   e.preventDefault();
+  //   links = $(".type");
+  //   $(links).animate({ scrollLeft: -45 }, 400);
+  // });
 });

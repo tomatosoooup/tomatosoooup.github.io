@@ -89,12 +89,17 @@ body>section {
 }
 
 /* div:first-of-type */
-.header-text>button {
+.header-text>button,
+footer button {
     background-color: var(--burger--color);
     border-radius: 10px;
     border: none;
     color: white;
     text-transform: uppercase;
+}
+
+footer button {
+    font-size: 15px;
 }
 
 .modal-header {
@@ -110,6 +115,10 @@ body>section {
     position: absolute;
     right: 15px;
     top: 15px;
+}
+
+.modal-footer {
+    border-top: none;
 }
 
 #options span {
@@ -275,6 +284,10 @@ body>section {
     font-size: 18px;
 }
 
+/* .form {
+    position: relative;
+} */
+
 .type {
     display: flex;
     overflow: hidden;
@@ -329,6 +342,41 @@ body>section {
     background-color: var(--burger--color);
     border-color: var(--burger--color);
 }
+
+/* .form button {
+    border-radius: 50%;
+    border: none;
+    width: 25px;
+    height: auto;
+    position: absolute;
+    background-color: var(--border--bottom--form);
+    color: var(--gray--color);
+    box-shadow: 1px 0px 0px 2px;
+}
+
+.form button:hover {
+    transform: translateZ(2px) scale(1.1)
+}
+
+.move-back {
+    right: -10px;
+    top: 5px;
+}
+
+.move-next {
+    right: -45px;
+    top: 5px;
+}
+
+.move-back::before {
+    content: "<";
+    font-size: 15px;
+}
+
+.move-next::before {
+    content: ">";
+    font-size: 15px;
+} */
 
 #terms {
     font-size: 14px;
