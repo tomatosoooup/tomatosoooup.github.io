@@ -378,8 +378,9 @@ footer button {
     font-size: 15px;
 } */
 
-#terms {
-    font-size: 14px;
+.mobile-info a:hover,
+.terms:hover {
+    text-decoration: underline;
 }
 
 #logo {
