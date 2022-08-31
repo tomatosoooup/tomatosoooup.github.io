@@ -14,10 +14,6 @@
     font-family: 'Avenir Next Cyr', syste-ui;
 }
 
-.female {
-    /* aspect-ratio: 16/9; */
-}
-
 html,
 body {
     min-height: 100vh;
@@ -29,7 +25,7 @@ body.lock {
     overflow: hidden;
 }
 
-body>section:first-of-type {
+body>section {
     padding: 6rem 0px 3rem 0px;
     background-color: var(--body--color);
 }
@@ -43,10 +39,10 @@ body>section:first-of-type {
 }
 
 .navbar-brand img {
-    width: 45px;
+    width: 35px;
 }
 
-/* Меню всплывашка */
+/* Меню бургер */
 .burger {
     height: 3em;
     width: 3em;
@@ -92,15 +88,28 @@ body>section:first-of-type {
     font-size: calc(0.6rem + 0.6vw);
 }
 
-.header-text>div:first-of-type {
+/* div:first-of-type */
+.header-text>button {
     background-color: var(--burger--color);
     border-radius: 10px;
-}
-
-.header-text div>a {
-    text-decoration: none;
+    border: none;
     color: white;
     text-transform: uppercase;
+}
+
+.modal-header {
+    position: relative;
+}
+
+.modal-header>h5 {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.modal-header>button {
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }
 
 #options span {
@@ -121,9 +130,7 @@ body>section:first-of-type {
 }
 
 /* Чому ми (блок) */
-.gray-border,
-.gray-border-3,
-.gray-border-3-1 {
+.gray-border {
     border: 1px solid var(--gray--color);
     border-radius: 20px;
     height: fit-content;
@@ -131,8 +138,7 @@ body>section:first-of-type {
 
 .why-we,
 .work,
-.gray-border-3,
-.gray-border-3-1 {
+#what-we-do div.gray-border {
     display: flex;
     padding: 5px 10px 10px;
     flex-wrap: wrap;
@@ -158,7 +164,7 @@ body>section:first-of-type {
 }
 
 .fix-border img {
-    max-height: 200px;
+    height: 170px;
 }
 
 .white-div {
@@ -184,17 +190,15 @@ body>section:first-of-type {
     text-transform: uppercase;
 }
 
-.gray-border-3>span,
-.gray-border-3-1>span {
+#what-we-do span {
     text-transform: uppercase;
     color: var(--p--color)
 }
 
-.gray-border-3>p,
-.gray-border-3-1>p {
+#what-we-do p {
     font-size: 17px;
     max-width: 300px;
-    color: var(--p--color)
+    text-transform: none !important;
 }
 
 .accordion-button:not(.collapsed) {

@@ -770,6 +770,7 @@
     }
 }
 
+
 @media screen and (max-width: 300px) {
 
     .slick-initialized .slick-slide {
@@ -778,6 +779,11 @@
 
     .portfolio-item {
         width: 100%;
+    }
+
+    .option>img {
+        width: 220px;
+        height: auto;
     }
 }
 

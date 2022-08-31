@@ -7,6 +7,23 @@ $(document).ready(function () {
     else {
       $(".ll").removeClass("active");
     }
+
+    if ($(window).width() < 769) {
+      // Инициализация слайдера №2
+      $(".carousel_inner_2").not(".slick-initialized").slick({
+        centerMode: true,
+        speed: 800,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        cssEase: "ease",
+        pauseOnHover: true,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+      });
+    }
   });
   // Переход по якорям сайта
   $(".links").on("click", "a", function (event) {
@@ -89,7 +106,7 @@ $(".carousel_inner")
       {
         breakpoint: 1500,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 2,
         },
       },
@@ -118,52 +135,27 @@ $(".carousel_inner")
     ],
   });
 
-// Инициализация слайдера №2
-$(".carousel_inner_2")
-  .not(".slick-initialized")
-  .slick({
-    centerMode: true,
-    speed: 800,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    cssEase: "ease",
-    pauseOnHover: true,
-    mobileFirst: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 601,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-    ],
-  });
+$(window).resize(function () {
+  if (window.innerWidth < 768) {
+    $(".carousel_inner_2").not(".slick-initialized").slick({
+      centerMode: true,
+      speed: 800,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      cssEase: "ease",
+      pauseOnHover: true,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      variableWidth: true,
+    });
+  } else {
+    if ($(".carousel_inner_2").hasClass("slick-initialized")) {
+      $(".carousel_inner_2").slick("unslick");
+    }
+  }
+});
 
 document.getElementById("change-lang").onclick = function () {
   if ($("#change-lang").is(":checked")) {
