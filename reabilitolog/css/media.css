@@ -33,6 +33,4 @@
     #what-we-do>:nth-child(odd) {
         width: calc(41.66666667% - 1rem);
     }
-
-
 }
