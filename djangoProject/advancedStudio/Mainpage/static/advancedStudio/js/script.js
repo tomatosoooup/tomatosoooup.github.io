@@ -13,6 +13,26 @@ $(document).ready(function () {
     }
   });
 
+  if ($(window).width() < 769) {
+    // Инициализация слайдера №2
+    $(".carousel_inner_2").not(".slick-initialized").slick({
+      centerMode: true,
+      speed: 800,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      pauseOnHover: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+    const button = $(".feedback");
+    let place = $(".append-here-2");
+    button.appendTo(place);
+  } else {
+    let place2 = $(".append-here");
+    button.appendTo(place2);
+  }
+
   $("#arrow__container,.nav, .nav-2, .feedback").on(
     "click",
     "a",
@@ -23,6 +43,13 @@ $(document).ready(function () {
       $("body,html").animate({ scrollTop: top }, 1500);
     }
   );
+
+  $("#choosen").val("Не вказано");
+
+  $("#choosing").on("change", function (e) {
+    let value = $("#choosing option:selected").html();
+    $("#choosen").val(value);
+  });
 
   // Переключение меню бургера
   $(".menu-burger").click(function (event) {
@@ -249,104 +276,6 @@ $(document).ready(function () {
       $(this).attr("href", current_href);
       this.preventDefault();
     }
-
-    if (language == "#RU") {
-      $(".studio__inner p").html(
-        "Создание цифровых продуктов, <br> которые трансформируют бизнес"
-      );
-      let links = $(".links");
-      let all_li = links.find("a").find("li");
-      $(all_li[0]).html("Главная");
-      $(all_li[1]).html("Портфолио");
-      $(all_li[2]).html("Услуги");
-      $(all_li[3]).html("Контакты");
-      $(all_li[4]).html("Св'язаться с нами");
-
-      $(".portfolio h4").html("Примеры готовых робот");
-      $(".portfolio h2").html("Наше портфолио");
-      $(".portfolio h3").html(
-        "Над созданием каждого сайта мы подходим индивидуально"
-      );
-      $(".options span").html("Разработка");
-      $(".options h2").html("Услуги");
-      $(".options p").html("Виберите нужную услугу и мы начнём работать");
-      $(".feedback a").html("Св'язаться с нами");
-      // Услуги
-      let services = $(".options-2");
-      let services_item = services.find("div.option");
-      $(services_item[0]).find("h3").html("Веб разработка");
-      $(services_item[0])
-        .find("p")
-        .html(
-          "Мы делаем полный функционал сайта удобным для пользования клиента"
-        );
-      $(services_item[1])
-        .find("p")
-        .html(
-          "Разрабатываем дизайн, делая сайт приятным для глаз та желанием вернуться снова"
-        );
-
-      $(services_item[2]).find("h3").html("Моб. программы");
-      $(services_item[2])
-        .find("p")
-        .html(
-          "Делаем удобный концепт программы для удобности пользования на телефоне"
-        );
-      // Конец услуг
-      // Шаги работы
-      $(".steps h4").html("Как мы работаем");
-      $(".steps h2").html("Последовательность работы");
-      let schedule = $(".schedule-wrapper");
-      let schedule_item = schedule.find("div.text");
-      $(schedule_item[0]).find("span").html("Св'язь с нами");
-      $(schedule_item[0])
-        .find("p")
-        .html(
-          "Вы св'язываетесь с нами по телефону или оставляет заявку, после чего мы перезваниваем"
-        );
-      $(schedule_item[1]).find("span").html("Обсуждение и составление Т.З");
-      $(schedule_item[1])
-        .find("p")
-        .html(
-          "Выслушивая ваши пожелания, ми задаём дополнительные вопросы, высказываем своё виденье и фіксируем итог"
-        );
-      $(schedule_item[2]).find("span").html("Подписание договора");
-      $(schedule_item[2])
-        .find("p")
-        .html(
-          "После составления технического задания мы укладываем офифиальный договор, что имеет юридическую силу"
-        );
-      $(schedule_item[3]).find("span").html("Сдача работы и передача доступов");
-      $(schedule_item[3])
-        .find("p")
-        .html(
-          "После окончания работы мы передаём вам все файлы в выходных форматах, доступы до административной панели и все материалы, которые были разработаны"
-        );
-      // Конец шагов работы
-      // Контактная форма
-      $(".application-text h2").html("Контакты");
-      $(".application-text h3").html("Предложите свои идеи");
-      $(".application-form h3").html("Напиши нам");
-      $(".form")
-        .find("label.col-lg-3")
-        .find("input")
-        .attr("placeholder", "Имя");
-      $(".form")
-        .find("label.col-lg-8")
-        .find("input")
-        .attr("placeholder", "Електронная почта");
-      $("textarea").attr("placeholder", "Каким бы вы хотели видить ваш сайт ?");
-      $(".form-button").html("Отправить заказ");
-      // Конец контактной формы
-
-      // Значения ссылок для опредиления языка
-      let current_href = $(".menu_link").attr("href");
-      let clicked_href = $(this).attr("href");
-      // Смена ссылок
-      $(".menu_link").attr("href", clicked_href);
-      $(this).attr("href", current_href);
-      this.preventDefault();
-    }
   });
 });
 
@@ -363,7 +292,6 @@ $(".carousel_inner")
     autoplaySpeed: 5000,
     cssEase: "ease",
     pauseOnHover: true,
-
     responsive: [
       {
         breakpoint: 992,
@@ -388,6 +316,30 @@ $(".carousel_inner")
       },
     ],
   });
+
+$(window).resize(function () {
+  if (window.innerWidth < 768) {
+    $(".carousel_inner_2").not(".slick-initialized").slick({
+      centerMode: true,
+      speed: 800,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      pauseOnHover: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+
+    let place = $(".append-here-2");
+    button.appendTo(place);
+  } else {
+    if ($(".carousel_inner_2").hasClass("slick-initialized")) {
+      $(".carousel_inner_2").slick("unslick");
+    }
+    let place2 = $(".append-here");
+    button.appendTo(place2);
+  }
+});
 
 function ShowThanksTelegram() {
   Toastify({

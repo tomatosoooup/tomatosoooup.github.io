@@ -440,6 +440,15 @@
 
 /********** Smartphones devices only **********/
 @media screen and (max-width: 600px) {
+    .options-2 h2 {
+        display: none;
+    }
+
+    .options {
+        padding: 50px 10px 0px 0px;
+        text-align: center;
+    }
+
     .links>a {
         font-size: 4vw;
     }
@@ -740,13 +749,16 @@
     }
 }
 
-/* @keyframes typing {
-
-    60% {
-        left: calc(100% + 45px);
+@media (max-width:768px) {
+    .options-2 {
+        margin: 30px 0px 0px 0px;
     }
 
-    100% {
-        left: 0;
+    .options-2 h2 {
+        display: none !important;
     }
-} */
+
+    .option {
+        margin: 0;
+    }
+}

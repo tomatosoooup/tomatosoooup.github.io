@@ -7,24 +7,24 @@ $(document).ready(function () {
     else {
       $(".ll").removeClass("active");
     }
-
-    if ($(window).width() < 769) {
-      // Инициализация слайдера №2
-      $(".carousel_inner_2").not(".slick-initialized").slick({
-        centerMode: true,
-        speed: 800,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        cssEase: "ease",
-        pauseOnHover: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true,
-      });
-    }
   });
+
+  if ($(window).width() < 769) {
+    // Инициализация слайдера №2
+    $(".carousel_inner_2").not(".slick-initialized").slick({
+      centerMode: true,
+      speed: 800,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      cssEase: "ease",
+      pauseOnHover: true,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      variableWidth: true,
+    });
+  }
   // Переход по якорям сайта
   $(".links").on("click", "a", function (event) {
     event.preventDefault();

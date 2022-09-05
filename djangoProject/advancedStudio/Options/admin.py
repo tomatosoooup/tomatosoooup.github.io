@@ -11,4 +11,9 @@ class OptionsAdmin(admin.ModelAdmin):
                           'image')
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
+
+
 admin.site.register(Options, OptionsAdmin)
+admin.site.register(Category, CategoryAdmin)
