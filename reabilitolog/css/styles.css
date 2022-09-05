@@ -42,43 +42,6 @@ body>section {
     width: 35px;
 }
 
-/* Меню бургер */
-.burger {
-    height: 3em;
-    width: 3em;
-    position: relative;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.burger .burger-lines:after {
-    top: -0.7em;
-}
-
-.burger .burger-lines:before {
-    top: 0.7em;
-}
-
-.burger .burger-lines {
-    top: 50%;
-    margin-top: -0.125em;
-}
-
-.burger .burger-lines,
-.burger .burger-lines:after,
-.burger .burger-lines:before {
-    pointer-events: none;
-    display: block;
-    content: '';
-    width: 100%;
-    border-radius: 0.25em;
-    background-color: var(--burger--color);
-    height: 2px;
-    position: absolute;
-}
-
-/* Конец меню */
-
 .header>h1 {
     color: var(--h1--color);
 }
