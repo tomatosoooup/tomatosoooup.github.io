@@ -431,8 +431,8 @@ footer ul>li {
     top: -35px;
     z-index: 2;
     font-size: 28px;
-    width: 30px !important;
-    height: 30px !important;
+    height: 30px;
+    padding: 15px;
     border: none;
     background-color: var(--burger--color);
     border-radius: 50%;
