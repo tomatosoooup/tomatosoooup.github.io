@@ -162,7 +162,7 @@ footer button {
     align-items: center;
     color: white;
     text-transform: uppercase;
-    font-size: calc(0.8rem + 0.3vw);
+    font-size: calc(0.8rem + 0.2vw);
 }
 
 #what-we-do span {
@@ -431,8 +431,8 @@ footer ul>li {
     top: -35px;
     z-index: 2;
     font-size: 28px;
-    width: 30px;
-    height: 30px;
+    width: 30px !important;
+    height: 30px !important;
     border: none;
     background-color: var(--burger--color);
     border-radius: 50%;
@@ -441,13 +441,11 @@ footer ul>li {
 }
 
 .carousel .slick-arrow.slick-prev {
-    right: 65px;
-    display: block;
+    right: 45px;
 }
 
 .carousel .slick-arrow.slick-next {
-    right: 15px;
-    display: block;
+    right: 5px;
 }
 
 .carousel .slick-arrow.slick-prev>i {

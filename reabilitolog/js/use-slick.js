@@ -9,8 +9,6 @@ $(document).ready(function () {
       autoplay: true,
       autoplaySpeed: 5000,
       pauseOnHover: true,
-      // slidesToShow: 1,
-      // slidesToScroll: 1,
       lazyLoad: "ondemand",
       adaptiveHeight: true,
       variableWidth: true,
@@ -20,8 +18,6 @@ $(document).ready(function () {
           breakpoint: 576,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
           },
         },
         {
@@ -34,21 +30,4 @@ $(document).ready(function () {
         },
       ],
     });
-
-  changeArrowsInner();
-
-  $(window).resize(function () {
-    if ($(window).width() > 1) {
-      changeArrowsInner();
-    }
-  });
-
-  function changeArrowsInner() {
-    $(".slick-arrow.slick-next").html(
-      '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-    );
-    $(".slick-arrow.slick-prev").html(
-      '<i class="fa fa-angle-left" aria-hidden="true"></i>'
-    );
-  }
 });
