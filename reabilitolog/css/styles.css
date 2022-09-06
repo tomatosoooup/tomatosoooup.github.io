@@ -401,11 +401,11 @@ footer ul>li {
     visibility: visible;
 }
 
-.experts {
+.secondary-blocks {
     position: relative;
 }
 
-.experts>span {
+.secondary-blocks>span {
     color: white;
     text-transform: uppercase;
     position: absolute;
@@ -415,7 +415,7 @@ footer ul>li {
 }
 
 .append-p {
-    font-size: calc(1rem + 0.5vw);
+    font-size: calc(0.9rem + 0.4vw);
 }
 
 /* Карусель */
@@ -430,36 +430,39 @@ footer ul>li {
     position: absolute;
     top: -35px;
     z-index: 2;
-    font-size: 28px;
+    font-size: 0;
     height: 30px;
     padding: 15px;
     border: none;
     background-color: var(--burger--color);
     border-radius: 50%;
     cursor: pointer;
-    color: white;
+
 }
 
 .carousel .slick-arrow.slick-prev {
     right: 45px;
+    /* background: ; */
 }
 
 .carousel .slick-arrow.slick-next {
     right: 5px;
+    /* background: ; */
 }
 
-.carousel .slick-arrow.slick-prev>i {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 3px;
-    bottom: 0;
+
+
+.services>div {
+    padding: 10px 0px;
+    border-radius: 15px;
+    border: 1px solid var(--sertificates--border);
 }
 
-.carousel .slick-arrow.slick-next>i {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: -3px;
-    bottom: 0;
+.services>div>span {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.services>div>p {
+    line-height: 19px;
 }
