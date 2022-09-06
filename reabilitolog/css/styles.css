@@ -438,15 +438,16 @@ footer ul>li {
     border-radius: 50%;
     cursor: pointer;
     color: white;
-    display: inline-block;
 }
 
 .carousel .slick-arrow.slick-prev {
     right: 65px;
+    display: block;
 }
 
 .carousel .slick-arrow.slick-next {
     right: 15px;
+    display: block;
 }
 
 .carousel .slick-arrow.slick-prev>i {
