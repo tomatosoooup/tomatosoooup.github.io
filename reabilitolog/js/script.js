@@ -11,6 +11,9 @@ const button_move = $(".button-move");
 const logo = $("#logo").parent();
 const div = $(".header");
 const div2 = $(".header-text");
+const h2 = $(".append-h2");
+const p = $(".append-p");
+const p_here = $(".append-p-here");
 
 $(document).ready(function () {
   // $("body").toggleClass("lock");
@@ -19,10 +22,12 @@ $(document).ready(function () {
       img.appendTo(div);
       terms.appendTo(insert);
       button_move.appendTo(insert_button);
+      p.appendTo(h2);
     } else {
       img.appendTo(div2);
       button_move.appendTo(logo);
       terms.appendTo(insert_button);
+      p.appendTo(p_here);
     }
   });
 
@@ -30,10 +35,12 @@ $(document).ready(function () {
     img.appendTo(div);
     terms.appendTo(insert);
     button_move.appendTo(insert_button);
+    p.appendTo(h2);
   } else {
     img.appendTo(div2);
     button_move.appendTo(logo);
     terms.appendTo(insert_button);
+    p.appendTo(p_here);
   }
 
   $(".accordion-button").click(function () {

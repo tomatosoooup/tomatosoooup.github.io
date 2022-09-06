@@ -8,10 +8,12 @@
     --span--gray--color: #9F9F9F;
     --help--type--color: #B2B1B1;
     --border--bottom--form: #E7E7E7;
+    --sertificates--border: #BDBDBD;
 }
 
 * {
     font-family: 'Avenir Next Cyr', syste-ui;
+    box-sizing: border-box;
 }
 
 html,
@@ -30,7 +32,7 @@ body>section {
     background-color: var(--body--color);
 }
 
-.container-fluid>h2 {
+.container-fluid h2 {
     text-transform: uppercase;
 }
 
@@ -160,6 +162,7 @@ footer button {
     align-items: center;
     color: white;
     text-transform: uppercase;
+    font-size: calc(0.7rem + 0.3vw);
 }
 
 #what-we-do span {
@@ -406,7 +409,57 @@ footer ul>li {
     color: white;
     text-transform: uppercase;
     position: absolute;
-    top: 40%;
+    top: 42.5%;
     left: 10%;
     font-size: calc(1rem + 1.5vw);
+}
+
+.append-p {
+    font-size: calc(1rem + 0.5vw);
+}
+
+/* Карусель */
+
+.slick-slide {
+    /* border: 1px solid var(--sertificates--border); */
+    margin: 0px 30px 0px 0px;
+}
+
+/* Стрелки */
+.carousel .slick-arrow {
+    position: absolute;
+    top: -35px;
+    z-index: 2;
+    font-size: 28px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: var(--burger--color);
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+}
+
+.carousel .slick-arrow.slick-prev {
+    right: 65px;
+}
+
+.carousel .slick-arrow.slick-next {
+    right: 15px;
+}
+
+.carousel .slick-arrow.slick-prev>i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 3px;
+    bottom: 0;
+}
+
+.carousel .slick-arrow.slick-next>i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -3px;
+    bottom: 0;
 }
