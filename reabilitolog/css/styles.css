@@ -61,10 +61,7 @@ footer button {
     border: none;
     color: white;
     text-transform: uppercase;
-}
-
-footer button {
-    font-size: 15px;
+    font-size: calc(0.7rem + 0.5vw);
 }
 
 .modal-header {
@@ -409,9 +406,14 @@ footer ul>li {
     color: white;
     text-transform: uppercase;
     position: absolute;
-    top: 42.5%;
-    left: 10%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     font-size: calc(1rem + 1.5vw);
+    padding: 15% 0px 0px 10%;
+    max-width: 350px;
+    letter-spacing: 2px;
 }
 
 .append-p {
@@ -465,4 +467,23 @@ footer ul>li {
 
 .services>div>p {
     line-height: 19px;
+}
+
+.price-div {
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.price-div>span:not(:first-child) {
+    border-radius: 10px;
+    padding: 10px 5px;
+    border: 2px solid var(--p--color);
+}
+
+.price-div>a {
+    text-decoration: none;
+}
+
+.services-text-under-image h5 {
+    text-transform: uppercase;
 }

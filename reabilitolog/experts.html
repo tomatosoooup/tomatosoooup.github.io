@@ -16,6 +16,13 @@
 </head>
 
 <body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
     <div class="container-fluid fixed-top bg-white p-0">
         <div class="container">
             <nav class="navbar navbar-white navbar-expand-sm">
@@ -49,10 +56,10 @@
                                     <a class="nav-link" href="services.html">Послуги</a>
                                 </li>
                                 <li class="nav-item pe-3">
-                                    <a class="nav-link" href="#">Блог</a>
+                                    <a class="nav-link" href="blog.html">Блог</a>
                                 </li>
                                 <li class="nav-item pe-3">
-                                    <a class="nav-link" href="#">Відео</a>
+                                    <a class="nav-link" href="video.html">Відео</a>
                                 </li>
                                 <li class="nav-item pe-3">
                                     <a class="nav-link" href="#">Контакти</a>
@@ -77,8 +84,8 @@
                     <div class="col-sm-5 append-h2">
                         <h2>ПРО НАС</h2>
                     </div>
-                    <div class="col-sm-7 ps-sm-4"><img src="images/hand-care.png" alt=""
-                            class="w-100 img-fluid r-20 mt-2">
+                    <div class="col-sm-7 ps-sm-4">
+                        <img src="images/hand-care.png" alt="" class="w-100 img-fluid r-20 mt-2">
                     </div>
                     <div class="mt-2 m-sm-0 append-p-here">
                         <p class="append-p">Приватна лікарня ЕКСПЕРТ відкрила свої двері у самому серці
@@ -187,58 +194,58 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container p-sm-0">
-            <div class="container-fluid p-0 mt-5 help d-flex flex-column flex-lg-row flex-wrap">
-                <div class="col-12">
-                    <h2>Ми вам допоможемо</h2>
-                    <p>Надішліть листа та ми з вами зв’яжемося найближчим часом</p>
-                </div>
-                <div class="mb-4 d-none d-sm-block col-lg-6 pe-lg-3 mb-lg-0">
-                    <img src="images/map.png" alt="" class="img-fluid r-20 w-100 h-100">
-                </div>
-                <div class="col-lg-6 container-fluid p-0">
-                    <span>Оберіть тип лікування</span>
-                    <div class="type-of-help">
-                        <form action="#" method="get" class="form">
-                            <div class="type mt-3">
-                                <span>Реабілітація</span>
-                                <span>Кардіологія</span>
-                                <span>Реабілітація</span>
-                                <span>Кардіологія</span>
-                            </div>
-                            <!-- <button class="move-back d-none d-lg-block"></button>
-                            <button class="move-next d-none d-lg-block"></button> -->
-                            <div id="labels"
-                                class="d-flex flex-column flex-wrap flex-sm-row justify-content-sm-between gap-3 mt-3 mb-4">
-                                <label for="" class="col-12 col-sm-5">
-                                    <input type="text" class="w-100" placeholder="Ім'я">
-                                </label>
-                                <label for="" class="col-12 col-sm-6">
-                                    <input type="text" class="w-100" placeholder="Прізвище">
-                                </label>
-                                <label for="" class="col-12 col-sm-5">
-                                    <input type="text" class="w-100" placeholder="Номер телефона">
-                                </label>
-                                <label for="" class="col-12 col-sm-6">
-                                    <input type="text" class="w-100" placeholder="Електронна адреса">
-                                </label>
-                            </div>
-                            <span style="color:#706E6E">Що вас турбує ?</span>
-                            <textarea rows="5" class="help-text gray-border mt-3 mb-3"></textarea>
-                            <div class="d-flex flex-column flex-sm-row justify-content-sm-between">
-                                <div class="col-sm-4 col-md-4 col-lg-3 order-sm-2">
-                                    <a href="#" class="green-span" role="button">
-                                        <span>Відправити</span>
-                                    </a>
+            <div class="container p-sm-0">
+                <div class="container-fluid p-0 mt-5 help d-flex flex-column flex-lg-row flex-wrap">
+                    <div class="col-12">
+                        <h2>Ми вам допоможемо</h2>
+                        <p>Надішліть листа та ми з вами зв’яжемося найближчим часом</p>
+                    </div>
+                    <div class="mb-4 d-none d-sm-block col-lg-6 pe-lg-3 mb-lg-0">
+                        <img src="images/map.png" alt="" class="img-fluid r-20 w-100 h-100">
+                    </div>
+                    <div class="col-lg-6 container-fluid p-0">
+                        <span>Оберіть тип лікування</span>
+                        <div class="type-of-help">
+                            <form action="#" method="get" class="form">
+                                <div class="type mt-3">
+                                    <span>Реабілітація</span>
+                                    <span>Кардіологія</span>
+                                    <span>Реабілітація</span>
+                                    <span>Кардіологія</span>
                                 </div>
-                                <label for="terms" class="mt-2 mt-lg-1" id="terms order-sm-1">
-                                    <input type="checkbox" name="terms" class="form-check-input me-2">
-                                    Я погоджуюсь з <a href="#" style="color: var(--burger--color);">політикою
-                                        конфіденціальності.</a>
-                                </label>
-                            </div>
-                        </form>
+                                <!-- <button class="move-back d-none d-lg-block"></button>
+                            <button class="move-next d-none d-lg-block"></button> -->
+                                <div id="labels"
+                                    class="d-flex flex-column flex-wrap flex-sm-row justify-content-sm-between gap-3 mt-3 mb-4">
+                                    <label for="" class="col-12 col-sm-5">
+                                        <input type="text" class="w-100" placeholder="Ім'я">
+                                    </label>
+                                    <label for="" class="col-12 col-sm-6">
+                                        <input type="text" class="w-100" placeholder="Прізвище">
+                                    </label>
+                                    <label for="" class="col-12 col-sm-5">
+                                        <input type="text" class="w-100" placeholder="Номер телефона">
+                                    </label>
+                                    <label for="" class="col-12 col-sm-6">
+                                        <input type="text" class="w-100" placeholder="Електронна адреса">
+                                    </label>
+                                </div>
+                                <span style="color:#706E6E">Що вас турбує ?</span>
+                                <textarea rows="5" class="help-text gray-border mt-3 mb-3"></textarea>
+                                <div class="d-flex flex-column flex-sm-row justify-content-sm-between">
+                                    <div class="col-sm-4 col-md-4 col-lg-3 order-sm-2">
+                                        <a href="#" class="green-span" role="button">
+                                            <span>Відправити</span>
+                                        </a>
+                                    </div>
+                                    <label for="terms" class="mt-2 mt-lg-1" id="terms order-sm-1">
+                                        <input type="checkbox" name="terms" class="form-check-input me-2">
+                                        Я погоджуюсь з <a href="#" style="color: var(--burger--color);">політикою
+                                            конфіденціальності.</a>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,10 +265,10 @@
             </div>
             <div class="container-fluid p-0 col-sm-5">
                 <ul class="d-flex flex-wrap p-0 mobile-info flex-sm-column">
-                    <li><a href="#">Наші спеціалісти</a></li>
-                    <li><a href="#">Відео</a></li>
-                    <li><a href="#">Блог</a></li>
-                    <li><a href="#">Послуги</a></li>
+                    <li><a href="experts.html">Наші спеціалісти</a></li>
+                    <li><a href="video.html">Відео</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="services.html">Послуги</a></li>
                     <li><a href="#">Контакти</a></li>
                 </ul>
                 <hr class="mt-0 d-sm-none">

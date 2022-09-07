@@ -1,7 +1,7 @@
-// $(window).on("load", function () {
-//   $(".preloader").fadeOut().end().delay(400).fadeOut("slow");
-//   $("body").toggleClass("lock");
-// });
+$(window).on("load", function () {
+  $(".preloader").fadeOut().end().delay(400).fadeOut("slow");
+  $("body").toggleClass("lock");
+});
 
 const img = $(".append-header-img");
 const insert = $(".insert");
@@ -16,7 +16,7 @@ const p = $(".append-p");
 const p_here = $(".append-p-here");
 
 $(document).ready(function () {
-  // $("body").toggleClass("lock");
+  $("body").toggleClass("lock");
   $(window).resize(function () {
     if ($(window).width() >= 576) {
       img.appendTo(div);
