@@ -487,3 +487,8 @@ footer ul>li {
 .services-text-under-image h5 {
     text-transform: uppercase;
 }
+
+.video-section>div p {
+    text-transform: uppercase;
+    font-size: calc(1rem + 1vw);
+}

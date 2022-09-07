@@ -126,7 +126,7 @@
             </div>
         </div>
     </section>
-    <div class="container">
+    <div class="container p-sm-0">
         <footer class="pb-3 d-flex flex-column flex-sm-row flex-wrap justify-content-sm-end pt-sm-2">
             <div class="container-fluid p-0 col-sm-3">
                 <div class="d-flex justify-content-between p-2 pe-0 align-items-center">
@@ -173,6 +173,52 @@
                 <a href="#" class="terms order-sm-1 m-sm-1"><span>Політика конфіденціальності</span></a>
             </div>
         </footer>
+        <!-- Modal -->
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog mt-5">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title col-11 m-auto text-center mt-sm-2" id="ModalLabel">Ми вам
+                            допоможемо
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="get">
+                            <div id="labels"
+                                class="d-flex flex-column flex-wrap flex-sm-row justify-content-sm-between gap-3 mt-3 mb-4">
+                                <label for="" class="col-12 col-sm-5">
+                                    <input type="text" class="w-100" placeholder="Ім'я">
+                                </label>
+                                <label for="" class="col-12 col-sm-6">
+                                    <input type="text" class="w-100" placeholder="Прізвище">
+                                </label>
+                                <label for="" class="col-12 col-sm-5">
+                                    <input type="text" class="w-100" placeholder="Номер телефона">
+                                </label>
+                                <label for="" class="col-12 col-sm-6">
+                                    <input type="text" class="w-100" placeholder="Електронна адреса">
+                                </label>
+                            </div>
+                            <span style="color:#706E6E">Що вас турбує ?</span>
+                            <textarea rows="5" class="help-text gray-border mt-3 mb-2"></textarea>
+                            <label for="terms" class="mt-2 mt-lg-1" id="terms">
+                                <input type="checkbox" name="terms" class="form-check-input me-2">
+                                Я погоджуюсь з <span style="color: var(--burger--color);">політикою
+                                    конфіденціальності.</span>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="modal-footer pt-0">
+                        <div class="col-12">
+                            <a href="#" class="green-span" role="button">
+                                <span>Записатись</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- jQuery и js файлы -->
