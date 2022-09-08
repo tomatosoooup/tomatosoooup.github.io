@@ -1,1 +1,347 @@
-/* Nothing new yet */
+/* Common styles */
+:root {
+    --burger--color: #58CC99;
+    --body--color: #F9F9F9;
+    --h1--color: #2C2B2B;
+    --p--color: #404040;
+    --gray--color: #A5A5A5;
+    --male--figure--bg: #EDEDED;
+    --span--gray--color: #9F9F9F;
+    --help--type--color: #B2B1B1;
+    --border--bottom--form: #E7E7E7;
+    --sertificates--border: #BDBDBD;
+}
+
+* {
+    font-family: 'Avenir Next Cyr', syste-ui;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+body>section {
+    padding: 6rem 0px 3rem 0px;
+    background-color: var(--body--color);
+}
+
+.container-fluid h2 {
+    text-transform: uppercase;
+}
+
+.r-20 {
+    border-radius: 20px;
+}
+
+.navbar-brand img {
+    width: 35px;
+}
+
+.white-div {
+    background-color: #fff;
+    padding: 10px 15px;
+    font-size: calc(0.8rem);
+    /* max-width: 25%; пока что не использовать */
+}
+
+/* Зелёные кнопки */
+.green-span {
+    text-decoration: none;
+}
+
+.green-span>span {
+    border-radius: 10px;
+    padding: 12.5px 12px;
+    background-color: var(--burger--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: calc(0.8rem + 0.2vw);
+}
+
+/* Конец зелёных кнопок */
+
+/* Начало бургера меню */
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--body--color);
+    z-index: 9999;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: var(--burger--color);
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-bounce {
+
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+/* Меню бургер */
+.burger {
+    height: 3em;
+    width: 3em;
+    position: relative;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.burger .burger-lines:after {
+    top: -0.7em;
+}
+
+.burger .burger-lines:before {
+    top: 0.7em;
+}
+
+.burger .burger-lines {
+    top: 50%;
+    margin-top: -0.125em;
+}
+
+.burger .burger-lines,
+.burger .burger-lines:after,
+.burger .burger-lines:before {
+    pointer-events: none;
+    display: block;
+    content: '';
+    width: 100%;
+    border-radius: 0.25em;
+    background-color: var(--burger--color);
+    height: 2px;
+    position: absolute;
+}
+
+/* Конец бургера меню */
+
+/* Модальное окно */
+.modal-header {
+    position: relative;
+}
+
+.modal-header>h5 {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.modal-header>button {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+/* Конец модального окна */
+/* Карусель */
+
+.slick-slide {
+    /* border: 1px solid var(--sertificates--border); */
+    margin: 0px 30px 0px 0px;
+}
+
+/* Стрелки */
+.carousel .slick-arrow {
+    position: absolute;
+    top: -35px;
+    z-index: 2;
+    font-size: 0;
+    height: 30px;
+    padding: 15px;
+    border: none;
+    background-color: var(--burger--color);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.carousel .slick-arrow.slick-prev {
+    right: 45px;
+    /* background: ; */
+}
+
+.carousel .slick-arrow.slick-next {
+    right: 5px;
+    /* background: ; */
+}
+
+/* Конец карусели */
+/* Форма отправи заявки */
+.type {
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: 0px 0px 10px 0px;
+    gap: 7px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.type::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.type span {
+    padding: 3px 10px;
+    border: 2px solid var(--help--type--color);
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--help--type--color);
+    cursor: pointer;
+}
+
+.type span.active {
+    border: 2px solid var(--burger--color);
+    color: var(--burger--color);
+}
+
+#labels>label>input {
+    all: unset;
+    font-size: 14px;
+    padding: 0px 0px 5px 0px;
+    border-bottom: 1px solid var(--border--bottom--form);
+}
+
+.form label>input::placeholder {
+    color: var(--help--type--color)
+}
+
+.help-text {
+    resize: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: transparent;
+    color: var(--help--type--color);
+    outline: none;
+}
+
+.form-check-input:checked {
+    background-color: var(--burger--color);
+    border-color: var(--burger--color);
+}
+
+/* Конец формы */
+/* Футер */
+.header-text>button,
+footer button {
+    background-color: var(--burger--color);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: calc(0.7rem + 0.5vw);
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul>li {
+    margin: 5px 10px 0px 0px;
+}
+
+.mobile-info a {
+    text-decoration: none;
+    color: var(--h1--color);
+    width: fit-content;
+}
+
+.mobile-info>span {
+    margin: 10px 0px 0px 0px;
+}
+
+.media-links>li>a {
+    position: relative;
+}
+
+.media-links img {
+    width: 35px;
+}
+
+.media-links img:hover {
+    transform: scale(1.1);
+}
+
+.media-links>li>a::before {
+    content: attr(data-hover);
+    visibility: hidden;
+    color: black;
+    position: absolute;
+    font-size: 10px;
+    right: -35px;
+    top: -20px;
+    z-index: 1;
+}
+
+.media-links>li>a:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-info a:hover,
+.terms:hover {
+    text-decoration: underline;
+}
+
+#logo {
+    width: 70px;
+}
+
+
+/* Конец футера */

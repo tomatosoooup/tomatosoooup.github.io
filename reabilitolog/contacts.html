@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <div class="containe-fluid fixed-top bg-white p-0">
+        <div class="container">
+            <nav class="navbar navbar-white navbar-expand-sm">
+                <div class="container-fluid justify-content-between p-0">
+                    <a class="navbar-brand col-2 col-sm-1" href="index.html">
+                        <img src="images/logo.png" alt="" class="img-fluid">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                        <div class="burger burger-arrow">
+                            <div class="burger-lines"></div>
+                        </div>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-white col-11 flex-sm-row justify-content-end justify-content-lg-between align-items-sm-center"
+                        tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Опції сайту</h5>
+                            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="d-none d-lg-block"></div>
+                        <a href="tel:+380000000000" class="nav-link d-none d-lg-block">+38 (000) 00 000
+                            00</a>
+                        <div class="offcanvas-body align-self-start align-self-sm-end">
+                            <ul class="navbar-nav justify-content-end">
+                                <li class="nav-item pe-3">
+                                    <a class="nav-link" aria-current="page" href="experts.html">Наші
+                                        спеціалісти</a>
+                                </li>
+                                <li class="nav-item pe-3">
+                                    <a class="nav-link" href="services.html">Послуги</a>
+                                </li>
+                                <li class="nav-item pe-3">
+                                    <a class="nav-link" href="blog.html">Блог</a>
+                                </li>
+                                <li class="nav-item pe-3">
+                                    <a class="nav-link" href="video.html">Відео</a>
+                                </li>
+                                <li class="nav-item pe-3">
+                                    <a class="nav-link active" href="contacts.html">Контакти</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <section>
+        <div class="container p-sm-0">
+            <div class="container-fluid p-0 mt-4 secondary-blocks">
+                <img src="images/contacts.png" alt="" class="img-fluid r-20">
+                <span>Контакти</span>
+            </div>
+        </div>
+        <div class="container p-sm-0">
+            <div class="container-fluid p-0 mt-5">
+                <h2>Зв'язатися з нами</h2>
+                <div class="">
+                    <img src="images/map-2.png" alt="" class="img-fluid r-20">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container p-sm-0">
+        <footer class="pb-3 d-flex flex-column flex-sm-row flex-wrap justify-content-sm-end pt-sm-2">
+            <div class="container-fluid p-0 col-sm-3">
+                <div class="d-flex justify-content-between p-2 pe-0 align-items-center">
+                    <img src="images/logo.png" alt="" class="img-fluid" id="logo">
+                    <button type="button" class="button-move col-8 col-sm-12 pt-3 pb-3 mt-3 text-center m-sm-0 order-3"
+                        data-bs-toggle="modal" data-bs-target="#Modal">
+                        ОТРИМАТИ КОНСУЛЬТАЦІЮ
+                    </button>
+                </div>
+                <hr class="mt-0 d-sm-none">
+            </div>
+            <div class="container-fluid p-0 col-sm-5">
+                <ul class="d-flex flex-wrap p-0 mobile-info flex-sm-column">
+                    <li><a href="experts.html">Наші спеціалісти</a></li>
+                    <li><a href="video.html">Відео</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="services.html">Послуги</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+                <hr class="mt-0 d-sm-none">
+            </div>
+            <div class="container-fluid p-0 d-flex flex-column mobile-info col-sm-4 insert gap-2">
+                <a href="tel:+380000000000" class="order-sm-2">+38 (000) 00 000 00</a>
+                <span class="order-sm-3">вул. Кришталева 14, м. Київ</span>
+            </div>
+            <div class="container-fluid p-0 col-sm-5 m-sm-0">
+                <ul class="d-flex p-0 gap-2 media-links mt-2">
+                    <li><a href="#" data-hover="Instagram">
+                            <img src="images/instagram.png" alt="">
+                        </a></li>
+                    <li><a href="#" data-hover="Facebook">
+                            <img src="images/facebook.png" alt="">
+                        </a></li>
+                    <li><a href="#" data-hover="YouTube">
+                            <img src="images/youtube.png" alt="">
+                        </a></li>
+                    <li><a href="#" data-hover="Telegram">
+                            <img src="images/telegram.png" alt="">
+                        </a></li>
+                </ul>
+                <hr class="mt-0 d-sm-none">
+            </div>
+            <div class="container-fluid p-0 mobile-info col-sm-4 m-sm-0 insert-button align-self-sm-center col-sm-4">
+                <a href="#" class="terms order-sm-1 m-sm-1"><span>Політика конфіденціальності</span></a>
+            </div>
+        </footer>
+        <!-- Modal -->
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog mt-5">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title col-11 m-auto text-center mt-sm-2" id="ModalLabel">Ми вам
+                            допоможемо
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="get">
+                            <div id="labels"
+                                class="d-flex flex-column flex-wrap flex-sm-row justify-content-sm-between gap-3 mt-3 mb-4">
+                                <label for="" class="col-12 col-sm-5">
+                                    <input type="text" class="w-100" placeholder="Ім'я">
+                                </label>
+                                <label for="" class="col-12 col-sm-6">
+                                    <input type="text" class="w-100" placeholder="Прізвище">
+                                </label>
+                                <label for="" class="col-12 col-sm-5">
+                                    <input type="text" class="w-100" placeholder="Номер телефона">
+                                </label>
+                                <label for="" class="col-12 col-sm-6">
+                                    <input type="text" class="w-100" placeholder="Електронна адреса">
+                                </label>
+                            </div>
+                            <span style="color:#706E6E">Що вас турбує ?</span>
+                            <textarea rows="5" class="help-text gray-border mt-3 mb-2"></textarea>
+                            <label for="terms" class="mt-2 mt-lg-1" id="terms">
+                                <input type="checkbox" name="terms" class="form-check-input me-2">
+                                Я погоджуюсь з <span style="color: var(--burger--color);">політикою
+                                    конфіденціальності.</span>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="modal-footer pt-0">
+                        <div class="col-12">
+                            <a href="#" class="green-span" role="button">
+                                <span>Записатись</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery и js файлы -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
