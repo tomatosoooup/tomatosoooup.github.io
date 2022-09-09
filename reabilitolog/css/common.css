@@ -215,23 +215,21 @@ body>section {
     top: -35px;
     z-index: 2;
     font-size: 0;
-    height: 30px;
-    padding: 15px;
+    padding: 20px;
     border: none;
-    background-color: var(--burger--color);
     border-radius: 50%;
     cursor: pointer;
-
 }
 
 .carousel .slick-arrow.slick-prev {
     right: 45px;
-    /* background: ; */
+    background: url(../images/arrow-back.png)0 0/100% no-repeat;
 }
 
 .carousel .slick-arrow.slick-next {
     right: 5px;
-    /* background: ; */
+    background: url(../images/arrow-back.png)0 0/100% no-repeat;
+    transform: rotate(180deg);
 }
 
 /* Конец карусели */
