@@ -172,6 +172,7 @@
     padding: 15% 0px 0px 10%;
     max-width: 350px;
     letter-spacing: 2px;
+    font-weight: 500;
 }
 
 .append-p {
@@ -218,4 +219,16 @@
 .video-section>div p {
     text-transform: uppercase;
     font-size: calc(0.7rem + 1vw);
+}
+
+.contacts-text h6 {
+    text-transform: uppercase;
+}
+
+.contacts-info {
+    text-transform: uppercase;
+}
+
+.contacts-info>div>span {
+    color: var(--contacts--span)
 }

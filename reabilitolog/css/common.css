@@ -10,6 +10,7 @@
     --help--type--color: #B2B1B1;
     --border--bottom--form: #E7E7E7;
     --sertificates--border: #BDBDBD;
+    --contacts--span: #898989;
 }
 
 * {
@@ -67,6 +68,7 @@ body>section {
     color: white;
     text-transform: uppercase;
     font-size: calc(0.8rem + 0.2vw);
+    font-weight: 500;
 }
 
 /* Конец зелёных кнопок */
@@ -286,6 +288,7 @@ footer button {
     color: white;
     text-transform: uppercase;
     font-size: calc(0.7rem + 0.5vw);
+    font-weight: 500;
 }
 
 footer ul {
