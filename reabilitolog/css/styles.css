@@ -229,6 +229,21 @@
     text-transform: uppercase;
 }
 
-.contacts-info>div>span {
-    color: var(--contacts--span)
+.contacts-info>div>:where(span, a) {
+    color: var(--contacts--span);
+    text-decoration: none;
+}
+
+.privacy {
+    text-transform: capitalize;
+    font-size: calc(1.2rem + 1vw);
+    font-weight: 500;
+}
+
+.policy-rules>li {
+    margin: 20px 0px 0px 0px;
+}
+
+.policy-rules>li::first-letter {
+    margin: 0px 0px 0px 30px;
 }

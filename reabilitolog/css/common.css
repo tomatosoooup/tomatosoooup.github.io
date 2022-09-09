@@ -42,6 +42,14 @@ body>section {
     border-radius: 20px;
 }
 
+.list-style-n {
+    list-style: none;
+}
+
+.text-transform-up {
+    text-transform: uppercase;
+}
+
 .navbar-brand img {
     width: 35px;
 }
@@ -69,6 +77,11 @@ body>section {
     text-transform: uppercase;
     font-size: calc(0.8rem + 0.2vw);
     font-weight: 500;
+}
+
+.green-span.off {
+    opacity: 0.7;
+    pointer-events: none
 }
 
 /* Конец зелёных кнопок */

@@ -23,13 +23,11 @@ $(document).ready(function () {
       terms.appendTo(insert);
       button_move.appendTo(insert_button);
       p.appendTo(h2);
-      changeArrowsInner();
     } else {
       img.appendTo(div2);
       button_move.appendTo(logo);
       terms.appendTo(insert_button);
       p.appendTo(p_here);
-      changeArrowsInner();
     }
   });
 
@@ -38,7 +36,6 @@ $(document).ready(function () {
     terms.appendTo(insert);
     button_move.appendTo(insert_button);
     p.appendTo(h2);
-    changeArrowsInner();
   } else {
     img.appendTo(div2);
     button_move.appendTo(logo);
@@ -66,6 +63,13 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
+  $(".form .form-check-input").click(function () {
+    $(".form .green-span").toggleClass("off");
+  });
+
+  $(".modal-body .form-check-input").click(function () {
+    $(".modal-footer .green-span").toggleClass("off");
+  });
   // $(".form button.move-next").click(function (e) {
   //   e.preventDefault();
   //   links = $(".type");
@@ -77,15 +81,4 @@ $(document).ready(function () {
   //   links = $(".type");
   //   $(links).animate({ scrollLeft: -45 }, 400);
   // });
-
-  changeArrowsInner();
-
-  function changeArrowsInner() {
-    $(".slick-next").html(
-      '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-    );
-    $(".slick-prev").html(
-      '<i class="fa fa-angle-left" aria-hidden="true"></i>'
-    );
-  }
 });
