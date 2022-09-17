@@ -120,10 +120,11 @@
                         {% if context.sites %}
                         {% for item in context.sites %}
                         <div class="carousel_item">
-                            <div class="portfolio-item">
-                                <img src="{{ MEDIA_URL }} {{ item.image.url }}" alt="">
-                                <a href="{{ item.link_of_site }}"></a>
-                            </div>
+                            <a href="{{ item.link_of_site }}">
+                                <div class="portfolio-item">
+                                    <img src="{{ MEDIA_URL }} {{ item.image.url }}" alt="">
+                                </div>
+                            </a>
                         </div>
                         {% endfor %}
                         {% endif %}

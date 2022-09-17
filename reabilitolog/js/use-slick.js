@@ -30,4 +30,25 @@ $(document).ready(function () {
         },
       ],
     });
+  resizeSlick();
+
+  $(window).resize(function () {
+    resizeSlick();
+  });
+
+  function resizeSlick() {
+    if ($(window).width() >= 992) {
+      const append_arrows = $(".append-arrows");
+      let arrow1 = $(".slick-prev");
+      let arrow2 = $(".slick-next");
+      arrow1.appendTo(append_arrows);
+      arrow2.appendTo(append_arrows);
+    } else {
+      const carousel = $(".carousel.pt-4");
+      let arrow1 = $(".slick-prev");
+      let arrow2 = $(".slick-next");
+      arrow1.appendTo(carousel);
+      arrow2.appendTo(carousel);
+    }
+  }
 });

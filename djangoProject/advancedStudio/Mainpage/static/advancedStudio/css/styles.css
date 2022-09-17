@@ -16,6 +16,7 @@
     --light--link: #394F58;
     --headers--fill: #232439;
     --light--gray: #727272;
+    --gray--form: #F6F6F6;
 }
 
 body,
@@ -426,18 +427,21 @@ body.lock {
     height: 325px;
     margin: 0px 20px;
     border-radius: 25px;
+    border: 2px solid var(--gray--form);
+    overflow: hidden;
 }
 
 .portfolio-item>img {
     width: 100%;
     height: 100%;
+    border-radius: 25px;
 }
 
 /* Пока что не использовать */
-/* .slick-current>.portfolio-item {
+.slick-current>.portfolio-item {
     height: 375px;
     width: 260px;
-} */
+}
 
 /* Конец видов блока */
 /* Конец карусели */

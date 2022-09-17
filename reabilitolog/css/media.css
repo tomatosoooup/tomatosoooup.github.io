@@ -12,4 +12,13 @@
     .fix-border .gray-border {
         width: calc(25% - 1rem);
     }
+
+    #what-we-do div.gray-border {
+        border: none;
+    }
+
+    .carousel .slick-arrow {
+        top: auto;
+        bottom: 0;
+    }
 }

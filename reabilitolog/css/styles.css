@@ -41,7 +41,6 @@
 }
 
 #what-we-do img {
-    min-height: 200px;
     max-height: 200px;
 }
 
@@ -70,11 +69,13 @@
 /* Конец блока Чому ми */
 #what-we-do span {
     text-transform: uppercase;
-    color: var(--p--color)
+    color: var(--p--color);
+    font-size: calc(0.5rem + 0.5vw);
+    font-weight: 500;
 }
 
 #what-we-do p {
-    font-size: 17px;
+    font-size: calc(0.5rem + .5vw);
     max-width: 300px;
     text-transform: none !important;
 }

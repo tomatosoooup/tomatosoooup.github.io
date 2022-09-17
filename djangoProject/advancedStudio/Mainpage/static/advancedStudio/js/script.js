@@ -292,6 +292,8 @@ $(".carousel_inner")
     autoplaySpeed: 5000,
     cssEase: "ease",
     pauseOnHover: true,
+    variableWidth: true,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 992,
