@@ -13,4 +13,6 @@ https://tomatosoooup.github.io/adwanced_studio
 # Reabilitolog 
 https://tomatosoooup.github.io/reabilitolog
 
+#Parallax 
+https://tomatosoooup.github.io/parallax_testing
 
