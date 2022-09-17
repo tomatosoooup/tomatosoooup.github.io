@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="body">
     <header id="header">
         <a href="" class="logo">Logo</a>
+        <div class="burger">
+            <span>---</span>
+            <span>---</span>
+            <span>---</span>
+        </div>
         <ul>
             <li><a href="#" class="active">Home</a></li>
             <li><a href="#">About</a></li>
@@ -19,11 +24,13 @@
             <li><a href="#">Contacts</a></li>
         </ul>
     </header>
-    <section>
+    <section class="section">
+        <a href="#sec" class="back-top">Узнать</a>
         <img src="images/clouds-2.png" alt="" id="clouds">
         <img src="images/mountains-2.png" alt="" id="mountain">
     </section>
-    <div class="sec">
+    <div class="sec" id="sec">
+        <div style="text-align: right;"><a href="#body" class="back-top">Перейти обратно</a></div>
         <h2>Parallax Scrolling Effect</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui sed labore, consequatur, pariatur assumenda
             architecto saepe quis nobis, aliquam minus numquam. Eveniet placeat rerum nisi tenetur nulla sunt labore hic
