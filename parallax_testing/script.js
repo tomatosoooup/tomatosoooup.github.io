@@ -124,3 +124,42 @@ $(".sec, .section").on("click", "a", function (event) {
   let top = $(id).offset().top;
   $("body,html").animate({ scrollTop: top }, 1500);
 });
+
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+let users = [];
+
+function addUser() {
+  let user_name = document.getElementById("input_name").value.trim();
+  let user_age = document.getElementById("input_age").value.trim();
+  let total_name = document.getElementById("total_name");
+  let average_age = document.getElementById("average_age");
+
+  if (user_name && user_age) {
+    users.push(new User(`${user_name}`, user_age));
+
+    let information = document.querySelector(".information");
+
+    information.innerHTML =
+      information.innerHTML +
+      `<label>${users[users.length - 1].name} | ${
+        users[users.length - 1].age
+      }</label>`;
+
+    total_name.innerHTML = users.length;
+    total = 0;
+    users.forEach((user) => {
+      total += Number(user.age);
+      average_age.innerHTML = Math.floor(total / users.length);
+    });
+  }
+
+  localStorage.setItem("testObject", JSON.stringify(users));
+
+  let getObjects = localStorage.getItem("testObject");
+}
