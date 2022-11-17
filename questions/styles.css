@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Fira Code", monospace;
+}
+
+html,
+body {
+  width: 100vw;
+  max-width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #0f0f0f;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0px 30px 0px;
+}
+
+.header button {
+  width: fit-content;
+  height: 60px;
+  font-size: calc(1rem + 0.2vw);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+
+.header label {
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 2px solid #acacac;
+  background-color: #ebe5e5;
+}
+
+main {
+  padding: 0px 10px;
+}
+
+.container {
+  min-width: 280px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(20, 35, 43);
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.questions {
+  list-style: none;
+  padding: 15px;
+}
+
+.questions li {
+  font-size: calc(0.9rem + 0.6vw);
+  position: relative;
+  padding: 5px 0px;
+  color: aliceblue;
+}
+
+.questions li::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: darkgray;
+  left: -25px;
+  top: 16px;
+  border-radius: 50%;
+}
