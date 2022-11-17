@@ -65,18 +65,18 @@ main {
 
 .questions li {
   font-size: calc(0.9rem + 0.6vw);
-  position: relative;
   padding: 5px 0px;
   color: aliceblue;
+  position: relative;
 }
 
 .questions li::before {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
+  left: -20px;
+  top: 15px;
   background-color: darkgray;
-  left: -25px;
-  top: 16px;
   border-radius: 50%;
 }
