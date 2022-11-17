@@ -3,7 +3,7 @@ let container = document.querySelector(".questions");
 let questions = document.querySelectorAll(".questions li");
 let values = [];
 for (let i = 0; i < questions.length; i++) {
-  values.push(questions[i].innerHTML);
+  values.push(questions[i].innerText);
 }
 
 function askMe() {
