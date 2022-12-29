@@ -1,0 +1,373 @@
+{% extends 'Freelancers/base.html' %} {% load static %} {% block title %}
+Freelancers {% endblock %} {% block links %}
+<link rel="stylesheet" href="{% static 'Freelancers/css/style.css' %}" />
+<link rel="stylesheet" href="{% static 'Freelancers/css/media.css' %}" />
+<link rel="stylesheet" href="{% static 'Freelancers/css/keyframes.css' %}" />
+<meta
+  name="keywords"
+  content="розробка сайтів, IT, Україна, сайти під ключ, розробка, створення"
+/>
+<!--
+<meta
+  name="description"
+  content="Мучак Андрій Іванович – лікар-офтальмолог доказової медицини. Огляд проводиться на сучасному обладнанні згідно з міжнародними протоколами."
+/>
+<meta property="og:type" content="Лікар-офтальмолог" />
+<meta
+  property="og:image"
+  content="{% static 'Optelis/images/site-image.png'%}"
+/>
+<meta property="og:site_name" content="Optelis" />
+<meta property="og:url" content="https://dr-muchak.com/" /> -->
+{% endblock %} {% block content %}
+<body>
+  <div class="bubbles">
+    <div
+      style="--left: 30%; --top: 35%; --toX: 40px; --toY: -50px; --width: 270px"
+    ></div>
+    <div
+      style="--left: 42%; --top: 50%; --toX: -40px; --toY: 40px; --width: 230px"
+    ></div>
+    <div
+      style="--left: 47%; --top: 35%; --toX: 90px; --toY: 28px; --width: 320px"
+    ></div>
+    <div
+      style="--left: 30%; --top: 35%; --toX: 40px; --toY: -50px; --width: 270px"
+    ></div>
+    <div
+      style="--left: 17%; --top: 35%; --toX: 40px; --toY: -50px; --width: 270px"
+    ></div>
+    <!-- <div
+      style="
+        --left: 70%;
+        --top: 229%;
+        --toX: 40px;
+        --toY: -50px;
+        --width: 270px;
+      "
+    ></div>
+    <div
+      style="
+        --left: 30%;
+        --top: 170%;
+        --toX: 40px;
+        --toY: -50px;
+        --width: 270px;
+      "
+    ></div> -->
+  </div>
+  <nav class="navbar navbar-expand-sm position-absolute w-100 p-3" id="menu">
+    <div class="container-fluid d-flex justify-content-between">
+      <div class="col-2 text-center ms-lg-1">
+        <a href="#" class="navbar-brand">
+          <img
+            src="{% static 'Freelancers/images/logo.svg' %}"
+            alt=""
+            width="100"
+            height="auto"
+            class="img-fluid logo"
+          />
+        </a>
+      </div>
+      <button
+        class="navbar-toggler p-0"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar"
+      >
+        <svg
+          class="ham hamRotate ham1"
+          viewBox="0 0 100 100"
+          width="70"
+          onclick="this.classList.toggle('active')"
+        >
+          <path
+            class="line top"
+            d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+          />
+          <path class="line middle" d="m 30,50 h 40" />
+          <path
+            class="line bottom"
+            d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+          />
+        </svg>
+      </button>
+      <div
+        class="offcanvas offcanvas-top h-100 text-bg-dark align-items-sm-center flex-sm-grow-0 me-sm-2 me-lg-5 mt-4"
+        tabindex="-1"
+        id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel"
+      >
+        <div class="offcanvas-body me-lg-5">
+          <ul class="navbar-nav me-sm-5" id="page-links">
+            {% for key, value in context.menu.items %}
+            <li class="nav-item pe-4">
+              <a href="#{{ key }}" class="nav-link p-0">{{ value }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          <hr class="mt-5" />
+          <div class="phone_and_mail d-sm-none p-3">
+            <a href="tel: +380 950 237 867">+380 950 237 867</a>
+            <p>freelancewb2022@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="main-header">
+    <h1>FULL STACK DEVELOPERS</h1>
+    <div class="container-fluid arrow-container">
+      <div class="d-flex justify-content-center">
+        <a href="#main"
+          ><img
+            src="{% static 'Freelancers/images/arrow-down.png' %}"
+            alt=""
+            class="img-fluid"
+        /></a>
+      </div>
+    </div>
+  </div>
+  <main class="pt-5 pb-4" id="main">
+    <div class="container-fluid mt-5">
+      <div class="pt-3 mb-5"></div>
+      <div class="container-sm" id="skills">
+        <h2 class="">Skills</h2>
+        <div
+          class="container-fluid p-0 mt-4 d-flex flex-column gap-3 gap-lg-4 flex-sm-row flex-wrap"
+        >
+          {% for skill in context.Skills %}
+          <div class="skill-block col-12 col-md-4">
+            <p class="m-0">{{ skill.skill_name }}</p>
+            <img
+              src="{{ MEDIA_URL }} {{ skill.icon_svg.url }}"
+              alt=""
+              class="img-fluid"
+            />
+            <span class="">{{ skill.skill_cat }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="container-sm mt-5">
+      <div class="pt-5 mb-5"></div>
+      <div class="container-sm" id="portfolio">
+        <h2 class="">Recent Projects</h2>
+        <div
+          class="containe-fluid p-0 mt-4 d-flex gap-1 gap-lg-4 justify-content-around justify-content-lg-center"
+        >
+          <span class="active">Everything</span>
+          <span class="">Lending</span>
+          <span class="">Design</span>
+        </div>
+      </div>
+      <div class="container-fluid mt-5 p-sm-0">
+        <div class="d-flex flex-column flex-wrap flex-sm-row portfolio">
+          {% for item in context.Portfolio %}
+          <div class="portfolio-item col-12 col-lg-7">
+            <img
+              src="{{ MEDIA_URL }} {{ item.image.url }}"
+              alt=""
+              class="img-fluid"
+            />
+            <span class="site-title">{{ item.site_type }}</span>
+            <img
+              src="{{ MEDIA_URL }} {{ item.icon_svg.url }}"
+              alt=""
+              class="site-logo img-fluid"
+            />
+            <h3>{{ item.portfolio_name }}</h3>
+            <p>{{ item.description }}</p>
+            <div class="show-project">
+              <span>Подивитись проект</span>
+              <img
+                src="{% static 'Freelancers/images/slides-arrow.svg' %}"
+                alt=""
+              />
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-5">
+      <div class="pt-5 mb-5 d-none d-sm-block"></div>
+      <div class="container-sm" id="services">
+        <h2 class="">Services</h2>
+        <div
+          class="d-flex flex-column gap-3 gap-lg-2 flex-sm-row flex-wrap justify-content-between"
+        >
+          {% for service in context.Services %}
+          <div class="service col-12 d-flex flex-column">
+            <div class="name_of_service">
+              <span>{{ service.name_of_service }}</span>
+            </div>
+            <ul>
+              {% for l in service.options.all %}
+              <li><span>{{ l }}</span></li>
+              {% endfor %}
+            </ul>
+            <span>${{ service.price }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-5">
+      <div class="pt-5 mb-5"></div>
+      <div class="container-sm" id="contacts">
+        <h2 class="">Drop A Line</h2>
+        <div
+          class="d-flex mt-4 flex-wrap gap-sm-5 justify-content-lg-between align-items-lg-start"
+        >
+          <form
+            class="col-12 d-flex flex-column gap-2 flex-sm-row flex-wrap justify-content-between"
+            method="post"
+          >
+            {% csrf_token %}
+            <div
+              class="info col-12 d-flex justify-content-between flex-wrap gap-2 order-sm-2 flex-lg-column"
+            >
+              {% for item in form %}
+              <label for="{{ item.id_for_label }}" class="label col-12">
+                {{ item }}
+              </label>
+              {% endfor %}
+            </div>
+            <textarea
+              class="textarea col-12 order-sm-3"
+              placeholder="Tell us what do you want"
+              name="user_text"
+            ></textarea>
+            <div
+              class="d-flex align-items-center privacy gap-2 order-sm-5 col-sm-10 col-md-4 col-lg-5 ps-lg-2"
+            >
+              <input type="checkbox" name="" id="" />
+              <p class="m-0">
+                I agree with the <a href="#"><span>Privary Policy</span></a>
+              </p>
+            </div>
+            <div class="d-none d-sm-block col-md-7 col-lg-6 order-sm-4">
+              <div class="col-12 d-none icons d-sm-flex gap-4 mt-2">
+                <a href="#"
+                  ><img
+                    src="{% static 'Freelancers/images/insta.svg' %}"
+                    alt=""
+                    class="img-fluid"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="{% static 'Freelancers/images/telegram.svg' %}"
+                    alt=""
+                    class="img-fluid"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="{% static 'Freelancers/images/behance.svg' %}"
+                    alt=""
+                    class="img-fluid"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="{% static 'Freelancers/images/github.svg' %}"
+                    alt=""
+                    class="img-fluid"
+                /></a>
+              </div>
+            </div>
+            <div class="d-none d-sm-block col-md-7 col-lg-6 order-sm-5"></div>
+            <div class="mt-2 col-sm-4 col-md-4 col-lg-5 ps-lg-2 order-sm-5">
+              <button class="btn m-lg-0">SEND MESSAGE</button>
+            </div>
+            <div
+              class="col-12 d-flex flex-column contact-info order-sm-1 flex-sm-row gap-2 col-lg-3 flex-lg-column"
+            >
+              <div
+                class="col-12 col-sm-6 d-flex flex-column pe-2 col-lg-12 mt-2 mt-sm-0"
+              >
+                <span>Phone</span>
+                <p>+380 95 02 37 867</p>
+              </div>
+              <div class="col-12 col-sm-6 d-flex flex-column pe-2 col-lg-12">
+                <span>Email</span>
+                <p>freelancewb2022@gmail.com</p>
+              </div>
+            </div>
+          </form>
+          <div class="col-12 d-sm-none icons d-flex gap-3 mt-2">
+            <a href="#"
+              ><img
+                src="{% static 'Freelancers/images/insta.svg' %}"
+                alt=""
+                class="img-fluid"
+            /></a>
+            <a href="#"
+              ><img
+                src="{% static 'Freelancers/images/telegram.svg' %}"
+                alt=""
+                class="img-fluid"
+            /></a>
+            <a href="#"
+              ><img
+                src="{% static 'Freelancers/images/behance.svg' %}"
+                alt=""
+                class="img-fluid"
+            /></a>
+            <a href="#"
+              ><img
+                src="{% static 'Freelancers/images/github.svg' %}"
+                alt=""
+                class="img-fluid"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="d-none d-sm-block">
+    <div class="container-fluid">
+      <div class="container-sm pb-3 footer">
+        <hr />
+        <img
+          src="{% static 'Freelancers/images/logo.svg' %}"
+          class="img-fluid footer-logo"
+        />
+        <div
+          class="pt-3 col-8 text-center justify-content-center d-flex flex-column m-auto flex-wrap gap-3 footer-text col-sm-10 col-lg-8 pt-md-5 m-sm-0 ms-sm-auto align-items-center flex-sm-row"
+        >
+          {% for key, value in context.menu.items %}
+          <a href="#{{ key }}"><span>{{ value }}</span></a>
+          {% endfor %}
+          <div class="footer-right text-center ms-lg-auto">
+            @2022 All reserved
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery и js файлы -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"
+  ></script>
+  <script src="{% static 'Freelancers/js/script.js' %}"></script>
+</body>
+{% endblock %}

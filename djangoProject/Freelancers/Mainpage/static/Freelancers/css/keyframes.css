@@ -1,0 +1,39 @@
+/* место для всех анимаций */
+
+@keyframes jumping-arrow {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -10px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0px, 10px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveBubble {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(var(--toX), var(--toY));
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
