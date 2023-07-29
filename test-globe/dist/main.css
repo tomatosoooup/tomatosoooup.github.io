@@ -1,0 +1,14 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	overscroll-behavior: none;
+	overflow-x: hidden;
+}
+
+.canvas-container {
+	width: 100%;
+	min-height: 100vh;
+}
+
+/*# sourceMappingURL=main.css.map*/
