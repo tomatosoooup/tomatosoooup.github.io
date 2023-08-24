@@ -1,0 +1,456 @@
+:root {
+  --section--colors: #ebe5e5;
+  --main--color: #0f0f0f;
+  --main--h2--color: #e5e5e5;
+  --skill--border: #2c2c2c;
+  --skill--span: rgba(255, 255, 255, 0.3);
+  --contacts--p: #acacac;
+  --help--type--color: #b2b1b1;
+  --help--type--color--active: #2094ff;
+  --headers--color: #939393;
+  --burger--menu--bgc: #163253;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham", sans-serif;
+  scroll-behavior: smooth;
+  /* outline: none; */
+}
+
+html,
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  cursor: url(../images/cursor.png), auto;
+  background-color: var(--main--color);
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+html.lock,
+body.lock {
+  overflow: hidden;
+}
+
+/* Начало бургера */
+
+.canvas {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  height: 100vh;
+  transition: all 0.6s;
+  z-index: 2;
+}
+
+.canvas-body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--burger--menu--bgc);
+}
+.canvas.lock {
+  right: 0;
+}
+
+.burger-button {
+  z-index: 3;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transition: all 0.6s ease 0.5s;
+}
+
+#label {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+}
+
+#label span {
+  background: #fff;
+  border-radius: 10px;
+  height: 5px;
+  margin: 5px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+#label > span:nth-of-type(1) {
+  width: 50%;
+}
+
+#label > span:nth-of-type(2) {
+  width: 100%;
+}
+
+#label > span:nth-of-type(3) {
+  width: 75%;
+}
+
+#label > input[type="checkbox"] {
+  display: none;
+}
+
+#label > input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(8px, 0px);
+}
+
+#label > input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+#label > input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(23px, -7px) rotatez(45deg);
+}
+
+.logo,
+.links,
+.navbar {
+  z-index: 2;
+}
+
+.navbar {
+  background-color: var(--main--color);
+}
+
+/* Конец бургера */
+/* Начало первого слайда */
+
+#page-links {
+  text-transform: uppercase;
+}
+
+#page-links li a,
+.languages {
+  color: var(--section--colors);
+  list-style: none;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.languages > span {
+  opacity: 0.5;
+}
+
+.languages > span.active {
+  opacity: 1;
+}
+
+#page-links li a:hover,
+#page-links li a.active {
+  color: var(--help--type--color--active);
+}
+
+.main-header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-header h1 {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  font-size: calc(2.5rem + 4.5vw);
+  color: #ece9e9;
+  text-align: center;
+  font-weight: 700;
+}
+
+.arrow-container img {
+  width: 100%;
+  height: auto;
+  animation: jumping-arrow 2s ease-in-out 0.3s infinite;
+  position: relative;
+  bottom: 60px;
+}
+
+.arrow-container img:hover {
+  animation: none;
+  transform: scale(1.1);
+}
+
+.arrow-container {
+  width: 80px;
+}
+
+.arrow {
+  border: 2px solid #0277bd;
+  border-radius: 30px;
+  padding: 20px 0px;
+}
+
+/* Конец первого слайда */
+/* Начало слайда скиллов */
+main :where(#skills, #portfolio, #services, #formTelegram) h5 {
+  color: var(--headers--color);
+  margin: 0px 0px 15px 0px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: calc(0.9rem + 0.1vw);
+}
+
+.skill-block {
+  border: 1px solid var(--skill--border);
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  text-transform: uppercase;
+  height: 190px;
+  cursor: move;
+}
+
+.skill-block p {
+  line-height: 24px;
+  font-size: 20px;
+  color: var(--main--h2--color);
+  font-weight: 400;
+}
+
+.skill-block img {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 60px;
+}
+
+.skill-block span {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: var(--skill--span);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* Конец слайда скиллов */
+/* Начало слайдера */
+
+.swiper {
+  height: 350px;
+}
+
+.myswiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.swiper,
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+/* Конец слайдера */
+
+/* Бегущая строка */
+
+.scrolling_text {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+}
+
+.text {
+  font-size: calc(3rem + 1vw);
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #3a5988;
+  animation: animate_text 40s linear infinite; /*The animation property*/
+  position: relative;
+}
+
+.text > span::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #3a5988;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(35px, 10px);
+}
+
+.text span {
+  margin: 0 40px;
+}
+/* Конец бегущей строки */
+
+/*  Начало сервисов */
+.service {
+  max-height: fit-content;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.service > div {
+  color: #ffffff;
+}
+
+.service > div > p {
+  color: #e1dfdf;
+}
+
+.service :nth-child(1) > p {
+  font-size: calc(0.7rem + 0.2vw);
+  max-width: 300px;
+  line-break: strict;
+}
+
+.service :nth-child(2) > span {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-weight: 100;
+}
+/* Конец сервисов */
+/* Начало формы для заказов */
+.type-of-help > p {
+  color: #bebebe;
+  font-size: calc(0.9rem + 0.2vw);
+}
+
+.form > p:last-of-type {
+  color: #bebebe;
+  font-size: calc(0.7rem + 0.2vw);
+  max-width: 350px;
+}
+
+#formTelegram > p,
+#services > p,
+#portfolio > p,
+#skills > p {
+  color: #faf7f7;
+  font-size: calc(1rem + 1vw);
+  max-width: 550px;
+  word-wrap: break-word;
+  font-weight: 500;
+}
+
+.type {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  padding: 0px 0px 10px 0px;
+  gap: 7px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.type::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.type span {
+  padding: 3px 10px;
+  border: 2px solid var(--help--type--color);
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--help--type--color);
+  cursor: pointer;
+}
+
+.type span.active {
+  border: 2px solid var(--help--type--color--active);
+  color: var(--help--type--color--active);
+}
+
+.form input {
+  background-color: transparent;
+  border: none;
+  color: var(--help--type--color);
+  border-bottom: 1px solid #f1f1f1;
+  opacity: 0.5;
+  padding: 0px 0px 5px;
+  outline: none;
+}
+
+.form ::placeholder,
+.form :-ms-input-placeholder,
+.form ::-ms-input-placeholder {
+  color: var(--help--type--color);
+  opacity: 1; /* Firefox */
+}
+
+.contacts > div {
+  color: #ffffff;
+  padding: 0px 0px 0px 15px;
+  position: relative;
+}
+
+.contacts > div::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: var(--help--type--color--active);
+  position: absolute;
+  left: 0;
+  top: 7px;
+  border-radius: 50%;
+}
+
+.contacts p,
+.contacts a {
+  color: var(--contacts--p);
+}
+
+.btnTelegram {
+  background-color: var(--help--type--color--active);
+}
+
+.btnTelegram > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btnTelegram > a > span {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.footer-hr {
+  background-color: var(--help--type--color--active);
+  height: 2px;
+}
+
+/* Конец формы для заказов */
+/* Начало футера */
+footer {
+  height: fit-content;
+}
+
+.footer-links > a {
+  text-decoration: none;
+  width: calc(50% - 0.5rem);
+}
+
+.footer-links > a > li {
+  list-style: none;
+  color: #ffffff;
+}
+
+.footer-links :nth-child(5) > li,
+.footer-links :nth-child(6) > li {
+  margin-top: 10px;
+  color: var(--headers--color);
+}
+
+.footer-info span,
+.footer-info span > a {
+  text-decoration: none;
+  color: #ffffff;
+}

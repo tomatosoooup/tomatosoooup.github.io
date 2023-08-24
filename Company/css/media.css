@@ -1,0 +1,41 @@
+@media (max-width: 992px) {
+  #page-links li a {
+    color: var(--section--colors);
+    list-style: none;
+    font-size: calc(2rem + 0.5vw);
+    font-weight: 300;
+  }
+
+  .phone_and_mail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .phone_and_mail a {
+    color: var(--section--colors);
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #skills .skill-block {
+    width: 273px;
+  }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (min-width: 992px) {
+  .service {
+    border-bottom: none;
+    border-left: 2px solid #f1f1f1;
+  }
+  #formTelegram > h5,
+  #services > h5,
+  #portfolio > h5,
+  #skills > h5 {
+    width: 41.66666667%;
+  }
+}
