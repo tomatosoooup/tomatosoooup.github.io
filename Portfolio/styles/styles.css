@@ -116,22 +116,46 @@
 
 #main > div > h1 {
   font-size: calc(2rem + 1vw);
+  text-align: center;
 }
 
 #main > div > span {
   margin-top: 12.5px;
   font-size: calc(1rem + 0.4vw);
+  text-align: center;
 }
 
 #main > div > a {
   margin-top: 10px;
   font-size: calc(0.5rem + 0.5vw);
-  display: block;
-  padding: 10px 15px;
-  border-radius: 25px;
-  background-color: var(--main--link);
+  padding: 11.5px 15px;
+  border-radius: 10px;
+  background: var(--main--link);
   color: var(--main--text);
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+#main > div > a::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(229, 172, 142, 0),
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(229, 172, 142, 0)
+  );
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+#main > div > a:hover::after,
+#main > div > a:focus::after {
+  animation: sheen 1s forwards;
 }
 
 /* End main section */
