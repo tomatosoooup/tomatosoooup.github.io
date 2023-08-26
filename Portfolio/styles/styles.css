@@ -1,10 +1,9 @@
-@import url("./reset.css");
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Gotham", sans-serif;
+  border: none;
 }
 
 :root {
@@ -50,7 +49,7 @@
 }
 
 #header-menu > li > a {
-  /* text-decoration: none; */
+  text-decoration: none;
   position: relative;
   font-size: calc(0.8rem + 0.3vw);
   font-weight: 500;
@@ -69,6 +68,10 @@
   -webkit-text-fill-color: transparent;
 
   opacity: 0.7;
+}
+
+#header-menu {
+  margin: 0;
 }
 
 #header-menu > li > a::before {
@@ -130,12 +133,12 @@
 
 .overlay > a {
   margin-top: 10px;
-  font-size: calc(0.5rem + 0.5vw);
+  font-size: calc(0.6rem + 0.5vw);
   padding: 11.5px 15px;
   border-radius: 10px;
   background: var(--main--link);
   color: var(--main--text);
-  /* text-decoration: none; */
+  text-decoration: none;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -161,5 +164,4 @@
 .overlay > a:focus::after {
   animation: sheen 1s forwards;
 }
-
 /* End main section */
