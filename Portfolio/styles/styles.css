@@ -7,6 +7,12 @@
   font-family: "Gotham", sans-serif;
 }
 
+a,
+span {
+  text-align: -moz-center;
+  text-align: -webkit-center;
+}
+
 :root {
   --header: rgb(239, 241, 247);
   --header--text: rgb(0, 0, 0);
