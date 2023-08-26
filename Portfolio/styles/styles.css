@@ -28,6 +28,8 @@
 
 #nav > div {
   display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
   align-items: center;
   justify-content: space-between;
   max-width: 1340px;
