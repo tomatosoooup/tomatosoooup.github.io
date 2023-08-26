@@ -7,11 +7,6 @@
   font-family: "Gotham", sans-serif;
 }
 
-a,
-span {
-  inset: 0;
-}
-
 :root {
   --header: rgb(239, 241, 247);
   --header--text: rgb(0, 0, 0);
@@ -55,7 +50,7 @@ span {
 }
 
 #header-menu > li > a {
-  text-decoration: none;
+  /* text-decoration: none; */
   position: relative;
   font-size: calc(0.8rem + 0.3vw);
   font-weight: 500;
@@ -140,7 +135,7 @@ span {
   border-radius: 10px;
   background: var(--main--link);
   color: var(--main--text);
-  text-decoration: none;
+  /* text-decoration: none; */
   position: relative;
   overflow: hidden;
   text-align: center;
