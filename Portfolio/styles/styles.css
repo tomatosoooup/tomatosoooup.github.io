@@ -31,6 +31,7 @@ span {
   left: 0;
   top: 0;
   z-index: 2;
+  display: block;
 }
 
 #nav > div {
@@ -143,6 +144,7 @@ span {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  display: block;
 }
 
 .overlay > a::after {
