@@ -9,10 +9,7 @@
 
 a,
 span {
-  text-align: -moz-center;
-  text-align: -webkit-center;
-  vertical-align: middle;
-  viewport-fit: contain;
+  inset: 0;
 }
 
 :root {
@@ -50,6 +47,7 @@ span {
   letter-spacing: 2px;
   color: var(--header--text);
   font-weight: 500;
+  text-align: center;
 }
 
 #nav > div > ul {
@@ -145,6 +143,7 @@ span {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .overlay > a::after {
