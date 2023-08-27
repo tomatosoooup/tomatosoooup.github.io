@@ -7,4 +7,27 @@
   .hamburger {
     display: none;
   }
+
+  .photo,
+  .info {
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 0px 20px;
+  }
+
+  .sertificate-item {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .photo {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .info {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
 }
