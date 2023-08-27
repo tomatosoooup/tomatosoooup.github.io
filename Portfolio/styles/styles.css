@@ -24,6 +24,10 @@ body.lock {
   overflow: hidden;
 }
 
+.container {
+  max-width: 1340px;
+}
+
 /* Navigation start */
 #nav {
   width: 100vw;
@@ -44,7 +48,7 @@ body.lock {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 1340px;
+
   margin: auto;
   height: 100%;
 }
@@ -247,7 +251,26 @@ body.lock {
 }
 /* End main section */
 /* Section about */
-#about {
+section {
   min-height: 100vh;
+}
+
+#about {
   background-color: #b63939;
+}
+
+#portfolio {
+  background-color: #1ec7b9;
+}
+
+#experience {
+  background-color: #8379bd;
+}
+
+#techstack {
+  background-color: #ab49b4;
+}
+
+#portfolio {
+  background-color: #b7c252;
 }
