@@ -3,3 +3,9 @@
     transform: rotateZ(60deg) translate(1em, -9em);
   }
 }
+
+@keyframes hamburgerSlideIn {
+  to {
+    transform: translateX(0);
+  }
+}
