@@ -16,11 +16,28 @@
   }
 
   .sertificate-item {
-    width: calc(50% - 1rem);
+    width: 50%;
+  }
+
+  .sertificate-item > div > p {
+    min-height: 100px;
+  }
+
+  .technologies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tech-item > img {
+    width: 42px;
+    height: 42px;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  section {
+    padding: 100px 0px;
+  }
+
   .photo {
     flex: 0 0 auto;
     width: 33.33333333%;
@@ -29,5 +46,15 @@
   .info {
     flex: 0 0 auto;
     width: 66.66666667%;
+  }
+
+  .sertificate-item > div > img {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #nav {
+    padding: 20px 70px;
   }
 }
