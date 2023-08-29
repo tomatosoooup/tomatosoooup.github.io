@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburgerLinks = document.querySelectorAll(
     ".hamburger-items > ul > li > a"
   );
-
   const navLinks = document.querySelectorAll("#header-menu > li > a");
+  const learnMore = document.querySelector(".overlay > a");
 
   hamburger.addEventListener("click", () => {
     hamburgerLines.classList.toggle("active");
@@ -52,5 +52,21 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
     });
+  });
+
+  learnMore.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    let id = this.getAttribute("href");
+    let targetElement = document.querySelector(id);
+    if (targetElement) {
+      let top = targetElement.offsetTop;
+      window.scrollTo({
+        top: top,
+        behavior: "smooth",
+      });
+    } else {
+      return;
+    }
   });
 });
