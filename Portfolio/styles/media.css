@@ -32,6 +32,12 @@
     width: 42px;
     height: 42px;
   }
+
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -51,6 +57,11 @@
 
   .sertificate-item > div > img {
     height: 400px;
+  }
+
+  .portfolio {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
   }
 }
 

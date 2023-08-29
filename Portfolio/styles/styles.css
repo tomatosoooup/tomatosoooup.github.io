@@ -408,14 +408,15 @@ section {
 /* Start of portfolio block */
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-column-gap: 20px;
+  grid-row-gap: 20px;
   margin-top: 40px;
   padding: 0px 20px;
 }
 
 .project {
-  height: 200px;
+  height: 250px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
 }
@@ -444,7 +445,7 @@ section {
 }
 
 .project > div > span {
-  font-size: clamp(20px, 50%, 35px);
+  font-size: clamp(24px, 50%, 35px);
 }
 
 .project > div > a {
