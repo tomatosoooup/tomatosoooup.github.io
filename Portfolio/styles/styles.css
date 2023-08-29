@@ -436,7 +436,8 @@ section {
   z-index: 2;
 }
 
-.project:hover > div {
+.project:hover > div,
+.project:target > div {
   display: flex;
   align-items: center;
   justify-content: center;
