@@ -40,7 +40,7 @@ body.lock {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 #nav > div {
@@ -469,4 +469,48 @@ section {
 
 .project > img:hover {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+  padding: 50px 0px 40px;
+}
+
+.links {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.footer-item {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.footer-item > h4 {
+  margin-bottom: 0;
+}
+
+.group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.group > img {
+  width: 20px;
+  height: 20px;
+}
+
+.group > a {
+  color: var(--header--hover);
+}
+
+footer > div > p {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--sertificate--text);
 }
