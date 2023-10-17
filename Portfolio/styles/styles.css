@@ -275,9 +275,12 @@ section {
 .photo > img {
   display: block;
   margin: 0 auto;
-  width: 250px;
-  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  filter: sepia(20%) brightness(120%);
 }
 
 .info {
