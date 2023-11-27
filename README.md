@@ -1,9 +1,6 @@
 # Pages
 https://tomatosoooup.github.io/
 
-# Lawyer (not done at all)
-https://tomatosoooup.github.io/lawyer/
-
 # Oftalmic (done on django in ./djangoProjects)
 https://tomatosoooup.github.io/oftalmic/
 
